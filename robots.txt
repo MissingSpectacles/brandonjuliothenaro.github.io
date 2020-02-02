@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://brandonjuliothenaro.my.id/sitemap.xml
+Host: https://brandonjuliothenaro.my.id
