@@ -40,10 +40,10 @@ export default memo(() => (
         .
       </p>
       <p>Most loved programming languages: Python, Java.</p>
-      <p>Most loved frameworks: Ruby on Rails, GatsbyJS, React, Flutter.</p>
+      <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
       <p>
         <a href="./resume.pdf" className="text-white" target="_blank">
-          My Resume <FontAwesomeIcon icon={faLink} />
+          My Resume (PDF) <FontAwesomeIcon icon={faExternalLinkAlt} />
         </a>
       </p>
 
@@ -125,7 +125,7 @@ export default memo(() => (
           }) => (
             <tbody>
               {nodes.map((repository, index) => (
-                <tr>
+                <tr key={repository.name}>
                   <td>{index + 1}</td>
                   <td>
                     <a
@@ -134,7 +134,8 @@ export default memo(() => (
                       rel="noopener noreferrer"
                       className="text-white"
                     >
-                      {repository.name}
+                      {repository.name + " "}
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
                     </a>
                   </td>
                   <td>{repository.description}</td>

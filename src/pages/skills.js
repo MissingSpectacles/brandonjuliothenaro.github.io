@@ -5,12 +5,6 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 
-/*
-  TODO:
-  - Extend bootstrap
-    * Increase border radius
- */
-
 export default memo(() => (
   <Layout>
     <div className="row">

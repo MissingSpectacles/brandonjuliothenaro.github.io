@@ -1,6 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+import "../styles.scss"
 
 import React, { memo } from "react"
+
+import { Link } from "gatsby"
+
 import Helmet from "react-helmet"
 
 const notFound = memo(() => {
@@ -18,9 +21,9 @@ const notFound = memo(() => {
         <h1 className="display-4 text-center text-light">Page Not Found</h1>
         <br />
         <p className="text-center">
-          <a className="text-light" href="https://brandonjuliothenaro.my.id">
+          <Link to="/" className="text-light">
             Click here to return
-          </a>
+          </Link>
         </p>
       </main>
     </>

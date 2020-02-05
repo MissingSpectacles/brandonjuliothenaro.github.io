@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 const path = require(`path`)
 
 /**
@@ -18,8 +22,6 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
 
     {
       resolve: `gatsby-plugin-canonical-urls`,
@@ -63,13 +65,6 @@ module.exports = {
         host: "https://brandonjuliothenaro.my.id",
         sitemap: "https://brandonjuliothenaro.my.id/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: process.env.GTAG_MANAGER_ID,
       },
     },
 

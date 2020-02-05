@@ -28,9 +28,7 @@ export default memo(() => (
               aria-label="Facebook logo"
             >
               <FontAwesomeIcon icon={faFacebookSquare} /> Facebook{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -42,9 +40,7 @@ export default memo(() => (
               aria-label="Twitter logo"
             >
               <FontAwesomeIcon icon={faTwitterSquare} /> Twitter{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -56,9 +52,7 @@ export default memo(() => (
               aria-label="Instagram logo"
             >
               <FontAwesomeIcon icon={faInstagram} /> Instagram{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -70,9 +64,7 @@ export default memo(() => (
               aria-label="GitHub logo"
             >
               <FontAwesomeIcon icon={faGithubSquare} /> GitHub{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -84,9 +76,7 @@ export default memo(() => (
               aria-label="LinkedIn logo"
             >
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -110,10 +100,7 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Gatsby{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              Gatsby <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -123,10 +110,7 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Bootstrap{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              Bootstrap <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -136,10 +120,7 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              GitHub Pages{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              GitHub Pages <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -149,10 +130,7 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              JetBrains{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              JetBrains <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>
@@ -162,10 +140,7 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Binus{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
+              Binus <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           </li>
           <li>Mom &hearts; & Dad &hearts;</li>
@@ -186,10 +161,7 @@ export default memo(() => (
         rel="noopener noreferrer"
         className="text-muted"
       >
-        WebStorm{" "}
-        <small>
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
-        </small>
+        WebStorm <FontAwesomeIcon icon={faExternalLinkAlt} />
       </a>
       .
     </p>
