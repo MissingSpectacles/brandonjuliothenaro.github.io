@@ -135,7 +135,7 @@ export default memo(() => (
                       className="text-white"
                     >
                       {repository.name + " "}
-                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      <FontAwesomeIcon icon={faExternalLinkAlt} className="p" />
                     </a>
                   </td>
                   <td>{repository.description}</td>
