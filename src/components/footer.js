@@ -1,14 +1,6 @@
 import React, { memo } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faFacebookSquare,
-  faGithubSquare,
-  faInstagram,
-  faLinkedin,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 import ExternalLink from "./ExternalLink"
 
@@ -22,7 +14,7 @@ export default memo(() => (
 
         <ul className="list-unstyled">
           <li>
-            <FontAwesomeIcon icon={faFacebookSquare} />{" "}
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} />{" "}
             <ExternalLink
               to="https://www.facebook.com/profile.php?id=100008724798107"
               className="text-light"
@@ -31,7 +23,7 @@ export default memo(() => (
             </ExternalLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faTwitterSquare} />{" "}
+            <FontAwesomeIcon icon={["fab", "twitter-square"]} />{" "}
             <ExternalLink
               to="https://twitter.com/brandon_julio_t"
               className="text-light"
@@ -40,7 +32,7 @@ export default memo(() => (
             </ExternalLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faInstagram} />{" "}
+            <FontAwesomeIcon icon={["fab", "instagram"]} />{" "}
             <ExternalLink
               to="https://www.instagram.com/brandon.julio.t"
               className="text-light"
@@ -49,7 +41,7 @@ export default memo(() => (
             </ExternalLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGithubSquare} />{" "}
+            <FontAwesomeIcon icon={["fab", "github-square"]} />{" "}
             <ExternalLink
               to="https://github.com/brandon-thenaro"
               className="text-light"
@@ -58,7 +50,7 @@ export default memo(() => (
             </ExternalLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faLinkedin} />{" "}
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />{" "}
             <ExternalLink
               to="https://www.linkedin.com/in/brandon-julio-thenaro-602486193"
               className="text-light"

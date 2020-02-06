@@ -1,8 +1,5 @@
 import React, { memo } from "react"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-
 import Layout from "../components/layout"
 import ExternalLink from "../components/ExternalLink"
 

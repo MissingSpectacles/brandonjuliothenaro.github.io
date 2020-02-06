@@ -1,7 +1,6 @@
 import React, { memo } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 export default memo(({ to, children, className }) => (
   <>
@@ -13,6 +12,6 @@ export default memo(({ to, children, className }) => (
     >
       {children}
     </a>{" "}
-    <FontAwesomeIcon icon={faExternalLinkAlt} />
+    <FontAwesomeIcon icon="external-link-alt" size="1x" />
   </>
 ))

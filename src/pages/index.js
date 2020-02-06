@@ -2,7 +2,6 @@ import React, { memo } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt, faLink } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import ExternalLink from "../components/ExternalLink"
@@ -77,7 +76,7 @@ export default memo(() => (
           <Link to="/skills" className="text-light">
             Read more
           </Link>{" "}
-          <FontAwesomeIcon icon={faLink} />
+          <FontAwesomeIcon icon="link" />
         </p>
       </section>
 
