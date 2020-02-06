@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
+import ExternalLink from "./ExternalLink"
+
 export default memo(() => (
   <footer>
     <div className="row">
@@ -21,73 +23,56 @@ export default memo(() => (
         <ul className="list-unstyled">
           <li>
             <FontAwesomeIcon icon={faFacebookSquare} />{" "}
-            <a
-              href="https://www.facebook.com/profile.php?id=100008724798107"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://www.facebook.com/profile.php?id=100008724798107"
               className="text-light"
-              aria-label="Facebook logo"
             >
               Facebook
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
             <FontAwesomeIcon icon={faTwitterSquare} />{" "}
-            <a
-              href="https://twitter.com/BThenaro"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://twitter.com/BThenaro"
               className="text-light"
-              aria-label="Twitter logo"
             >
               Twitter
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
             <FontAwesomeIcon icon={faInstagram} />{" "}
-            <a
-              href="https://www.instagram.com/brandonjuliothenaro/?hl=id"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://www.instagram.com/brandon.julio.t/"
               className="text-light"
-              aria-label="Instagram logo"
             >
               Instagram
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
             <FontAwesomeIcon icon={faGithubSquare} />{" "}
-            <a
-              href="https://github.com/brandon-thenaro"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://github.com/brandon-thenaro"
               className="text-light"
-              aria-label="GitHub logo"
             >
               GitHub
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
             <FontAwesomeIcon icon={faLinkedin} />{" "}
-            <a
-              href="https://www.linkedin.com/in/brandon-julio-thenaro-602486193/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://www.linkedin.com/in/brandon-julio-thenaro-602486193/"
               className="text-light"
-              aria-label="LinkedIn logo"
             >
               LinkedIn
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
-            <a href="mailto:bandut2036@gmail.com" className="text-light">
+            <ExternalLink
+              to="mailto:bandut2036@gmail.com"
+              className="text-light"
+            >
               bandut2036@gmail.com
-            </a>
+            </ExternalLink>
           </li>
         </ul>
       </section>
@@ -99,59 +84,32 @@ export default memo(() => (
 
         <ul className="list-unstyled">
           <li>
-            <a
-              href="https://www.gatsbyjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-light"
-            >
+            <ExternalLink to="https://www.gatsbyjs.org/" className="text-light">
               Gatsby
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://getbootstrap.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-light"
-            >
+            <ExternalLink to="https://getbootstrap.com/" className="text-light">
               Bootstrap
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://pages.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-light"
-            >
-              GitHub
-            </a>{" "}
-            Pages <FontAwesomeIcon icon={faExternalLinkAlt} />
+            <ExternalLink to="https://www.netlify.com/" className="text-light">
+              Netlify
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://www.jetbrains.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              to="https://www.jetbrains.com/"
               className="text-light"
             >
               JetBrains
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://binus.ac.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-light"
-            >
+            <ExternalLink to="https://binus.ac.id" className="text-light">
               Binus
-            </a>{" "}
-            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </ExternalLink>
           </li>
           <li>Mom &hearts; & Dad &hearts;</li>
           <li>And you, random citizen</li>
@@ -165,15 +123,13 @@ export default memo(() => (
     </p>
     <p className="text-muted">
       Developed with{" "}
-      <a
-        href="https://www.jetbrains.com/webstorm/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <ExternalLink
+        to="https://www.jetbrains.com/webstorm/"
         className="text-muted"
       >
         WebStorm
-      </a>{" "}
-      <FontAwesomeIcon icon={faExternalLinkAlt} />.
+      </ExternalLink>
+      .
     </p>
   </footer>
 ))

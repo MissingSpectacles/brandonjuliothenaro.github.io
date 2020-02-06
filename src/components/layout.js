@@ -18,23 +18,21 @@ export default memo(({ children }) => (
   <>
     <SEO />
 
-    <div className="container text-light shadow rounded-lg px-md-5 py-5 my-md-4">
-      <header>
-        <h1 className="display-4">
-          <Link to="/" className="text-white">
-            Brandon Julio Thenaro
-          </Link>{" "}
-          <FontAwesomeIcon icon={faLink} />
-        </h1>
-      </header>
+    <header>
+      <h1 className="display-4">
+        <Link to="/" className="text-light">
+          Brandon J. Thenaro
+        </Link>{" "}
+        <FontAwesomeIcon icon={faLink} />
+      </h1>
+    </header>
 
-      <hr className="bg-light" />
+    <hr className="bg-light" />
 
-      <main>{children}</main>
+    <main>{children}</main>
 
-      <hr className="bg-light" />
+    <hr className="bg-light" />
 
-      <Footer />
-    </div>
+    <Footer />
   </>
 ))

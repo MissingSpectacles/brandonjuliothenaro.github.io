@@ -5,9 +5,9 @@ import { graphql, useStaticQuery } from "gatsby"
 
 export default memo(() => {
   const {
-      site: {
-        siteMetadata: { siteUrl, description, name, twitter_id },
-      },
+    site: {
+      siteMetadata: { siteUrl, description, name, twitter_id },
+    },
   } = useStaticQuery(graphql`
     query SEO {
       site {
@@ -24,7 +24,7 @@ export default memo(() => {
   return (
     <Helmet>
       <html lang="en" />
-      <body className="bg-dark" />
+      <body className="container text-light shadow rounded-lg px-md-5 py-5 my-md-4 bg-dark" />
 
       <title>{name}</title>
 

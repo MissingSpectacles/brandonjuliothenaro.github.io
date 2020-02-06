@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
+import ExternalLink from "../components/ExternalLink"
 
 export default memo(() => (
   <Layout>
-    <div className="row">
+    <article className="row">
       <section className="col">
         <header>
           <h2>Programming Languages</h2>
@@ -34,6 +35,12 @@ export default memo(() => (
         </header>
 
         <ul className="pl-3">
+          <li>Frontend</li>
+          <ul className="pl-3">
+            <li>Bootstrap</li>
+            <li>Gatsby</li>
+            <li>React</li>
+          </ul>
           <li>Backend</li>
           <ul className="pl-3">
             <li>ASP.NET</li>
@@ -41,12 +48,6 @@ export default memo(() => (
             <li>Laravel</li>
             <li>Ruby on Rails</li>
             <li>Spring Boot</li>
-          </ul>
-          <li>Frontend</li>
-          <ul className="pl-3">
-            <li>Bootstrap</li>
-            <li>Gatsby</li>
-            <li>React</li>
           </ul>
         </ul>
       </section>
@@ -63,7 +64,7 @@ export default memo(() => (
           <ul className="pl-3">
             <li>Android Studio</li>
             <li>DataGrip</li>
-            <li>Intell iJ IDEA</li>
+            <li>IntelliJ IDEA</li>
             <li>PhpStorm</li>
             <li>PyCharm</li>
             <li>RubyMine</li>
@@ -71,6 +72,7 @@ export default memo(() => (
           </ul>
           <li>Microsoft Office 365</li>
           <li>Visual Studio Code</li>
+          <li>Visual Studio IDE</li>
         </ul>
       </section>
 
@@ -81,30 +83,22 @@ export default memo(() => (
 
         <ul className="pl-3">
           <li>
-            <a
-              href="https://chocolatey.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              Chocolatey{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
-            </a>
+            <ExternalLink to="https://basecamp.com/" className="text-light">
+              Basecamp
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://firebase.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
+            <ExternalLink to="https://chocolatey.org/" className="text-light">
+              Chocolatey{" "}
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink
+              to="https://firebase.google.com/"
+              className="text-light"
             >
-              Firebase{" "}
-              <small>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </small>
-            </a>
+              Firebase
+            </ExternalLink>
           </li>
           <li>Git command-line</li>
           <li>Java Swing</li>
@@ -112,6 +106,6 @@ export default memo(() => (
           <li>Linux command-line</li>
         </ul>
       </section>
-    </div>
+    </article>
   </Layout>
 ))
