@@ -32,20 +32,19 @@ export default memo(() => (
           rel="noopener noreferrer"
           className="text-light"
         >
-          Binus University
-        </a>{" "}
-        <small>
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
-        </small>
+          Binus University{" "}
+          <small>
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+          </small>
+        </a>
         .
       </p>
       <p>Most loved programming languages: Python, Java.</p>
       <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
       <p>
         <a href="./resume.pdf" className="text-white" target="_blank">
-          My Resume (PDF)
-        </a>{" "}
-        <FontAwesomeIcon icon={faExternalLinkAlt} />
+          My Resume (PDF) <FontAwesomeIcon icon={faExternalLinkAlt} />
+        </a>
       </p>
 
       <header>
@@ -80,9 +79,8 @@ export default memo(() => (
 
       <p>
         <Link to="/skills" className="text-white">
-          Read more
-        </Link>{" "}
-        <FontAwesomeIcon icon={faLink} />
+          Read more <FontAwesomeIcon icon={faLink} />
+        </Link>
       </p>
 
       <header>
@@ -136,9 +134,9 @@ export default memo(() => (
                       rel="noopener noreferrer"
                       className="text-white"
                     >
-                      {repository.name}
-                    </a>{" "}
-                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      {repository.name + " "}
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    </a>
                   </td>
                   <td>{repository.description}</td>
                 </tr>

@@ -17,9 +17,8 @@ export default memo(({ children }) => (
       <header>
         <h1 className="display-4">
           <Link to="/" className="text-white">
-            Brandon Julio Thenaro
-          </Link>{" "}
-          <FontAwesomeIcon icon={faLink} />
+            Brandon Julio Thenaro <FontAwesomeIcon icon={faLink} />
+          </Link>
         </h1>
       </header>
 
