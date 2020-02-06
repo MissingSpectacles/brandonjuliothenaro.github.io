@@ -1,13 +1,18 @@
 import "../styles.scss"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import React, { memo } from "react"
 
 import { Link } from "gatsby"
 
-import Footer from "../components/footer"
-import SEO from "../components/seo"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLink } from "@fortawesome/free-solid-svg-icons"
+
+import Footer from "../components/footer"
+import SEO from "../components/seo"
+
+config.autoAddCss = false
 
 export default memo(({ children }) => (
   <>

@@ -20,6 +20,7 @@ export default memo(() => (
 
         <ul className="list-unstyled">
           <li>
+            <FontAwesomeIcon icon={faFacebookSquare} />{" "}
             <a
               href="https://www.facebook.com/profile.php?id=100008724798107"
               target="_blank"
@@ -27,11 +28,12 @@ export default memo(() => (
               className="text-light"
               aria-label="Facebook logo"
             >
-              <FontAwesomeIcon icon={faFacebookSquare} /> Facebook
+              Facebook
             </a>{" "}
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
+            <FontAwesomeIcon icon={faTwitterSquare} />{" "}
             <a
               href="https://twitter.com/BThenaro"
               target="_blank"
@@ -39,11 +41,12 @@ export default memo(() => (
               className="text-light"
               aria-label="Twitter logo"
             >
-              <FontAwesomeIcon icon={faTwitterSquare} /> Twitter
+              Twitter
             </a>{" "}
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
+            <FontAwesomeIcon icon={faInstagram} />{" "}
             <a
               href="https://www.instagram.com/brandonjuliothenaro/?hl=id"
               target="_blank"
@@ -51,11 +54,12 @@ export default memo(() => (
               className="text-light"
               aria-label="Instagram logo"
             >
-              <FontAwesomeIcon icon={faInstagram} /> Instagram
+              Instagram
             </a>{" "}
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
+            <FontAwesomeIcon icon={faGithubSquare} />{" "}
             <a
               href="https://github.com/brandon-thenaro"
               target="_blank"
@@ -63,11 +67,12 @@ export default memo(() => (
               className="text-light"
               aria-label="GitHub logo"
             >
-              <FontAwesomeIcon icon={faGithubSquare} /> GitHub
+              GitHub
             </a>{" "}
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
+            <FontAwesomeIcon icon={faLinkedin} />{" "}
             <a
               href="https://www.linkedin.com/in/brandon-julio-thenaro-602486193/"
               target="_blank"
@@ -75,7 +80,7 @@ export default memo(() => (
               className="text-light"
               aria-label="LinkedIn logo"
             >
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+              LinkedIn
             </a>{" "}
             <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
