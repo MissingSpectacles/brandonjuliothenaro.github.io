@@ -33,7 +33,7 @@ export default memo(() => (
           <li>
             <FontAwesomeIcon icon={faTwitterSquare} />{" "}
             <ExternalLink
-              to="https://twitter.com/BThenaro"
+              to="https://twitter.com/brandon_julio_t"
               className="text-light"
             >
               Twitter
@@ -42,7 +42,7 @@ export default memo(() => (
           <li>
             <FontAwesomeIcon icon={faInstagram} />{" "}
             <ExternalLink
-              to="https://www.instagram.com/brandon.julio.t/"
+              to="https://www.instagram.com/brandon.julio.t"
               className="text-light"
             >
               Instagram
@@ -60,7 +60,7 @@ export default memo(() => (
           <li>
             <FontAwesomeIcon icon={faLinkedin} />{" "}
             <ExternalLink
-              to="https://www.linkedin.com/in/brandon-julio-thenaro-602486193/"
+              to="https://www.linkedin.com/in/brandon-julio-thenaro-602486193"
               className="text-light"
             >
               LinkedIn
@@ -84,23 +84,23 @@ export default memo(() => (
 
         <ul className="list-unstyled">
           <li>
-            <ExternalLink to="https://www.gatsbyjs.org/" className="text-light">
+            <ExternalLink to="https://www.gatsbyjs.org" className="text-light">
               Gatsby
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink to="https://getbootstrap.com/" className="text-light">
+            <ExternalLink to="https://getbootstrap.com" className="text-light">
               Bootstrap
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink to="https://www.netlify.com/" className="text-light">
+            <ExternalLink to="https://www.netlify.com" className="text-light">
               Netlify
             </ExternalLink>
           </li>
           <li>
             <ExternalLink
-              to="https://www.jetbrains.com/"
+              to="https://www.jetbrains.com"
               className="text-light"
             >
               JetBrains
@@ -124,7 +124,7 @@ export default memo(() => (
     <p className="text-muted">
       Developed with{" "}
       <ExternalLink
-        to="https://www.jetbrains.com/webstorm/"
+        to="https://www.jetbrains.com/webstorm"
         className="text-muted"
       >
         WebStorm
