@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://brandonjuliothenaro.my.id`,
     description: `Mom, I'm on the internet!`,
     name: `Brandon Julio Thenaro`,
-    twitter_id: `@BThenaro`,
+    twitter_id: `@brandon_julio_t`,
   },
 
   plugins: [
