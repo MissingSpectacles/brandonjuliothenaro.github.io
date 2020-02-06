@@ -12,6 +12,6 @@ export default memo(({ to, children, className }) => (
     >
       {children}
     </a>{" "}
-    <FontAwesomeIcon icon="external-link-alt" size="1x" />
+    <FontAwesomeIcon icon="external-link-alt" fixedWidth />
   </>
 ))
