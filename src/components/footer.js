@@ -27,9 +27,9 @@ export default memo(() => (
               className="text-light"
               aria-label="Facebook logo"
             >
-              <FontAwesomeIcon icon={faFacebookSquare} /> Facebook{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              <FontAwesomeIcon icon={faFacebookSquare} /> Facebook
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -39,9 +39,9 @@ export default memo(() => (
               className="text-light"
               aria-label="Twitter logo"
             >
-              <FontAwesomeIcon icon={faTwitterSquare} /> Twitter{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              <FontAwesomeIcon icon={faTwitterSquare} /> Twitter
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -51,9 +51,9 @@ export default memo(() => (
               className="text-light"
               aria-label="Instagram logo"
             >
-              <FontAwesomeIcon icon={faInstagram} /> Instagram{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              <FontAwesomeIcon icon={faInstagram} /> Instagram
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -63,9 +63,9 @@ export default memo(() => (
               className="text-light"
               aria-label="GitHub logo"
             >
-              <FontAwesomeIcon icon={faGithubSquare} /> GitHub{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              <FontAwesomeIcon icon={faGithubSquare} /> GitHub
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -75,9 +75,9 @@ export default memo(() => (
               className="text-light"
               aria-label="LinkedIn logo"
             >
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a href="mailto:bandut2036@gmail.com" className="text-light">
@@ -100,8 +100,9 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Gatsby <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              Gatsby
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -110,8 +111,9 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Bootstrap <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              Bootstrap
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -120,8 +122,9 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              GitHub Pages <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              GitHub
+            </a>{" "}
+            Pages <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -130,8 +133,9 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              JetBrains <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              JetBrains
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>
             <a
@@ -140,8 +144,9 @@ export default memo(() => (
               rel="noopener noreferrer"
               className="text-light"
             >
-              Binus <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
+              Binus
+            </a>{" "}
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </li>
           <li>Mom &hearts; & Dad &hearts;</li>
           <li>And you, random citizen</li>
@@ -161,9 +166,9 @@ export default memo(() => (
         rel="noopener noreferrer"
         className="text-muted"
       >
-        WebStorm <FontAwesomeIcon icon={faExternalLinkAlt} />
-      </a>
-      .
+        WebStorm
+      </a>{" "}
+      <FontAwesomeIcon icon={faExternalLinkAlt} />.
     </p>
   </footer>
 ))
