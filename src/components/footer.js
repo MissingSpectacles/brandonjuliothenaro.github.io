@@ -47,7 +47,7 @@ export default memo(() => (
           </li>
           <li>
             <ExternalLink
-              to="https://www.linkedin.com/in/brandon-julio-thenaro-602486193"
+              to="https://www.linkedin.com/in/brandonjuliothenaro"
               className="text-light"
             >
               <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
