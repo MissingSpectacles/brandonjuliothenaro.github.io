@@ -1,3 +1,13 @@
+## What I Implemented
+
+## How to run Locally
+
+- `git clone` this repository
+- `cd` into the clonned repository's directory
+- Run `npm install -g gatsby-cli`
+- Run `npm install`
+- Run `gatsby develop`
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
