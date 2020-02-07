@@ -124,7 +124,7 @@ export default memo(() => (
                     <td>{index + 1}</td>
                     <td>
                       <ExternalLink to={url} className="text-light">
-                        {name}
+                        {name.replace(/[-]/gi, " ")}
                       </ExternalLink>
                     </td>
                     <td>{description}</td>
