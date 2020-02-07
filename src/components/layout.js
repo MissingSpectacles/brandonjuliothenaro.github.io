@@ -1,19 +1,16 @@
 import "../styles.scss"
-import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import React, { memo } from "react"
 
 import { Link } from "gatsby"
 
 import { library, config } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLink, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 
-library.add(faLink, faExternalLinkAlt, fab)
+library.add(fab)
 config.autoAddCss = false
 
 export default memo(({ children }) => (
@@ -23,9 +20,8 @@ export default memo(({ children }) => (
     <header>
       <h1 className="display-4">
         <Link to="/" className="text-light">
-          Brandon J. Thenaro
-        </Link>{" "}
-        <FontAwesomeIcon icon="link" />
+          Brandon Julio Thenaro
+        </Link>
       </h1>
     </header>
 

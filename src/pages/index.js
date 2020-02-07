@@ -1,10 +1,8 @@
 import React, { memo } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import Layout from "../components/layout"
-import ExternalLink from "../components/ExternalLink"
+import ExternalLink from "../components/external_link"
 
 export default memo(() => (
   <Layout>
@@ -75,8 +73,7 @@ export default memo(() => (
         <p>
           <Link to="/skills" className="text-light">
             Read more
-          </Link>{" "}
-          <FontAwesomeIcon icon="link" />
+          </Link>
         </p>
       </section>
 

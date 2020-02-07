@@ -2,7 +2,7 @@ import React, { memo } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import ExternalLink from "./ExternalLink"
+import ExternalLink from "./external_link"
 
 export default memo(() => (
   <footer>
