@@ -72,7 +72,7 @@ export default memo(() => (
 
         <p>
           <Link to="/skills" className="text-light">
-            Read more
+            <u>Read more</u>
           </Link>
         </p>
       </section>
