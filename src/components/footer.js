@@ -57,7 +57,7 @@ export default memo(() => (
         <p>
           Email:{" "}
           <ExternalLink
-            to="mailto: brandon.julio.t@icloud.com"
+            to="mailto:brandon.julio.t@icloud.com"
             className="text-light text-center"
           >
             brandon.julio.t@icloud.com
