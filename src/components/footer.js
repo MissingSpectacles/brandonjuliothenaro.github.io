@@ -57,10 +57,10 @@ export default memo(() => (
         <p>
           Email:{" "}
           <ExternalLink
-            to="mailto:bandut2036@gmail.com"
+            to="mailto: brandon.julio.t@icloud.com"
             className="text-light text-center"
           >
-            bandut2036@gmail.com
+            brandon.julio.t@icloud.com
           </ExternalLink>
         </p>
       </section>
