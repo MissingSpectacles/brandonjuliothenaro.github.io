@@ -1,5 +1,9 @@
 ## What I Implemented
 
+- PWA with Gatsby
+- Front-end design with [React](https://reactjs.org/) and [Bootstrap](https://getbootstrap.com/)
+- Deploy via [Gatsby Cloud](https://www.gatsbyjs.com/cloud/)
+
 ## How to run Locally
 
 - `git clone` this repository

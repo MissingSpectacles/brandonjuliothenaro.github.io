@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 import Helmet from "react-helmet"
 
-const notFound = memo(() => {
+export default memo(() => {
   return (
     <>
       <Helmet>
@@ -22,12 +22,10 @@ const notFound = memo(() => {
         <br />
         <p className="text-center">
           <Link to="/" className="text-light">
-            Click here to return
+            <u>Click here to return</u>
           </Link>
         </p>
       </main>
     </>
   )
 })
-
-export default notFound
