@@ -8,6 +8,13 @@ export default memo(() => (
   <Layout>
     <article>
       <section>
+        <p className="lead">
+          I write code for back-end and front-end, integrate databases, CI/CD,
+          and deploy it to the cloud.
+        </p>
+      </section>
+
+      <section>
         <header>
           <h2>About Me</h2>
         </header>
@@ -19,23 +26,19 @@ export default memo(() => (
         </p>
         <p>
           I am introverted, keeps everything to myself, code and learn new
-          stuffs on spare time. Loves memes and movies such as Joker and John
-          Wick, used to play games, mostly offline, currently on hiatus because
-          of my weak hardware.
+          tech stack on spare time. Loves memes and movies such as Joker and John
+          Wick, prefers to watch in IMAX. Used to play games, mostly offline,
+          currently on hiatus because of my weak hardware.
         </p>
         <p>
           Currently living in Jakarta, Indonesia to study Information System at{" "}
-          <ExternalLink to="https://binus.ac.id" className="text-light">
-            Binus University
-          </ExternalLink>
+          <ExternalLink to="https://binus.ac.id">Binus University</ExternalLink>
           .
         </p>
         <p>Most loved programming languages: Python, Java.</p>
         <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
         <p>
-          <ExternalLink to="./resume.pdf" className="text-light">
-            My Resume (PDF)
-          </ExternalLink>
+          <ExternalLink to="./resume.pdf">My Resume (PDF)</ExternalLink>
         </p>
       </section>
 
@@ -123,7 +126,7 @@ export default memo(() => (
                   <tr key={name}>
                     <td>{index + 1}</td>
                     <td>
-                      <ExternalLink to={url} className="text-light">
+                      <ExternalLink to={url}>
                         {name.replace(/[-]/gi, " ")}
                       </ExternalLink>
                     </td>

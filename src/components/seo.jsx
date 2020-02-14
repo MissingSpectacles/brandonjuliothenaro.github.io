@@ -24,7 +24,7 @@ export default memo(() => {
   return (
     <Helmet>
       <html lang="en" />
-      <body className="container text-light shadow rounded-lg px-md-5 py-5 my-md-4 bg-dark" />
+      <body className="container text-light shadow rounded-lg px-md-5 py-5 my-md-1 bg-dark" />
 
       <title>{name}</title>
 

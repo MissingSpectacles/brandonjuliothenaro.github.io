@@ -6,10 +6,17 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://brandonjuliothenaro.my.id`,
     description: `Mom, I'm on the internet!`,
+    email: `brandon.julio.t@icloud.com`,
     name: `Brandon Julio Thenaro`,
+    siteUrl: `https://brandonjuliothenaro.my.id`,
     twitter_id: `@brandon_julio_t`,
+
+    facebook_url: `https://www.facebook.com/profile.php?id=100008724798107`,
+    github_url: `https://github.com/brandon-julio-t`,
+    instagram_url: `https://www.instagram.com/brandon.julio.t`,
+    linkedin_url: `https://www.linkedin.com/in/brandonjuliothenaro`,
+    twitter_url: `https://twitter.com/brandon_julio_t`,
   },
 
   plugins: [
@@ -67,7 +74,7 @@ module.exports = {
       options: {
         token: process.env.GITHUB_API_TOKEN,
         // https://developer.github.com/v4/explorer/
-        // Used in index.js:99
+        // Used in index.jsx:99
         graphQLQuery: `
           query {
             viewer {

@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import { library, config } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
-import Footer from "../components/footer"
+import Footer from "./footer"
 import SEO from "../components/seo"
 
 library.add(fab)

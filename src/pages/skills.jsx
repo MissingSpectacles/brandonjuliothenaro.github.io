@@ -14,6 +14,7 @@ export default memo(() => (
         <ul className="pl-3">
           <li>C#</li>
           <li>C/C++</li>
+          <li>Dart</li>
           <li>Go</li>
           <li>Java</li>
           <li>Javascript</li>
@@ -35,6 +36,7 @@ export default memo(() => (
           <li>Frontend</li>
           <ul className="pl-3">
             <li>Bootstrap</li>
+            <li>Flutter</li>
             <li>Gatsby</li>
             <li>React</li>
           </ul>
@@ -46,6 +48,18 @@ export default memo(() => (
             <li>Ruby on Rails</li>
             <li>Spring Boot</li>
           </ul>
+        </ul>
+      </section>
+
+      <section className="col">
+        <header>
+          <h2>Database</h2>
+        </header>
+
+        <ul className="pl-3">
+          <li>MySQL</li>
+          <li>PostgreSQL</li>
+          <li>SQLite</li>
         </ul>
       </section>
 
@@ -75,32 +89,31 @@ export default memo(() => (
 
       <section className="col">
         <header>
-          <h2>Others</h2>
+          <h2>Other</h2>
         </header>
 
         <ul className="pl-3">
           <li>
-            <ExternalLink to="https://basecamp.com/" className="text-light">
-              Basecamp
-            </ExternalLink>
+            <ExternalLink to="https://basecamp.com/">Basecamp</ExternalLink>
           </li>
           <li>
-            <ExternalLink to="https://chocolatey.org/" className="text-light">
-              Chocolatey{" "}
-            </ExternalLink>
+            <ExternalLink to="https://chocolatey.org/">Chocolatey</ExternalLink>
           </li>
           <li>
-            <ExternalLink
-              to="https://firebase.google.com/"
-              className="text-light"
-            >
+            <ExternalLink to="https://firebase.google.com/">
               Firebase
             </ExternalLink>
           </li>
-          <li>Git command-line</li>
+          <li>
+            <ExternalLink to="https://www.docker.com/">Docker</ExternalLink>
+          </li>
+          <li>
+            <ExternalLink to="https://www.heroku.com/">Heroku</ExternalLink>
+          </li>
+          <li>Git CLI</li>
           <li>Java Swing</li>
           <li>JavaFX</li>
-          <li>Linux command-line</li>
+          <li>Linux CLI</li>
         </ul>
       </section>
     </article>
