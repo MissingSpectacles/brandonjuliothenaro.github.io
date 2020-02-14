@@ -42,7 +42,7 @@ export default memo(() => (
           </ul>
           <li>Backend</li>
           <ul className="pl-3">
-            <li>ASP.NET</li>
+            <li>ASP.NET Core</li>
             <li>Flask</li>
             <li>Laravel</li>
             <li>Ruby on Rails</li>
