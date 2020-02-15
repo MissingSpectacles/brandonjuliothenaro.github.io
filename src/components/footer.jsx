@@ -11,6 +11,7 @@ export default memo(() => {
       siteMetadata: {
         email,
         facebook_url,
+        freeCodeCamp_url,
         github_url,
         instagram_url,
         linkedin_url,
@@ -23,6 +24,7 @@ export default memo(() => {
         siteMetadata {
           email
           facebook_url
+          freeCodeCamp_url
           github_url
           instagram_url
           linkedin_url
@@ -41,31 +43,12 @@ export default memo(() => {
           </header>
 
           <ul className="list-unstyled d-flex justify-content-around">
-            <li>
-              <ExternalLink to={facebook_url}>
-                <FontAwesomeIcon icon={["fab", "facebook-square"]} size="2x" />
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink to={twitter_url}>
-                <FontAwesomeIcon icon={["fab", "twitter-square"]} size="2x" />
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink to={instagram_url}>
-                <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink to={github_url}>
-                <FontAwesomeIcon icon={["fab", "github-square"]} size="2x" />
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink to={linkedin_url}>
-                <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
-              </ExternalLink>
-            </li>
+            <li><ExternalLink to={facebook_url}><FontAwesomeIcon icon={["fab", "facebook-square"]} size="2x" /></ExternalLink></li>
+            <li><ExternalLink to={freeCodeCamp_url}><FontAwesomeIcon icon={["fab", "free-code-camp"]} size="2x" /></ExternalLink></li>
+            <li><ExternalLink to={github_url}><FontAwesomeIcon icon={["fab", "github-square"]} size="2x" /></ExternalLink></li>
+            <li><ExternalLink to={instagram_url}><FontAwesomeIcon icon={["fab", "instagram"]} size="2x" /></ExternalLink></li>
+            <li><ExternalLink to={linkedin_url}><FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" /></ExternalLink></li>
+            <li><ExternalLink to={twitter_url}><FontAwesomeIcon icon={["fab", "twitter-square"]} size="2x" /></ExternalLink></li>
           </ul>
           <p>
             Email:{" "}

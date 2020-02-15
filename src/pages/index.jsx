@@ -55,8 +55,8 @@ export default memo(() => (
 
             <ul className="pl-3">
               <li>Java</li>
-              <li>Python</li>
               <li>JavaScript</li>
+              <li>Python</li>
             </ul>
           </section>
 
@@ -66,9 +66,9 @@ export default memo(() => (
             </header>
 
             <ul className="pl-3">
-              <li>Ruby on Rails</li>
               <li>Laravel</li>
               <li>React</li>
+              <li>Ruby on Rails</li>
             </ul>
           </section>
         </div>
