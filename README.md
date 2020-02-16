@@ -1,5 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/73cb0c01-3ac6-4e20-a210-5c987e50f790/deploy-status)](https://app.netlify.com/sites/brandon-julio-thenaro-website/deploys)
-[![](https://img.shields.io/badge/Status-On%20Iteration-informational)]()
+[![](https://img.shields.io/badge/status-On%20Iteration-informational)]()
 [![](https://img.shields.io/github/last-commit/brandon-julio-t/brandon-julio-thenaro-website)]()
 
 ## What I Implemented
