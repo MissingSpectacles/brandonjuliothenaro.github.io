@@ -1,31 +1,55 @@
-import "../styles.scss"
-
-import React, { memo } from "react"
-
-import { Link } from "gatsby"
-
 import Helmet from "react-helmet"
+import React, { memo } from "react"
+import { Link } from "gatsby"
+import { connect } from "react-redux"
 
-export default memo(() => {
-  return (
-    <>
-      <Helmet>
-        <html lang="en" className="h-100" />
-        <body className="bg-dark h-100 d-flex justify-content-center align-items-center" />
+import "../styles/styles.scss"
+import { mapStateToProps, mapDispatchToProps } from "../state/createStore"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-        <title>404 Not Found | Brandon Julio Thenaro</title>
-      </Helmet>
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(
+  memo(({ theme, toggleTheme }) => {
+    return (
+      <>
+        <Helmet>
+          <html lang="en" className="h-100" />
+          <body
+            className={`h-100 d-flex justify-content-center align-items-center ${
+              theme === "dark" ? "bg-dark text-light" : ""
+            }`}
+          />
 
-      <main className="container">
-        <h1 className="display-3 text-center text-light">404</h1>
-        <h1 className="display-4 text-center text-light">Page Not Found</h1>
-        <br />
-        <p className="text-center">
-          <Link to="/" className="text-light">
-            <u>Click here to return</u>
-          </Link>
-        </p>
-      </main>
-    </>
-  )
-})
+          <title>404 | Brandon Julio Thenaro</title>
+        </Helmet>
+
+        <header className="container">
+          <h1 className="display-1">404: Not Found</h1>
+        </header>
+
+        <main className="container">
+          <p className="display-4 text-center">
+            <Link
+              to="/"
+              className={theme === "dark" ? "text-light" : "text-dark"}
+            >
+              <u>Click here to return</u>
+            </Link>
+          </p>
+
+          <div className="d-flex justify-content-center">
+            <button className="btn" onClick={toggleTheme}>
+              <FontAwesomeIcon
+                className={theme === "dark" ? "text-light" : ""}
+                icon={theme === "dark" ? "moon" : "sun"}
+                size="3x"
+              ></FontAwesomeIcon>
+            </button>
+          </div>
+        </main>
+      </>
+    )
+  })
+)

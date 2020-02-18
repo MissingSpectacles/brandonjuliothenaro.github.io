@@ -1,36 +1,26 @@
-import "../styles.scss"
-
 import React, { memo } from "react"
-
-import { Link } from "gatsby"
-
-import { library, config } from "@fortawesome/fontawesome-svg-core"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
+import { library, config } from "@fortawesome/fontawesome-svg-core"
 
+import "../styles/styles.scss"
 import Footer from "./footer"
-import SEO from "../components/seo"
+import Head from "./head"
+import Header from "./header"
 
-library.add(fab)
+// Prevent Font Awesome Icons being large then small on first load
+library.add(fab, faMoon, faSun)
 config.autoAddCss = false
 
-export default memo(({ children }) => (
-  <>
-    <SEO />
+export default memo(({ children }) => {
+  return (
+    <>
+      <Head />
 
-    <header>
-      <h1 className="display-4">
-        <Link to="/" className="text-light">
-          Brandon Julio Thenaro
-        </Link>
-      </h1>
-    </header>
+      <Header />
+      <main>{children}</main>
 
-    <hr className="bg-light" />
-
-    <main>{children}</main>
-
-    <hr className="bg-light" />
-
-    <Footer />
-  </>
-))
+      <Footer />
+    </>
+  )
+})

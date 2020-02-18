@@ -4,12 +4,14 @@ require("dotenv").config({
 
 const path = require(`path`)
 
+const siteUrl = `https://www.brandonjuliothenaro.my.id`
+
 module.exports = {
   siteMetadata: {
     description: `Mom, I'm on the internet!`,
     email: `brandon.julio.t@icloud.com`,
     name: `Brandon Julio Thenaro`,
-    siteUrl: `https://brandonjuliothenaro.my.id`,
+    siteUrl: siteUrl,
     twitter_id: `@brandon_julio_t`,
 
     facebook_url: `https://www.facebook.com/profile.php?id=100008724798107`,
@@ -28,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://brandonjuliothenaro.my.id`,
+        siteUrl: siteUrl,
       },
     },
 
@@ -36,7 +38,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         background_color: `#343a40`,
-        display: `standalone`,
+        display: `fullscreen`,
         icon: `src/images/favicon.webp`,
         lang: `en`,
         name: `Brandon Julio Thenaro's Website`,
@@ -62,10 +64,17 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-plugin-react-redux`,
+      options: {
+        pathToCreateStoreModule: "./src/state/createStore",
+      },
+    },
+
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://brandonjuliothenaro.my.id",
-        sitemap: "https://brandonjuliothenaro.my.id/sitemap.xml",
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
