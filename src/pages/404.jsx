@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 
 import "../styles/styles.scss"
 import { mapStateToProps, mapDispatchToProps } from "../state/createStore"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import  ChangeThemeButton  from "../components/change_theme_button"
 
 export default connect(
   mapStateToProps,
@@ -40,13 +40,7 @@ export default connect(
           </p>
 
           <div className="d-flex justify-content-center">
-            <button className="btn" onClick={toggleTheme}>
-              <FontAwesomeIcon
-                className={theme === "dark" ? "text-light" : ""}
-                icon={theme === "dark" ? "moon" : "sun"}
-                size="3x"
-              ></FontAwesomeIcon>
-            </button>
+            <ChangeThemeButton />
           </div>
         </main>
       </>

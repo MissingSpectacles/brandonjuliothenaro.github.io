@@ -14,12 +14,12 @@ module.exports = {
     siteUrl: siteUrl,
     twitter_id: `@brandon_julio_t`,
 
-    facebook_url: `https://www.facebook.com/profile.php?id=100008724798107`,
-    freeCodeCamp_url: `https://www.freecodecamp.org/brandon-julio-thenaro`,
-    github_url: `https://github.com/brandon-julio-t`,
-    instagram_url: `https://www.instagram.com/brandon.julio.t`,
-    linkedin_url: `https://www.linkedin.com/in/brandonjuliothenaro`,
-    twitter_url: `https://twitter.com/brandon_julio_t`,
+    facebook_url: `${siteUrl}/facebook`,
+    freeCodeCamp_url: `${siteUrl}/freecodecamp`,
+    github_url: `${siteUrl}/github`,
+    instagram_url: `${siteUrl}/instagram`,
+    linkedin_url: `${siteUrl}/linkedin`,
+    twitter_url: `${siteUrl}/twitter`,
   },
 
   plugins: [

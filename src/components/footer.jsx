@@ -48,7 +48,7 @@ export default memo(() => {
               <li>
                 <ExternalLink to={facebook_url}>
                   <FontAwesomeIcon
-                    icon={["fab", "facebook-square"]}
+                    icon={["fab", "facebook"]}
                     size="3x"
                   />
                 </ExternalLink>
@@ -60,7 +60,7 @@ export default memo(() => {
               </li>
               <li className="mx-1">
                 <ExternalLink to={github_url}>
-                  <FontAwesomeIcon icon={["fab", "github-square"]} size="3x" />
+                  <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
                 </ExternalLink>
               </li>
               <li className="mx-1">
@@ -75,7 +75,7 @@ export default memo(() => {
               </li>
               <li>
                 <ExternalLink to={twitter_url}>
-                  <FontAwesomeIcon icon={["fab", "twitter-square"]} size="3x" />
+                  <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" />
                 </ExternalLink>
               </li>
             </ul>

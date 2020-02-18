@@ -1,9 +1,9 @@
 import React, { memo } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
 
 import { mapStateToProps, mapDispatchToProps } from "../state/createStore"
+import ChangeThemeButton from "./change_theme_button"
 
 export default connect(
   mapStateToProps,
@@ -20,13 +20,7 @@ export default connect(
             Brandon Julio Thenaro
           </Link>
 
-          <button className="btn" onClick={toggleTheme}>
-            <FontAwesomeIcon
-              className={theme === "dark" ? "text-light" : ""}
-              icon={theme === "dark" ? "moon" : "sun"}
-              size="3x"
-            ></FontAwesomeIcon>
-          </button>
+          <ChangeThemeButton />
         </h1>
       </header>
 

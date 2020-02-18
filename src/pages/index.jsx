@@ -45,7 +45,7 @@ export default connect(mapStateToProps)(
           <p>Most loved programming languages: Python, Java.</p>
           <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
           <p>
-            <ExternalLink to="./resume.pdf">My Resume (PDF)</ExternalLink>
+            <ExternalLink to="/resume">My Resume (PDF)</ExternalLink>
           </p>
         </section>
 
