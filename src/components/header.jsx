@@ -1,30 +1,28 @@
 import React, { memo } from "react"
-import { Link } from "gatsby"
-import { connect } from "react-redux"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { mapStateToProps, mapDispatchToProps } from "../state/createStore"
 import ChangeThemeButton from "./change_theme_button"
+import Link from "./link"
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(
-  memo(({ theme, toggleTheme }) => (
-    <>
-      <header>
-        <h1 className="display-4 d-flex justify-content-between">
-          <Link
-            to="/"
-            className={theme === "dark" ? "text-light" : "text-dark"}
-          >
-            Brandon Julio Thenaro
-          </Link>
+export default memo(() => (
+  <>
+    <header className="d-flex justify-content-between">
+      <h1 className="display-4 d-flex align-items-center">
+        <Link
+          className="text-reset mr-2"
+          getProps={({ isCurrent }) =>
+            isCurrent ? { className: "d-none" } : {}
+          }
+          isInternal={true}
+          to="/"
+        >
+          <FontAwesomeIcon icon="arrow-left" />
+        </Link>
+        Brandon Julio Thenaro
+      </h1>
+      <ChangeThemeButton />
+    </header>
 
-          <ChangeThemeButton />
-        </h1>
-      </header>
-
-      <hr className="bg-light" />
-    </>
-  ))
-)
+    <hr className="bg-light" />
+  </>
+))

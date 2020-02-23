@@ -1,7 +1,7 @@
 import React, { memo } from "react"
 
 import Layout from "../components/layout"
-import ExternalLink from "../components/external_link"
+import ExternalLink from "../components/link"
 
 export default memo(() => (
   <Layout>

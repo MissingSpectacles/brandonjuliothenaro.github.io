@@ -1,9 +1,9 @@
 import React, { memo } from "react"
 import { connect } from "react-redux"
 
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
-import ExternalLink from "../components/external_link"
+import Link from "../components/link"
 import Layout from "../components/layout"
 import { mapStateToProps } from "../state/createStore"
 
@@ -37,15 +37,15 @@ export default connect(mapStateToProps)(
           <p>
             Currently living in Jakarta, Indonesia to study Information System
             at{" "}
-            <ExternalLink to="https://binus.ac.id">
+            <Link to="https://binus.ac.id">
               Binus University
-            </ExternalLink>
+            </Link>
             .
           </p>
           <p>Most loved programming languages: Python, Java.</p>
           <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
           <p>
-            <ExternalLink to="/resume">My Resume (PDF)</ExternalLink>
+            <Link to="/resume">My Resume (PDF)</Link>
           </p>
         </section>
 
@@ -82,10 +82,10 @@ export default connect(mapStateToProps)(
 
           <p>
             <Link
+              isInternal={true}
               to="/skills"
-              className={theme === "dark" ? "text-light" : "text-dark"}
             >
-              <u>Read more</u>
+              Read more
             </Link>
           </p>
         </section>
@@ -140,9 +140,9 @@ export default connect(mapStateToProps)(
                     <tr key={name}>
                       <td>{index + 1}</td>
                       <td>
-                        <ExternalLink to={url}>
+                        <Link to={url}>
                           {name.replace(/[-]/gi, " ")}
-                        </ExternalLink>
+                        </Link>
                       </td>
                       <td>{description}</td>
                     </tr>

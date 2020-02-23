@@ -2,7 +2,7 @@ import React, { memo } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { graphql, useStaticQuery } from "gatsby"
 
-import ExternalLink from "./external_link"
+import Link from "./link"
 
 export default memo(() => {
   const {
@@ -46,46 +46,41 @@ export default memo(() => {
 
             <ul className="list-unstyled d-flex justify-content-around">
               <li>
-                <ExternalLink to={facebook_url}>
-                  <FontAwesomeIcon
-                    icon={["fab", "facebook"]}
-                    size="3x"
-                  />
-                </ExternalLink>
+                <Link to={facebook_url} className="text-reset">
+                  <FontAwesomeIcon icon={["fab", "facebook"]} size="3x" />
+                </Link>
               </li>
               <li className="mx-1">
-                <ExternalLink to={freeCodeCamp_url}>
+                <Link to={freeCodeCamp_url} className="text-reset">
                   <FontAwesomeIcon icon={["fab", "free-code-camp"]} size="3x" />
-                </ExternalLink>
+                </Link>
               </li>
               <li className="mx-1">
-                <ExternalLink to={github_url}>
+                <Link to={github_url} className="text-reset">
                   <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
-                </ExternalLink>
+                </Link>
               </li>
               <li className="mx-1">
-                <ExternalLink to={instagram_url}>
+                <Link to={instagram_url} className="text-reset">
                   <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" />
-                </ExternalLink>
+                </Link>
               </li>
               <li className="mx-1">
-                <ExternalLink to={linkedin_url}>
+                <Link to={linkedin_url} className="text-reset">
                   <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
-                </ExternalLink>
+                </Link>
               </li>
               <li>
-                <ExternalLink to={twitter_url}>
+                <Link to={twitter_url} className="text-reset">
                   <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" />
-                </ExternalLink>
+                </Link>
               </li>
             </ul>
             <p>
               Email:{" "}
-              <ExternalLink
-                to={`mailto:${email}`}
-              >
+              <Link to={`mailto:${email}`} className="text-reset">
                 {email}
-              </ExternalLink>
+              </Link>
             </p>
           </section>
 
@@ -94,37 +89,44 @@ export default memo(() => {
               <h2>Credits</h2>
             </header>
 
-            <ul className="list-unstyled">
-              <li>
-                <ExternalLink to="https://binus.ac.id">Binus</ExternalLink>
-              </li>
-              <li>
-                <ExternalLink to="https://fontawesome.com/">
-                  Font Awesome
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink to="https://getbootstrap.com">
-                  Bootstrap
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink to="https://www.gatsbyjs.org">
-                  Gatsby
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink to="https://www.jetbrains.com">
-                  JetBrains
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink to="https://www.netlify.com">
-                  Netlify
-                </ExternalLink>
-              </li>
-              <li>Mom &hearts; & Dad &hearts;</li>
-              <li>And you, random citizen</li>
+            <ul className="row list-unstyled">
+              <div className="col">
+                <li>
+                  <Link to="https://binus.ac.id" className="text-reset">
+                    Binus
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://fontawesome.com/" className="text-reset">
+                    Font Awesome
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://getbootstrap.com" className="text-reset">
+                    Bootstrap
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://www.gatsbyjs.org" className="text-reset">
+                    Gatsby
+                  </Link>
+                </li>
+              </div>
+
+              <div className="col">
+                <li>
+                  <Link to="https://www.jetbrains.com" className="text-reset">
+                    JetBrains
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://www.netlify.com" className="text-reset">
+                    Netlify
+                  </Link>
+                </li>
+                <li>Mom &hearts; & Dad &hearts;</li>
+                <li>And you, random citizen</li>
+              </div>
             </ul>
           </section>
         </div>
@@ -134,16 +136,13 @@ export default memo(() => {
           Thenaro. All rights reserved.
           <br />
           Developed with{" "}
-          <ExternalLink to="https://www.gatsbyjs.org/" className="text-muted">
+          <Link to="https://www.gatsbyjs.org/" className="text-reset">
             Gatsby
-          </ExternalLink>
+          </Link>
           {" and "}
-          <ExternalLink
-            to="https://www.jetbrains.com/webstorm"
-            className="text-muted"
-          >
+          <Link to="https://www.jetbrains.com/webstorm" className="text-reset">
             WebStorm
-          </ExternalLink>
+          </Link>
         </p>
       </footer>
     </>
