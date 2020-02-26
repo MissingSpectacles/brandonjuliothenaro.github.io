@@ -46,33 +46,63 @@ export default memo(() => {
 
             <ul className="list-unstyled d-flex justify-content-around">
               <li>
-                <Link to={facebook_url} className="text-reset">
+                <Link
+                  aria-label="Facebook"
+                  className="text-reset"
+                  to={facebook_url}
+                >
                   <FontAwesomeIcon icon={["fab", "facebook"]} size="3x" />
+                  <span className="sr-only">Facebook</span>
                 </Link>
               </li>
               <li className="mx-1">
-                <Link to={freeCodeCamp_url} className="text-reset">
+                <Link
+                  aria-label="freeCodeCamp"
+                  className="text-reset"
+                  to={freeCodeCamp_url}
+                >
                   <FontAwesomeIcon icon={["fab", "free-code-camp"]} size="3x" />
+                  <span className="sr-only">freeCodeCamp</span>
                 </Link>
               </li>
               <li className="mx-1">
-                <Link to={github_url} className="text-reset">
+                <Link
+                  aria-label="GitHub"
+                  className="text-reset"
+                  to={github_url}
+                >
                   <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
+                  <span className="sr-only">GitHub</span>
                 </Link>
               </li>
               <li className="mx-1">
-                <Link to={instagram_url} className="text-reset">
+                <Link
+                  aria-label="Instagram"
+                  className="text-reset"
+                  to={instagram_url}
+                >
                   <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" />
+                  <span className="sr-only">Instagram</span>
                 </Link>
               </li>
               <li className="mx-1">
-                <Link to={linkedin_url} className="text-reset">
+                <Link
+                  aria-label="LinkedIn"
+                  className="text-reset"
+                  to={linkedin_url}
+                >
                   <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
+                  <span className="sr-only">LinkedIn</span>
                 </Link>
               </li>
               <li>
-                <Link to={twitter_url} className="text-reset">
+                <Link
+                  aria-label="Twitter"
+                  className="text-reset"
+                  to={twitter_url}
+                >
                   <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" />
+                  <span className="sr-only">Twitter</span>
                 </Link>
               </li>
             </ul>
@@ -89,8 +119,8 @@ export default memo(() => {
               <h2>Credits</h2>
             </header>
 
-            <ul className="row list-unstyled">
-              <div className="col">
+            <div className="row">
+              <ul className="col list-unstyled">
                 <li>
                   <Link to="https://binus.ac.id" className="text-reset">
                     Binus
@@ -111,9 +141,9 @@ export default memo(() => {
                     Gatsby
                   </Link>
                 </li>
-              </div>
+              </ul>
 
-              <div className="col">
+              <ul className="col list-unstyled">
                 <li>
                   <Link to="https://www.jetbrains.com" className="text-reset">
                     JetBrains
@@ -126,8 +156,8 @@ export default memo(() => {
                 </li>
                 <li>Mom &hearts; & Dad &hearts;</li>
                 <li>And you, random citizen</li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </section>
         </div>
 

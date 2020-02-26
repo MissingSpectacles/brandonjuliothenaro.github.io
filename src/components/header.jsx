@@ -15,8 +15,10 @@ export default memo(() => (
           }
           isInternal={true}
           to="/"
+          aria-label="Return to previous page button"
         >
           <FontAwesomeIcon icon="arrow-left" />
+          <span className="sr-only">Return to previous page button</span>
         </Link>
         Brandon Julio Thenaro
       </h1>
