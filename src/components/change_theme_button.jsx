@@ -2,7 +2,7 @@ import React, { memo } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { connect } from "react-redux"
 
-import { mapDispatchToProps, mapStateToProps } from "../state/createStore"
+import { mapDispatchToProps, mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(
   mapStateToProps,
@@ -11,8 +11,8 @@ export default connect(
   memo(({ theme, toggleTheme }) => (
     <button className="btn" onClick={toggleTheme}>
       <FontAwesomeIcon
-        className={theme === "dark" ? "text-light" : ""}
-        icon={theme === "dark" ? "sun" : "moon"}
+        className={theme === THEME.DARK ? "text-light" : ""}
+        icon={theme === THEME.DARK ? "sun" : "moon"}
         size="3x"
       ></FontAwesomeIcon>
     </button>

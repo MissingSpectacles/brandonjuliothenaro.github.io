@@ -3,7 +3,7 @@ import React, { memo } from "react"
 import { connect } from "react-redux"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { mapStateToProps } from "../state/createStore"
+import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
   memo(({ theme }) => {
@@ -30,7 +30,7 @@ export default connect(mapStateToProps)(
         <html lang="en" />
         <body
           className={`container px-md-5 py-5 my-md-1 ${
-            theme === "dark" ? "bg-dark text-light" : ""
+            theme === THEME.DARK ? "bg-dark text-light" : ""
           }`}
         />
 

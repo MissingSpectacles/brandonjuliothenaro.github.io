@@ -1,24 +1,21 @@
 import Helmet from "react-helmet"
 import React, { memo } from "react"
-import { Link } from "gatsby"
 import { connect } from "react-redux"
 
 import "../styles/styles.scss"
-import { mapStateToProps, mapDispatchToProps } from "../state/createStore"
-import  ChangeThemeButton  from "../components/change_theme_button"
+import ChangeThemeButton from "../components/change_theme_button"
+import Link from "../components/link"
+import { mapStateToProps, THEME } from "../state/createStore"
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(
-  memo(({ theme, toggleTheme }) => {
+export default connect(mapStateToProps)(
+  memo(({ theme }) => {
     return (
       <>
         <Helmet>
           <html lang="en" className="h-100" />
           <body
             className={`h-100 d-flex justify-content-center align-items-center ${
-              theme === "dark" ? "bg-dark text-light" : ""
+              theme === THEME.DARK ? "bg-dark text-light" : ""
             }`}
           />
 
@@ -31,11 +28,8 @@ export default connect(
 
         <main className="container">
           <p className="display-4 text-center">
-            <Link
-              to="/"
-              className={theme === "dark" ? "text-light" : "text-dark"}
-            >
-              <u>Click here to return</u>
+            <Link to="/" isInternal={true}>
+              Click here to return
             </Link>
           </p>
 

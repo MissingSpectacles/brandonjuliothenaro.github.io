@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Link from "../components/link"
 import Layout from "../components/layout"
-import { mapStateToProps } from "../state/createStore"
+import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
   memo(({ theme }) => (
@@ -97,7 +97,7 @@ export default connect(mapStateToProps)(
 
           <table
             className={`table table-responsive ${
-              theme === "dark" ? "table-dark" : ""
+              theme === THEME.DARK ? "table-dark" : ""
             }`}
           >
             <thead>

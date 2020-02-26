@@ -1,11 +1,16 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit"
 
+const THEME = {
+  DARK: "DARK",
+  LIGHT: "LIGHT",
+}
+
 const themeSlice = createSlice({
   name: "theme",
-  initialState: { theme: "dark" },
+  initialState: { theme: THEME.DARK },
   reducers: {
     toggleTheme: state => ({
-      theme: state.theme === "light" ? "dark" : "light",
+      theme: state.theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT,
     }),
   },
 })
@@ -19,4 +24,4 @@ export default preloadedState =>
     preloadedState: preloadedState,
   })
 
-export { mapStateToProps, mapDispatchToProps }
+export { mapStateToProps, mapDispatchToProps, THEME }

@@ -59,6 +59,7 @@ export default memo(() => (
         <ul className="pl-3">
           <li>MySQL</li>
           <li>PostgreSQL</li>
+          <li>SQL Server</li>
           <li>SQLite</li>
         </ul>
       </section>
@@ -82,6 +83,7 @@ export default memo(() => (
             <li>WebStorm</li>
           </ul>
           <li>Microsoft Office 365</li>
+          <li>SQL Server Management Studio</li>
           <li>Visual Studio Code</li>
           <li>Visual Studio IDE</li>
         </ul>
