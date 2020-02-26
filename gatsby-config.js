@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-preact`,
 
     {
       resolve: `gatsby-plugin-canonical-urls`,
