@@ -1,7 +1,6 @@
 import React, { memo } from "react"
-import { connect } from "react-redux"
-
 import { StaticQuery, graphql } from "gatsby"
+import { connect } from "react-redux"
 
 import Link from "../components/link"
 import Layout from "../components/layout"
@@ -29,18 +28,23 @@ export default connect(mapStateToProps)(
             striving to be software engineer.
           </p>
           <p>
-            I am introverted, keeps everything to myself, code and learn new
-            tech stack on spare time. Loves memes and movies such as Joker and
-            John Wick, prefers to watch in IMAX. Used to play games, mostly
+            I am introverted, keeps everything to myself, hates public speaking
+            and presentation, code and learn new tech stack on spare time. Loves
+            memes and movies such as Joker, John Wick, IP Man, Sonic the
+            Hedgehog, etc., prefers to watch in IMAX. Used to play games, mostly
             offline, currently on hiatus because of my weak hardware.
           </p>
           <p>
+            Spent most of my childhood with computer to play games. Had many
+            issues with the computer such as bad sector, corrupted windows,
+            outdated drivers, system incompatibility, viruses, etc. because it
+            was a low-end machine. Because of those issues, I'm now unwavering
+            in face of errors. Although sometimes errors are frustrating but I
+            will come back to solve it.
+          </p>
+          <p>
             Currently living in Jakarta, Indonesia to study Information System
-            at{" "}
-            <Link to="https://binus.ac.id">
-              Binus University
-            </Link>
-            .
+            at <Link to="https://binus.ac.id">Binus University</Link>.
           </p>
           <p>Most loved programming languages: Python, Java.</p>
           <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
@@ -81,10 +85,7 @@ export default connect(mapStateToProps)(
           </div>
 
           <p>
-            <Link
-              isInternal={true}
-              to="/skills"
-            >
+            <Link isInternal={true} to="/skills">
               Read more
             </Link>
           </p>
@@ -140,9 +141,7 @@ export default connect(mapStateToProps)(
                     <tr key={name}>
                       <td>{index + 1}</td>
                       <td>
-                        <Link to={url}>
-                          {name.replace(/[-]/gi, " ")}
-                        </Link>
+                        <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
                       </td>
                       <td>{description}</td>
                     </tr>

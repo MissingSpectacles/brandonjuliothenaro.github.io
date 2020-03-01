@@ -6,7 +6,7 @@ import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
   memo(({ children, className, getProps, isInternal, theme, to }) => {
-    className = className || (theme === THEME.DARK ? "text-info" : "")
+    className = className || (theme === THEME.DARK ? "text-dark-link" : "")
 
     return isInternal ? (
       <Link to={to} getProps={getProps} className={className}>
