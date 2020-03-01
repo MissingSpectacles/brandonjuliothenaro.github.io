@@ -9,4 +9,8 @@ $text-dark-link-color: #00B9FF;
   color: $text-dark-link-color;
 }
 
+ul {
+  @extend .pl-3;
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";

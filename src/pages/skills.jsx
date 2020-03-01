@@ -11,7 +11,7 @@ export default memo(() => (
           <h2>Programming Languages</h2>
         </header>
 
-        <ul className="pl-3">
+        <ul>
           <li>C#</li>
           <li>C/C++</li>
           <li>Dart</li>
@@ -32,16 +32,16 @@ export default memo(() => (
           <h2>Frameworks</h2>
         </header>
 
-        <ul className="pl-3">
+        <ul>
           <li>Frontend</li>
-          <ul className="pl-3">
+          <ul>
             <li>Bootstrap</li>
             <li>Flutter</li>
             <li>Gatsby</li>
             <li>React</li>
           </ul>
           <li>Backend</li>
-          <ul className="pl-3">
+          <ul>
             <li>ASP.NET Core</li>
             <li>Flask</li>
             <li>Laravel</li>
@@ -56,7 +56,7 @@ export default memo(() => (
           <h2>Database</h2>
         </header>
 
-        <ul className="pl-3">
+        <ul>
           <li>MySQL</li>
           <li>PostgreSQL</li>
           <li>SQL Server</li>
@@ -69,11 +69,11 @@ export default memo(() => (
           <h2>Tools</h2>
         </header>
 
-        <ul className="pl-3">
+        <ul>
           <li>Adobe Xd</li>
           <li>GitHub Desktop</li>
           <li>JetBrain IDEs</li>
-          <ul className="pl-3">
+          <ul>
             <li>Android Studio</li>
             <li>DataGrip</li>
             <li>IntelliJ IDEA</li>
@@ -94,7 +94,7 @@ export default memo(() => (
           <h2>Other</h2>
         </header>
 
-        <ul className="pl-3">
+        <ul>
           <li>
             <ExternalLink to="https://basecamp.com/">Basecamp</ExternalLink>
           </li>

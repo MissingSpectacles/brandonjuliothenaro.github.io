@@ -64,7 +64,7 @@ export default connect(mapStateToProps)(
                 <h3>Programming Languages</h3>
               </header>
 
-              <ul className="pl-3">
+              <ul>
                 <li>Java</li>
                 <li>JavaScript</li>
                 <li>Python</li>
@@ -76,7 +76,7 @@ export default connect(mapStateToProps)(
                 <h3>Frameworks</h3>
               </header>
 
-              <ul className="pl-3">
+              <ul>
                 <li>Laravel</li>
                 <li>React</li>
                 <li>Ruby on Rails</li>
