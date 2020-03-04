@@ -44,7 +44,7 @@ export default memo(() => {
               <h2>Contact</h2>
             </header>
 
-            <ul className="list-unstyled d-flex justify-content-around">
+            <ul className="list-unstyled d-flex justify-content-around text-center">
               <li>
                 <Link
                   aria-label="Facebook"

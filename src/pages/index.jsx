@@ -29,10 +29,15 @@ export default connect(mapStateToProps)(
           </p>
           <p>
             I am introverted, keeps everything to myself, hates public speaking
-            and presentation, code and learn new tech stack on spare time. Loves
-            memes and movies such as Joker, John Wick, IP Man, Sonic the
-            Hedgehog, etc., prefers to watch in IMAX. Used to play games, mostly
-            offline, currently on hiatus because of my weak hardware.
+            and presentation, code and learn new tech stack on spare time.
+          </p>
+          <p>
+            Loves memes and movies such as Joker, John Wick, IP Man, Sonic the
+            Hedgehog, etc., prefers to watch in IMAX.
+          </p>
+          <p>
+            Used to play games, mostly offline, currently on hiatus because of
+            my weak hardware.
           </p>
           <p>
             Spent most of my childhood with computer to play games. Had many
@@ -68,6 +73,8 @@ export default connect(mapStateToProps)(
                 <li>Java</li>
                 <li>JavaScript</li>
                 <li>Python</li>
+                <li>Ruby</li>
+                <li>SQL</li>
               </ul>
             </section>
 
@@ -77,9 +84,11 @@ export default connect(mapStateToProps)(
               </header>
 
               <ul>
+                <li>Flask</li>
                 <li>Laravel</li>
                 <li>React</li>
                 <li>Ruby on Rails</li>
+                <li>Spring Boot</li>
               </ul>
             </section>
           </div>
