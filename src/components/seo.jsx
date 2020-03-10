@@ -45,9 +45,7 @@ export default connect(mapStateToProps)(
         <title>Brandon Julio Thenaro</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">
-          {structured_data}
-        </script>
+        <script type="application/ld+json">{structured_data}</script>
 
         {/* Search Engine */}
         <meta name="description" content={description} />
@@ -63,6 +61,10 @@ export default connect(mapStateToProps)(
         <meta name="twitter:description" content={description} />
         <meta name="twitter:site" content={twitter_id} />
         <meta name="twitter:title" content={name} />
+        <meta
+          name="twitter:image"
+          content="https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
+        />
 
         {/* Open Graph general (Facebook, Pinterest & Google+) */}
         <meta name="og:description" content={description} />
@@ -71,6 +73,14 @@ export default connect(mapStateToProps)(
         <meta name="og:title" content={name} />
         <meta name="og:type" content="website" />
         <meta name="og:url" content={siteUrl} />
+        <meta
+          name="og:image"
+          content="https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
+        />
+        <meta
+          name="og:image:alt"
+          content="An image of a dog, which is a popular meme under the name of 'doge'."
+        />
       </Helmet>
     )
   })

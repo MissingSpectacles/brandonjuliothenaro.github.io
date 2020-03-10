@@ -9,7 +9,9 @@ const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
 module.exports = {
   siteMetadata: {
-    description: `Mom, I'm on the internet!`,
+    description: `I am a programmer who can write code in multiple programming
+            languages and frameworks for front-end, back-end, database, and
+            CI/CD with best practices in mind.`,
     name: `Brandon Julio Thenaro`,
     siteUrl: siteUrl,
     twitter_id: `@brandon_julio_t`,

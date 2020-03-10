@@ -10,6 +10,13 @@
   "url": "https://www.brandonjuliothenaro.my.id",
   "jobTitle": "Undergraduate Student",
   "telephone": "+62-851-5522-8431",
+  "image": {
+    "@type": "ImageObject",
+    "@id": "https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg",
+    "caption": "An image of a dog, which is a popular meme under the name of 'doge'.",
+    "url": "https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg",
+    "identifier": "https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
+  },
   "email": [
     "brandon.julio.t@icloud.com",
     "bandut2036@gmail.com",
@@ -23,6 +30,7 @@
     "email": "pmb@binus.edu",
     "identifier": "https://binus.ac.id",
     "legalName": "Bina Nusantara University",
+    "logo": "https://binus.ac.id/wp-content/uploads/2019/04/logo-binus.svg",
     "url": "https://binus.ac.id",
     "telephone": [
       "+62-21-534-5830",

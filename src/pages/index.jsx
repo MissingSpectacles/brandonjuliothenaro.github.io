@@ -14,7 +14,7 @@ export default connect(mapStateToProps)(
           <p className="lead">
             I am a programmer who can write code in multiple programming
             languages and frameworks for front-end, back-end, database, and
-            CI/CD.
+            CI/CD with best practices in mind.
           </p>
         </section>
 
