@@ -8,7 +8,6 @@ export default memo(() => {
   const {
     site: {
       siteMetadata: {
-        email,
         facebook_url,
         freeCodeCamp_url,
         github_url,
@@ -21,7 +20,6 @@ export default memo(() => {
     query Contacts {
       site {
         siteMetadata {
-          email
           facebook_url
           freeCodeCamp_url
           github_url
@@ -41,58 +39,54 @@ export default memo(() => {
         <div className="row">
           <section className="col">
             <header>
-              <h2>Contact</h2>
+              <h2>Social Medias</h2>
             </header>
 
-            <ul className="list-unstyled d-flex justify-content-around text-center">
+            <ul className="list-unstyled">
               <li>
                 <Link
                   aria-label="Facebook"
                   className="text-reset"
                   to={facebook_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "facebook"]} size="3x" />
-                  <span className="sr-only">Facebook</span>
+                  <FontAwesomeIcon icon={["fab", "facebook"]} /> Facebook
                 </Link>
               </li>
-              <li className="mx-1">
+              <li>
                 <Link
                   aria-label="freeCodeCamp"
                   className="text-reset"
                   to={freeCodeCamp_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "free-code-camp"]} size="3x" />
-                  <span className="sr-only">freeCodeCamp</span>
+                  <FontAwesomeIcon icon={["fab", "free-code-camp"]} />{" "}
+                  freeCodeCamp
                 </Link>
               </li>
-              <li className="mx-1">
+              <li>
                 <Link
                   aria-label="GitHub"
                   className="text-reset"
                   to={github_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
-                  <span className="sr-only">GitHub</span>
+                  <FontAwesomeIcon icon={["fab", "github"]} /> GitHub
                 </Link>
               </li>
-              <li className="mx-1">
+              <li>
                 <Link
                   aria-label="Instagram"
                   className="text-reset"
                   to={instagram_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} size="3x" />
-                  <span className="sr-only">Instagram</span>
+                  <FontAwesomeIcon icon={["fab", "instagram"]} /> Instagram
                 </Link>
               </li>
-              <li className="mx-1">
+              <li>
                 <Link
                   aria-label="LinkedIn"
                   className="text-reset"
                   to={linkedin_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
-                  <span className="sr-only">LinkedIn</span>
+                  <FontAwesomeIcon icon={["fab", "linkedin"]} /> LinkedIn
                 </Link>
               </li>
               <li>
@@ -101,17 +95,10 @@ export default memo(() => {
                   className="text-reset"
                   to={twitter_url}
                 >
-                  <FontAwesomeIcon icon={["fab", "twitter"]} size="3x" />
-                  <span className="sr-only">Twitter</span>
+                  <FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter
                 </Link>
               </li>
             </ul>
-            <p>
-              Email:{" "}
-              <Link to={`mailto:${email}`} className="text-reset">
-                {email}
-              </Link>
-            </p>
           </section>
 
           <section className="col">
@@ -119,45 +106,40 @@ export default memo(() => {
               <h2>Credits</h2>
             </header>
 
-            <div className="row">
-              <ul className="col list-unstyled">
-                <li>
-                  <Link to="https://binus.ac.id" className="text-reset">
-                    Binus
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://fontawesome.com/" className="text-reset">
-                    Font Awesome
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://getbootstrap.com" className="text-reset">
-                    Bootstrap
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://www.gatsbyjs.org" className="text-reset">
-                    Gatsby
-                  </Link>
-                </li>
-              </ul>
-
-              <ul className="col list-unstyled">
-                <li>
-                  <Link to="https://www.jetbrains.com" className="text-reset">
-                    JetBrains
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://www.netlify.com" className="text-reset">
-                    Netlify
-                  </Link>
-                </li>
-                <li>Mom &hearts; & Dad &hearts;</li>
-                <li>And you, random citizen</li>
-              </ul>
-            </div>
+            <ul className="list-unstyled">
+              <li>
+                <Link to="https://binus.ac.id" className="text-reset">
+                  Binus
+                </Link>
+              </li>
+              <li>
+                <Link to="https://fontawesome.com/" className="text-reset">
+                  Font Awesome
+                </Link>
+              </li>
+              <li>
+                <Link to="https://getbootstrap.com" className="text-reset">
+                  Bootstrap
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.gatsbyjs.org" className="text-reset">
+                  Gatsby
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.jetbrains.com" className="text-reset">
+                  JetBrains
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.netlify.com" className="text-reset">
+                  Netlify
+                </Link>
+              </li>
+              <li>Mom &hearts; & Dad &hearts;</li>
+              <li>And you, random citizen</li>
+            </ul>
           </section>
         </div>
 
@@ -168,8 +150,8 @@ export default memo(() => {
           Developed with{" "}
           <Link to="https://www.gatsbyjs.org/" className="text-reset">
             Gatsby
-          </Link>
-          {" and "}
+          </Link>{" "}
+          and{" "}
           <Link to="https://www.jetbrains.com/webstorm" className="text-reset">
             WebStorm
           </Link>

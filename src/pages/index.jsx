@@ -105,6 +105,8 @@ export default connect(mapStateToProps)(
             <h2>GitHub Projects</h2>
           </header>
 
+          <p>The following table shows my 5 latest repositories on GitHub.</p>
+
           <table
             className={`table table-responsive ${
               theme === THEME.DARK ? "table-dark" : ""

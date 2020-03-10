@@ -4,22 +4,21 @@ require("dotenv").config({
 
 const path = require(`path`)
 
-const siteUrl = `https://www.brandonjuliothenaro.my.id`
+const site_url = `https://www.brandonjuliothenaro.my.id`
 
 module.exports = {
   siteMetadata: {
     description: `Mom, I'm on the internet!`,
-    email: `brandon.julio.t@icloud.com`,
     name: `Brandon Julio Thenaro`,
-    siteUrl: siteUrl,
+    site_url: site_url,
     twitter_id: `@brandon_julio_t`,
 
-    facebook_url: `${siteUrl}/facebook`,
-    freeCodeCamp_url: `${siteUrl}/freecodecamp`,
-    github_url: `${siteUrl}/github`,
-    instagram_url: `${siteUrl}/instagram`,
-    linkedin_url: `${siteUrl}/linkedin`,
-    twitter_url: `${siteUrl}/twitter`,
+    facebook_url: `${site_url}/facebook`,
+    freeCodeCamp_url: `${site_url}/freecodecamp`,
+    github_url: `${site_url}/github`,
+    instagram_url: `${site_url}/instagram`,
+    linkedin_url: `${site_url}/linkedin`,
+    twitter_url: `${site_url}/twitter`,
   },
 
   plugins: [
@@ -31,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: siteUrl,
+        siteUrl: site_url,
       },
     },
 
@@ -74,8 +73,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: siteUrl,
-        sitemap: `${siteUrl}/sitemap.xml`,
+        host: site_url,
+        sitemap: `${site_url}/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -99,6 +98,13 @@ module.exports = {
             }
           }
         `,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
   ],

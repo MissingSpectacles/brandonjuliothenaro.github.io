@@ -1,6 +1,7 @@
 import React, { memo } from "react"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { mapStateToProps, THEME } from "../state/createStore"
 
@@ -13,14 +14,14 @@ export default connect(mapStateToProps)(
         {children}
       </Link>
     ) : (
-      <a
+      <OutboundLink
         href={to}
         className={className}
         target="_blank"
         rel="noreferrer noopener"
       >
         {children}
-      </a>
+      </OutboundLink>
     )
   })
 )
