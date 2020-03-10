@@ -42,7 +42,7 @@ export default memo(() => {
               <h2>Social Medias</h2>
             </header>
 
-            <ul className="list-unstyled">
+            <ul className="list-unstyled pl-0">
               <li>
                 <Link
                   aria-label="Facebook"
@@ -106,7 +106,7 @@ export default memo(() => {
               <h2>Credits</h2>
             </header>
 
-            <ul className="list-unstyled">
+            <ul className="list-unstyled pl-0">
               <li>
                 <Link to="https://binus.ac.id" className="text-reset">
                   Binus
