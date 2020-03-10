@@ -12,8 +12,9 @@ export default connect(mapStateToProps)(
       <article>
         <section>
           <p className="lead">
-            I write code for back-end and front-end, integrate databases, CI/CD,
-            and deploy it to the cloud.
+            I am a programmer who can write code in multiple programming
+            languages and frameworks for front-end, back-end, database, and
+            CI/CD.
           </p>
         </section>
 
@@ -54,7 +55,7 @@ export default connect(mapStateToProps)(
           <p>Most loved programming languages: Python, Java.</p>
           <p>Most loved frameworks: Ruby on Rails, Gatsby, Flutter.</p>
           <p>
-            <Link to="/resume">My Resume (PDF)</Link>
+            <Link to="/resume.pdf">My Resume (PDF)</Link>
           </p>
         </section>
 
@@ -95,7 +96,7 @@ export default connect(mapStateToProps)(
 
           <p>
             <Link isInternal={true} to="/skills">
-              Read more
+              Full list of my developer skills.
             </Link>
           </p>
         </section>
