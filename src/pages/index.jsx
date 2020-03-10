@@ -107,47 +107,48 @@ export default connect(mapStateToProps)(
 
           <p>The following table shows my 5 latest repositories on GitHub.</p>
 
-          <table
-            className={`table table-responsive ${
-              theme === THEME.DARK ? "table-dark" : ""
-            }`}
-          >
-            <thead>
+          <div className="table-responsive">
+            <table
+              className={`table ${
+                theme === THEME.DARK ? "table-dark" : ""
+              }`}
+            >
+              <thead>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
               </tr>
-            </thead>
-            {/* GraphQL query matches localhost:8000/___graphql */}
-            <StaticQuery
-              query={graphql`
-                query GitHubAPI {
-                  githubData {
-                    data {
-                      viewer {
-                        repositories {
-                          nodes {
-                            url
-                            name
-                            description
+              </thead>
+              {/* GraphQL query matches localhost:8000/___graphql */}
+              <StaticQuery
+                query={graphql`
+                          query GitHubAPI {
+                            githubData {
+                              data {
+                                viewer {
+                                  repositories {
+                                    nodes {
+                                      url
+                                      name
+                                      description
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
-                        }
-                      }
-                    }
-                  }
-                }
-              `}
-              render={({
-                githubData: {
-                  data: {
-                    viewer: {
-                      repositories: { nodes },
+                        `}
+                render={({
+                  githubData: {
+                    data: {
+                      viewer: {
+                        repositories: { nodes },
+                      },
                     },
                   },
-                },
-              }) => (
-                <tbody>
+                }) => (
+                  <tbody>
                   {nodes.map(({ name, url, description }, index) => (
                     <tr key={name}>
                       <td>{index + 1}</td>
@@ -157,10 +158,11 @@ export default connect(mapStateToProps)(
                       <td>{description}</td>
                     </tr>
                   ))}
-                </tbody>
-              )}
-            />
-          </table>
+                  </tbody>
+                )}
+              />
+            </table>
+          </div>
         </section>
       </article>
     </Layout>
