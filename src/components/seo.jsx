@@ -19,18 +19,18 @@ export default connect(mapStateToProps)(
         },
       },
     } = useStaticQuery(graphql`
-      query name {
-        site {
-          siteMetadata {
-            name
-            description
-            name
-            siteUrl
-            twitter_id
-            structured_data
-          }
+        query name {
+            site {
+                siteMetadata {
+                    name
+                    description
+                    name
+                    siteUrl
+                    twitter_id
+                    structured_data
+                }
+            }
         }
-      }
     `)
 
     return (
@@ -65,22 +65,28 @@ export default connect(mapStateToProps)(
           name="twitter:image"
           content="https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
         />
+        <meta
+          name="twitter:image:alt"
+          content="An image of a dog, which is a popular meme under the name of 'doge'."
+        />
 
         {/* Open Graph general (Facebook, Pinterest & Google+) */}
-        <meta name="og:description" content={description} />
-        <meta name="og:locale" content="en" />
-        <meta name="og:site_name" content={name} />
-        <meta name="og:title" content={name} />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content={siteUrl} />
+        <meta property="og:description" content={description} />
+        <meta property="og:locale" content="en" />
+        <meta property="og:site_name" content={name} />
+        <meta property="og:title" content={name} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
         <meta
-          name="og:image"
+          property="og:image"
           content="https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg"
         />
         <meta
-          name="og:image:alt"
+          property="og:image:alt"
           content="An image of a dog, which is a popular meme under the name of 'doge'."
         />
+
+        <meta property="fb:app_id" content="440691499995681" />
       </Helmet>
     )
   })
