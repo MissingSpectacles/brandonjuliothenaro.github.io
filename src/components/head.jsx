@@ -9,7 +9,7 @@ export default connect(mapStateToProps)(
   memo(({ theme }) => {
     const {
       site: {
-        siteMetadata: { description, name, siteUrl: site_url, twitter_id },
+        siteMetadata: { description, name, siteUrl, twitter_id },
       },
     } = useStaticQuery(graphql`
       query name {
@@ -18,7 +18,7 @@ export default connect(mapStateToProps)(
             name
             description
             name
-            site_url
+            siteUrl
             twitter_id
           }
         }
@@ -54,7 +54,7 @@ export default connect(mapStateToProps)(
         <meta name="og:site_name" content={name} />
         <meta name="og:title" content={name} />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content={site_url} />
+        <meta name="og:url" content={siteUrl} />
       </Helmet>
     )
   })

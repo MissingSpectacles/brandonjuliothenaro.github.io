@@ -4,21 +4,21 @@ require("dotenv").config({
 
 const path = require(`path`)
 
-const site_url = `https://www.brandonjuliothenaro.my.id`
+const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
 module.exports = {
   siteMetadata: {
     description: `Mom, I'm on the internet!`,
     name: `Brandon Julio Thenaro`,
-    site_url: site_url,
+    siteUrl: siteUrl,
     twitter_id: `@brandon_julio_t`,
 
-    facebook_url: `${site_url}/facebook`,
-    freeCodeCamp_url: `${site_url}/freecodecamp`,
-    github_url: `${site_url}/github`,
-    instagram_url: `${site_url}/instagram`,
-    linkedin_url: `${site_url}/linkedin`,
-    twitter_url: `${site_url}/twitter`,
+    facebook_url: `${siteUrl}/facebook`,
+    freeCodeCamp_url: `${siteUrl}/freecodecamp`,
+    github_url: `${siteUrl}/github`,
+    instagram_url: `${siteUrl}/instagram`,
+    linkedin_url: `${siteUrl}/linkedin`,
+    twitter_url: `${siteUrl}/twitter`,
   },
 
   plugins: [
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: site_url,
+        siteUrl: siteUrl,
       },
     },
 
@@ -73,8 +73,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: site_url,
-        sitemap: `${site_url}/sitemap.xml`,
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
