@@ -26,7 +26,7 @@ export default connect(mapStateToProps)(
     `)
 
     return (
-      <Helmet >
+      <Helmet>
         <html lang="en" />
         <body
           className={`container px-md-5 py-5 my-md-1 ${
@@ -34,8 +34,11 @@ export default connect(mapStateToProps)(
           }`}
         />
 
+        <title>Brandon Julio Thenaro</title>
+
         {/* Search Engine */}
         <meta name="description" content={description} />
+        <meta name="author" content="Brandon Julio Thenaro" />
 
         {/* Schema.org for Google */}
         <meta itemProp="description" content={description} />
