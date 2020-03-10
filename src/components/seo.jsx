@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { mapStateToProps, THEME } from "../state/createStore"
+// import StructuredData from "../../static/structured_data"
 
 export default connect(mapStateToProps)(
   memo(({ theme }) => {
@@ -38,17 +39,55 @@ export default connect(mapStateToProps)(
 
         {/* JSON-LD */}
         <script type="application/ld+json">
-          {{
-            "@context": "http://schema.org/",
-            "@type": "Person",
-            name: "Brandon Julio Thenaro",
-            jobTitle: "Undergraduate Student",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Jakarta",
-              addressRegion: "West Jakarta",
-            },
-          }}
+          {`{
+  "@context": "https://schema.org/",
+  "@id": "https://www.brandonjuliothenaro.my.id",
+  "@type": "Person",
+  "name": "Brandon Julio Thenaro",
+  "birthDate": "2001-07-07",
+  "gender": "male",
+  "workLocation": "Jakarta",
+  "identifier": "https://www.brandonjuliothenaro.my.id",
+  "url": "https://www.brandonjuliothenaro.my.id",
+  "jobTitle": "Undergraduate Student",
+  "telephone": "+62-851-5522-8431",
+  "email": [
+    "brandon.julio.t@icloud.com",
+    "bandut2036@gmail.com",
+    "brandon.thenaro@binus.ac.id"
+  ],
+  "affiliation": {
+    "@type": "Organization",
+    "@id": "https://binus.ac.id",
+    "name": "BINUS UNIVERSITY",
+    "brand": "Binus University",
+    "email": "pmb@binus.edu",
+    "identifier": "https://binus.ac.id",
+    "legalName": "Bina Nusantara University",
+    "url": "https://binus.ac.id",
+    "telephone": [
+      "+62-21-534-5830",
+      "+62-21-535-0660"
+    ],
+    "alternateName": [
+      "Bina Nusantara University",
+      "BINUS University",
+      "Binus University"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "@id": "https://binus.ac.id",
+      "postalCode": "11480",
+      "streetAddress": "Jl. K. H. Syahdan No. 9, Kemanggisan, Palmerah",
+      "identifier": "https://binus.ac.id",
+      "addressCountry": [
+        "Indonesia",
+        "ID"
+      ]
+    }
+  }
+}
+`}
         </script>
 
         {/* Search Engine */}
