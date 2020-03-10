@@ -36,6 +36,21 @@ export default connect(mapStateToProps)(
 
         <title>Brandon Julio Thenaro</title>
 
+        {/* JSON-LD */}
+        <script type="application/ld+json">
+          {{
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            name: "Brandon Julio Thenaro",
+            jobTitle: "Undergraduate Student",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Jakarta",
+              addressRegion: "West Jakarta",
+            },
+          }}
+        </script>
+
         {/* Search Engine */}
         <meta name="description" content={description} />
         <meta name="author" content="Brandon Julio Thenaro" />

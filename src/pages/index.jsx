@@ -109,36 +109,34 @@ export default connect(mapStateToProps)(
 
           <div className="table-responsive">
             <table
-              className={`table ${
-                theme === THEME.DARK ? "table-dark" : ""
-              }`}
+              className={`table ${theme === THEME.DARK ? "table-dark" : ""}`}
             >
               <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-              </tr>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Description</th>
+                </tr>
               </thead>
               {/* GraphQL query matches localhost:8000/___graphql */}
               <StaticQuery
                 query={graphql`
-                          query GitHubAPI {
-                            githubData {
-                              data {
-                                viewer {
-                                  repositories {
-                                    nodes {
-                                      url
-                                      name
-                                      description
-                                    }
-                                  }
-                                }
-                              }
+                  query GitHubAPI {
+                    githubData {
+                      data {
+                        viewer {
+                          repositories {
+                            nodes {
+                              url
+                              name
+                              description
                             }
                           }
-                        `}
+                        }
+                      }
+                    }
+                  }
+                `}
                 render={({
                   githubData: {
                     data: {
@@ -149,15 +147,15 @@ export default connect(mapStateToProps)(
                   },
                 }) => (
                   <tbody>
-                  {nodes.map(({ name, url, description }, index) => (
-                    <tr key={name}>
-                      <td>{index + 1}</td>
-                      <td>
-                        <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
-                      </td>
-                      <td>{description}</td>
-                    </tr>
-                  ))}
+                    {nodes.map(({ name, url, description }, index) => (
+                      <tr key={name}>
+                        <td>{index + 1}</td>
+                        <td>
+                          <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
+                        </td>
+                        <td>{description}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 )}
               />
