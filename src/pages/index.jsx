@@ -3,18 +3,18 @@ import { StaticQuery, graphql } from "gatsby"
 import { connect } from "react-redux"
 
 import Link from "../components/link"
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
-  memo(({ theme }) => (
-    <Layout>
+  memo(({ location, theme }) => (
+    <Layout location={location}>
       <article>
         <section>
           <p className="lead">
             I am a programmer who can write code in multiple programming
             languages and frameworks for front-end, back-end, database, and
-            CI/CD with best practices in mind.
+            CI/CD with best practices and code clarity in mind.
           </p>
         </section>
 
@@ -95,7 +95,7 @@ export default connect(mapStateToProps)(
           </div>
 
           <p>
-            <Link isInternal={true} to="/skills">
+            <Link to="/skills">
               Full list of my developer skills.
             </Link>
           </p>

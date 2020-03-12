@@ -4,10 +4,9 @@ import { connect } from "react-redux"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { mapStateToProps, THEME } from "../state/createStore"
-// import StructuredData from "../../static/structured_data"
 
 export default connect(mapStateToProps)(
-  memo(({ theme }) => {
+  memo(({ structuredData, theme, title }) => {
     const {
       site: {
         siteMetadata: {
@@ -19,33 +18,40 @@ export default connect(mapStateToProps)(
         },
       },
     } = useStaticQuery(graphql`
-        query name {
-            site {
-                siteMetadata {
-                    name
-                    description
-                    name
-                    siteUrl
-                    twitter_id
-                    structured_data
-                }
-            }
+      query SiteMetadata {
+        site {
+          siteMetadata {
+            name
+            description
+            name
+            siteUrl
+            twitter_id
+            structured_data
+          }
         }
+      }
     `)
 
+    const tabTitle = title ? title : name
+    const structuredDatas = Array.isArray(structuredData)
+      ? `[${[structured_data, ...structuredData]}]`
+      : structuredData
+      ? `[${[structured_data, JSON.stringify(structuredData)]}]`
+      : structured_data
+
     return (
-      <Helmet>
+      <Helmet titleTemplate={`%s | ${name}`}>
         <html lang="en" />
         <body
-          className={`container px-md-5 py-5 my-md-1 ${
-            theme === THEME.DARK ? "bg-dark text-light" : ""
-          }`}
+          className={`${theme === THEME.DARK ? "bg-dark text-light" : ""}`}
         />
 
-        <title>Brandon Julio Thenaro</title>
+        <title>{tabTitle}</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">{structured_data}</script>
+        <script type="application/ld+json">
+          {structuredDatas}
+        </script>
 
         {/* Search Engine */}
         <meta name="description" content={description} />

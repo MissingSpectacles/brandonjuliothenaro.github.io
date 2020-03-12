@@ -12,16 +12,16 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(
-  memo(({ theme, toggleTheme }) => (
+  memo(({ theme, toggleTheme, className }) => (
     <button
-      className="btn"
+      className={`btn ${className}`}
       onClick={toggleTheme}
       aria-label="Change theme button"
     >
       <FontAwesomeIcon
         className={theme === THEME.DARK ? "text-light" : ""}
         icon={theme === THEME.DARK ? "sun" : "moon"}
-        size="3x"
+        size="2x"
       ></FontAwesomeIcon>
       <span className="sr-only">Change theme button</span>
     </button>

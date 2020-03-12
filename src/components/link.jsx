@@ -6,11 +6,11 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
-  memo(({ children, className, getProps, isInternal, theme, to }) => {
-    className = className || (theme === THEME.DARK ? "text-dark-link" : "")
+  memo(({ children, className, theme, to }) => {
+    className = `${className} ${theme === THEME.DARK ? "text-dark-link" : ""}`
 
-    return isInternal ? (
-      <Link to={to} getProps={getProps} className={className}>
+    return !to.includes("http") ? (
+      <Link to={to} className={className}>
         {children}
       </Link>
     ) : (

@@ -1,10 +1,10 @@
 import React, { memo } from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import ExternalLink from "../components/link"
 
-export default memo(() => (
-  <Layout>
+export default memo(({location}) => (
+  <Layout location={location} title="Developer Skills">
     <article className="row">
       <section className="col">
         <header>
