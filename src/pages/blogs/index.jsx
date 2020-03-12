@@ -32,7 +32,7 @@ export default connect(mapStateToProps)(
       }
     `)
 
-    const blogStructuredData = JSON.stringify(getBlogStructuredDataTemplate())
+    const blogStructuredData = getBlogStructuredDataTemplate()
 
     nodes.forEach(node => {
       const blogPostingStructuredData = createBlogPostStructuredData(
@@ -49,7 +49,7 @@ export default connect(mapStateToProps)(
       <Layout
         location={location}
         title="Blog"
-        structuredData={blogStructuredData}
+        structuredData={JSON.stringify(blogStructuredData)}
         className="card-columns"
       >
         {nodes.map(
