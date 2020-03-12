@@ -40,9 +40,7 @@ export default connect(mapStateToProps)(
         node
       )
 
-      blogStructuredData.blogPosts.push(
-        JSON.stringify(blogPostingStructuredData)
-      )
+      blogStructuredData.blogPosts.push(blogPostingStructuredData)
     })
 
     return (

@@ -49,7 +49,7 @@ export default connect(mapStateToProps)(
         <title>{tabTitle}</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">{structuredDatas}</script>
+        {/* <script type="application/ld+json">{structuredDatas}</script> */}
 
         {/* Search Engine */}
         <meta name="description" content={description} />
