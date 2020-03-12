@@ -21,19 +21,19 @@ export default memo(
     const thumbnailUrl = thumbnail_src
     const imageAlt = thumbnail_alt
 
-    const blogPostStructuredData = JSON.stringify(createBlogPostStructuredData(
+    const blogPostStructuredData = createBlogPostStructuredData(
       url,
       title,
       year,
       validDate,
       thumbnailUrl
-    ))
+    )
 
     return (
       <Layout
         location={location}
         title={title} // Pass post title up as the <h1> of the page
-        structuredData={blogPostStructuredData}
+        structuredData={JSON.stringify(blogPostStructuredData)}
       >
         <MDXProvider
           components={{
