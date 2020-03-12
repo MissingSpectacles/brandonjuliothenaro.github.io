@@ -36,7 +36,7 @@ export default connect(mapStateToProps)(
     const structuredDatas = Array.isArray(structuredData)
       ? `[${[structured_data, ...structuredData]}]`
       : structuredData
-      ? `[${[structured_data, JSON.stringify(structuredData)]}]`
+      ? `[${[structured_data, structuredData]}]`
       : structured_data
 
     return (
@@ -49,9 +49,7 @@ export default connect(mapStateToProps)(
         <title>{tabTitle}</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">
-          {structuredDatas}
-        </script>
+        <script type="application/ld+json">{structuredDatas}</script>
 
         {/* Search Engine */}
         <meta name="description" content={description} />

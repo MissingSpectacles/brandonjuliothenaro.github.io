@@ -32,7 +32,7 @@ export default connect(mapStateToProps)(
       }
     `)
 
-    const blogStructuredData = getBlogStructuredDataTemplate()
+    const blogStructuredData = JSON.stringify(getBlogStructuredDataTemplate())
 
     nodes.forEach(node => {
       const blogPostingStructuredData = createBlogPostStructuredData(
@@ -40,7 +40,9 @@ export default connect(mapStateToProps)(
         node
       )
 
-      blogStructuredData.blogPosts.push(blogPostingStructuredData)
+      blogStructuredData.blogPosts.push(
+        JSON.stringify(blogPostingStructuredData)
+      )
     })
 
     return (
@@ -77,7 +79,9 @@ export default connect(mapStateToProps)(
                   <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{excerpt}</p>
-                    <small>{`${new Date(date).toDateString()} • ${timeToRead} min read`}</small>
+                    <small>{`${new Date(
+                      date
+                    ).toDateString()} • ${timeToRead} min read`}</small>
                   </div>
                 </Link>
               </div>
@@ -91,6 +95,7 @@ export default connect(mapStateToProps)(
 
 function getBlogStructuredDataTemplate() {
   return {
+    "@schema": "https://schema.org/",
     "@type": "Blog",
     "@id": "https://www.brandonjuliothenaro.my.id/blogs",
     identification: "https://www.brandonjuliothenaro.my.id/blogs",
@@ -140,16 +145,17 @@ function createBlogPostStructuredData(
   { headings, frontmatter: { date, thumbnail_src } }
 ) {
   const title = headings[0].value
-  const uri = `${location.href}/${slugify(title, {
+  const url = `${location.href}/${slugify(title, {
     lower: true,
   })}`
   const validDate = new Date(date)
 
   return {
+    "@schema": "https://schema.org/",
     "@type": "BlogPosting",
-    "@id": uri,
-    identification: uri,
-    identifier: uri,
+    "@id": url,
+    identification: url,
+    identifier: url,
     name: title,
 
     editor: "https://www.brandonjuliothenaro.my.id",
@@ -181,9 +187,9 @@ function createBlogPostStructuredData(
     pagination: "1-1",
     accessMode: "visual",
     accessModeSufficient: ["textual", "visual", "textOnVisual"],
-    discussionUrl: uri,
+    discussionUrl: url,
     headline: title,
     inLanguage: "en",
-    url: uri,
+    url: url,
   }
 }

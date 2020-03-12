@@ -14,20 +14,20 @@ export default memo(
       frontmatter: { date, thumbnail_src, thumbnail_alt },
     },
   }) => {
-    const uri = location.href
+    const url = location.href
     const title = children[0].props.children // The '#' element from the '.mdx' file
     const validDate = new Date(date)
     const year = validDate.getFullYear()
     const thumbnailUrl = thumbnail_src
     const imageAlt = thumbnail_alt
 
-    const blogPostStructuredData = createBlogPostStructuredData(
-      uri,
+    const blogPostStructuredData = JSON.stringify(createBlogPostStructuredData(
+      url,
       title,
       year,
       validDate,
       thumbnailUrl
-    )
+    ))
 
     return (
       <Layout
@@ -50,17 +50,18 @@ export default memo(
 )
 
 function createBlogPostStructuredData(
-  uri,
+  url,
   title,
   year,
   validDate,
   thumbnailUrl
 ) {
   return {
+    "@schema": "https://schema.org/",
     "@type": "BlogPosting",
-    "@id": uri,
-    identification: uri,
-    identifier: uri,
+    "@id": url,
+    identification: url,
+    identifier: url,
     name: title,
 
     editor: "https://www.brandonjuliothenaro.my.id",
@@ -92,9 +93,9 @@ function createBlogPostStructuredData(
     pagination: "1-1",
     accessMode: "visual",
     accessModeSufficient: ["textual", "visual", "textOnVisual"],
-    discussionUrl: uri,
+    discussionUrl: url,
     headline: title,
     inLanguage: "en",
-    url: uri,
+    url: url,
   }
 }
