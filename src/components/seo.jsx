@@ -32,7 +32,7 @@ export default connect(mapStateToProps)(
       }
     `)
 
-    const tabTitle = title ? title : name
+    const tabTitle = title ? title : "Home"
     const structuredDatas = Array.isArray(structuredData)
       ? `[${[structured_data, ...structuredData]}]`
       : structuredData
