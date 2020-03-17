@@ -28,7 +28,7 @@ const themeSlice = createSlice({
   },
 })
 
-const mapStateToProps = state => ({ theme: state.theme })
+const mapStateToProps = state => ({ theme: state.theme, isFirstLoad: state.isFirstLoad })
 const mapDispatchToProps = { toggleTheme: themeSlice.actions.toggleTheme }
 
 export default preloadedState =>
