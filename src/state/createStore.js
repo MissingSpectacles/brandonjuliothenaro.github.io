@@ -7,6 +7,8 @@ const THEME = Object.freeze({
 
 const time = new Date().getHours()
 
+console.log(time)
+
 const themeSlice = createSlice({
   name: "theme",
   /*
