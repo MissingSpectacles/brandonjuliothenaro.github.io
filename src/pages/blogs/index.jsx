@@ -47,7 +47,7 @@ export default connect(mapStateToProps)(
       <Layout
         location={location}
         title="Blog"
-        structuredData={JSON.stringify(blogStructuredData)}
+        additionalStructuredData={JSON.stringify(blogStructuredData)}
         className="card-columns"
       >
         {nodes.map(
