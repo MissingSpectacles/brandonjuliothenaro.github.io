@@ -5,12 +5,10 @@ const THEME = Object.freeze({
   LIGHT: "LIGHT",
 })
 
-
 const getThemeByTime = () => {
   const hour = new Date().getHours()
   return hour >= 6 && hour <= 18 ? THEME.LIGHT : THEME.DARK
 }
-
 
 const themeSlice = createSlice({
   name: "theme",
@@ -20,12 +18,12 @@ const themeSlice = createSlice({
    */
   initialState: {
     theme: getThemeByTime(),
-    isFirstLoad: true, // Enable manual theme option after automatically set theme according to the time
+    isFirstLoad: true, // Enable layout.jsx:40
   },
   reducers: {
     toggleTheme: state => ({
       theme: state.theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT,
-      isFirstLoad: false,
+      isFirstLoad: false, // Disable layout.jsx:40
     }),
   },
 })

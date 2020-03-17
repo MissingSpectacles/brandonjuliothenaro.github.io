@@ -36,6 +36,7 @@ export default connect(
       isFirstLoad,
       toggleTheme,
     }) => {
+      // Automatically change theme according to time on first load
       if (isFirstLoad && theme !== getThemeByTime()) {
         toggleTheme()
       }
