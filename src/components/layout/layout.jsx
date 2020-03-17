@@ -36,10 +36,6 @@ export default connect(
       isFirstLoad,
       toggleTheme,
     }) => {
-      console.log(
-        `Hour: ${new Date().getHours()}, so the theme should be ${getThemeByTime()}. Actual theme: ${theme}, so should I change? ${isFirstLoad}`
-      )
-
       // Automatically change theme according to time on first load
       if (isFirstLoad && theme !== getThemeByTime()) {
         console.log("Theme is not in sync. Changing...")
