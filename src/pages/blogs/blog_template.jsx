@@ -34,7 +34,7 @@ export default memo(
       <Layout
         location={location}
         title={title} // Pass post title up as the <h1> of the page
-        additionalStructuredData={JSON.stringify(blogPostStructuredData)}
+        additionalStructuredData={blogPostStructuredData}
       >
         <MDXProvider
           components={{

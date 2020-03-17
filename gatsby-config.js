@@ -21,7 +21,7 @@ module.exports = {
     linkedinUrl: `https://www.linkedin.com/in/brandonjuliothenaro/`,
     twitterUrl: `https://twitter.com/brandon_julio_t`,
 
-    myStructuredData: JSON.stringify(myStructuredData),
+    myStructuredData: myStructuredData,
   },
 
   plugins: [

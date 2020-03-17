@@ -44,10 +44,10 @@ export default connect(mapStateToProps)(
         <title>{tabTitle}</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">{myStructuredData}</script>
+        <script type="application/ld+json">{JSON.stringify(myStructuredData)}</script>
 
         {additionalStructuredData ? (
-          <script type="application/ld+json">{additionalStructuredData}</script>
+          <script type="application/ld+json">{JSON.stringify(additionalStructuredData)}</script>
         ) : null}
 
         {/* Search Engine */}
