@@ -1,9 +1,9 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit"
 
-const THEME = Object.freeze({
+const THEME = {
   DARK: "DARK",
   LIGHT: "LIGHT",
-})
+}
 
 const time = new Date().getHours()
 

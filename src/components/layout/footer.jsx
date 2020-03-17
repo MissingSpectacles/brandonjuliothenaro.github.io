@@ -11,24 +11,24 @@ export default connect(mapStateToProps)(
     const {
       site: {
         siteMetadata: {
-          facebookUrl,
-          freeCodeCampUrl,
-          githubUrl,
-          instagramUrl,
-          linkedinUrl,
-          twitterUrl,
+          facebook_url,
+          freeCodeCamp_url,
+          github_url,
+          instagram_url,
+          linkedin_url,
+          twitter_url,
         },
       },
     } = useStaticQuery(graphql`
       query Contacts {
         site {
           siteMetadata {
-            facebookUrl
-            freeCodeCampUrl
-            githubUrl
-            instagramUrl
-            linkedinUrl
-            twitterUrl
+            facebook_url
+            freeCodeCamp_url
+            github_url
+            instagram_url
+            linkedin_url
+            twitter_url
           }
         }
       }
@@ -50,7 +50,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="Facebook"
                     className="text-reset"
-                    to={facebookUrl}
+                    to={facebook_url}
                   >
                     <FontAwesomeIcon icon={["fab", "facebook"]} /> Facebook
                   </Link>
@@ -59,7 +59,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="freeCodeCamp"
                     className="text-reset"
-                    to={freeCodeCampUrl}
+                    to={freeCodeCamp_url}
                   >
                     <FontAwesomeIcon icon={["fab", "free-code-camp"]} />{" "}
                     freeCodeCamp
@@ -69,7 +69,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="GitHub"
                     className="text-reset"
-                    to={githubUrl}
+                    to={github_url}
                   >
                     <FontAwesomeIcon icon={["fab", "github"]} /> GitHub
                   </Link>
@@ -78,7 +78,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="Instagram"
                     className="text-reset"
-                    to={instagramUrl}
+                    to={instagram_url}
                   >
                     <FontAwesomeIcon icon={["fab", "instagram"]} /> Instagram
                   </Link>
@@ -87,7 +87,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="LinkedIn"
                     className="text-reset"
-                    to={linkedinUrl}
+                    to={linkedin_url}
                   >
                     <FontAwesomeIcon icon={["fab", "linkedin"]} /> LinkedIn
                   </Link>
@@ -96,7 +96,7 @@ export default connect(mapStateToProps)(
                   <Link
                     aria-label="Twitter"
                     className="text-reset"
-                    to={twitterUrl}
+                    to={twitter_url}
                   >
                     <FontAwesomeIcon icon={["fab", "twitter"]} /> Twitter
                   </Link>

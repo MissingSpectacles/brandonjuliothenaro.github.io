@@ -8,9 +8,8 @@ import ResponsiveImg from "../../components/responsive_image"
 
 export default memo(
   ({
-    children,
     location,
-    theme,
+    children,
     pageContext: {
       frontmatter: { date, thumbnail_src, thumbnail_alt },
     },
@@ -34,7 +33,7 @@ export default memo(
       <Layout
         location={location}
         title={title} // Pass post title up as the <h1> of the page
-        additionalStructuredData={JSON.stringify(blogPostStructuredData)}
+        structuredData={JSON.stringify(blogPostStructuredData)}
       >
         <MDXProvider
           components={{

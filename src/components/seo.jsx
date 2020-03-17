@@ -6,15 +6,15 @@ import { graphql, useStaticQuery } from "gatsby"
 import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
-  memo(({ structuredData: additionalStructuredData, theme, title }) => {
+  memo(({ structuredData, theme, title }) => {
     const {
       site: {
         siteMetadata: {
           description,
           name,
           siteUrl,
-          twitterId,
-          myStructuredData,
+          twitter_id,
+          structured_data,
         },
       },
     } = useStaticQuery(graphql`
@@ -25,14 +25,19 @@ export default connect(mapStateToProps)(
             description
             name
             siteUrl
-            twitterId
-            myStructuredData
+            twitter_id
+            structured_data
           }
         }
       }
     `)
 
     const tabTitle = title ? title : "Home"
+    const structuredDatas = Array.isArray(structuredData)
+      ? `[${[structured_data, ...structuredData]}]`
+      : structuredData
+      ? `[${[structured_data, structuredData]}]`
+      : structured_data
 
     return (
       <Helmet titleTemplate={`%s | ${name}`}>
@@ -44,11 +49,7 @@ export default connect(mapStateToProps)(
         <title>{tabTitle}</title>
 
         {/* JSON-LD */}
-        <script type="application/ld+json">{myStructuredData}</script>
-
-        {additionalStructuredData ? (
-          <script type="application/ld+json">{additionalStructuredData}</script>
-        ) : null}
+        <script type="application/ld+json">{structuredDatas}</script>
 
         {/* Search Engine */}
         <meta name="description" content={description} />
@@ -60,9 +61,9 @@ export default connect(mapStateToProps)(
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content={twitterId} />
+        <meta name="twitter:creator" content={twitter_id} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:site" content={twitterId} />
+        <meta name="twitter:site" content={twitter_id} />
         <meta name="twitter:title" content={name} />
         <meta
           name="twitter:image"

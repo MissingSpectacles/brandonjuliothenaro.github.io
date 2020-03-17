@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 const path = require(`path`)
-const myStructuredData = require(`./static/structured_data`)
+const structured_data = require(`./static/structured_data`)
 
 const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
@@ -12,16 +12,16 @@ module.exports = {
     description: `I am a programmer who can write code in multiple programming languages and frameworks for front-end, back-end, database, and CI/CD with best practices and code clarity in mind.`,
     name: `Brandon Julio Thenaro`,
     siteUrl: siteUrl,
-    twitterId: `@brandon_julio_t`,
+    twitter_id: `@brandon_julio_t`,
 
-    facebookUrl: `https://www.facebook.com/profile.php?id=100008724798107`,
-    freeCodeCampUrl: `https://www.freecodecamp.org/brandon-julio-thenaro`,
-    githubUrl: `https://github.com/brandon-julio-t`,
-    instagramUrl: `https://www.instagram.com/`,
-    linkedinUrl: `https://www.linkedin.com/in/brandonjuliothenaro/`,
-    twitterUrl: `https://twitter.com/brandon_julio_t`,
+    facebook_url: `https://www.facebook.com/profile.php?id=100008724798107`,
+    freeCodeCamp_url: `https://www.freecodecamp.org/brandon-julio-thenaro`,
+    github_url: `https://github.com/brandon-julio-t`,
+    instagram_url: `https://www.instagram.com/`,
+    linkedin_url: `https://www.linkedin.com/in/brandonjuliothenaro/`,
+    twitter_url: `https://twitter.com/brandon_julio_t`,
 
-    myStructuredData: JSON.stringify(myStructuredData),
+    structured_data: JSON.stringify(structured_data),
   },
 
   plugins: [
@@ -116,10 +116,9 @@ module.exports = {
           viewer {
             repositories(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
               nodes {
-                description
-                name
-                updatedAt
                 url
+                name
+                description
               }
             }
           }
