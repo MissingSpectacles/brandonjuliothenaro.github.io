@@ -38,6 +38,7 @@ export default connect(
     }) => {
       // Automatically change theme according to time on first load
       if (isFirstLoad && theme !== getThemeByTime()) {
+        console.log("Theme is not in sync. Changing...")
         toggleTheme()
       }
 
