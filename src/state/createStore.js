@@ -7,7 +7,6 @@ const THEME = Object.freeze({
 
 const getThemeByTime = () => {
   const hour = new Date().getHours()
-  console.log(`Hour: ${hour}`)
   return hour >= 6 && hour <= 18 ? THEME.LIGHT : THEME.DARK
 }
 
