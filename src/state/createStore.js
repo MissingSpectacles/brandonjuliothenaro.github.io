@@ -5,9 +5,12 @@ const THEME = Object.freeze({
   LIGHT: "LIGHT",
 })
 
-const time = new Date().getHours()
 
-console.log(time)
+const getThemeByTime = () => {
+  const hour = new Date().getHours()
+  return hour >= 6 && hour <= 18 ? THEME.LIGHT : THEME.DARK
+}
+
 
 const themeSlice = createSlice({
   name: "theme",
@@ -15,10 +18,14 @@ const themeSlice = createSlice({
    * Light mode will be activated from 6.00 A.M. until 18.59 P.M.
    * Dark mode will be activated from 19.00 P.M. until 5.59 A.M.
    */
-  initialState: { theme: time >= 6 && time <= 18 ? THEME.LIGHT : THEME.DARK },
+  initialState: {
+    theme: getThemeByTime(),
+    isFirstLoad: true, // Enable manual theme option after automatically set theme according to the time
+  },
   reducers: {
     toggleTheme: state => ({
       theme: state.theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT,
+      isFirstLoad: false,
     }),
   },
 })
@@ -32,4 +39,4 @@ export default preloadedState =>
     preloadedState: preloadedState,
   })
 
-export { mapStateToProps, mapDispatchToProps, THEME }
+export { mapStateToProps, mapDispatchToProps, THEME, getThemeByTime }

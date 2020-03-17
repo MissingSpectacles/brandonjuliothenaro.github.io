@@ -8,20 +8,52 @@ import Footer from "./footer"
 import Header from "./header"
 import Navbar from "./navbar"
 import SEO from "../seo"
+import {
+  getThemeByTime,
+  mapDispatchToProps,
+  mapStateToProps,
+} from "../../state/createStore"
+import { connect } from "react-redux"
 
 library.add(fab, faMoon, faSun, faArrowLeft)
 config.autoAddCss = false // Prevent Font Awesome Icons being large then small on first load
 
-export default memo(
-  ({ children, className, location, additionalStructuredData, title }) => (
-    <>
-      <Navbar location={location} />
-      <div className="container">
-        <SEO title={title} additionalStructuredData={additionalStructuredData} />
-        <Header location={location} title={title} />
-        <main className={className}>{children}</main>
-        <Footer />
-      </div>
-    </>
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(
+  memo(
+    ({
+      /* Props */
+      children,
+      className,
+      location,
+      additionalStructuredData,
+      title,
+
+      /* Redux Store */
+      theme,
+      isFirstLoad,
+      toggleTheme,
+    }) => {
+      if (isFirstLoad && theme !== getThemeByTime()) {
+        toggleTheme()
+      }
+
+      return (
+        <>
+          <Navbar location={location} />
+          <div className="container">
+            <SEO
+              title={title}
+              additionalStructuredData={additionalStructuredData}
+            />
+            <Header location={location} title={title} />
+            <main className={className}>{children}</main>
+            <Footer />
+          </div>
+        </>
+      )
+    }
   )
 )
