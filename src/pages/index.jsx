@@ -95,9 +95,7 @@ export default connect(mapStateToProps)(
           </div>
 
           <p>
-            <Link to="/skills">
-              Full list of my developer skills.
-            </Link>
+            <Link to="/skills">Full list of my developer skills.</Link>
           </p>
         </section>
 
@@ -117,6 +115,7 @@ export default connect(mapStateToProps)(
                   <th scope="col">#</th>
                   <th scope="col">Name</th>
                   <th scope="col">Description</th>
+                  <th scope="col">Last Updated</th>
                 </tr>
               </thead>
               {/* GraphQL query matches localhost:8000/___graphql */}
@@ -128,9 +127,10 @@ export default connect(mapStateToProps)(
                         viewer {
                           repositories {
                             nodes {
-                              url
-                              name
                               description
+                              name
+                              updatedAt
+                              url
                             }
                           }
                         }
@@ -148,15 +148,18 @@ export default connect(mapStateToProps)(
                   },
                 }) => (
                   <tbody>
-                    {nodes.map(({ name, url, description }, index) => (
-                      <tr key={name}>
-                        <td>{index + 1}</td>
-                        <td>
-                          <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
-                        </td>
-                        <td>{description}</td>
-                      </tr>
-                    ))}
+                    {nodes.map(
+                      ({ name, url, description, updatedAt }, index) => (
+                        <tr key={name}>
+                          <td>{index + 1}</td>
+                          <td>
+                            <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
+                          </td>
+                          <td>{description}</td>
+                          <td>{new Date(updatedAt).toDateString()}</td>
+                        </tr>
+                      )
+                    )}
                   </tbody>
                 )}
               />
