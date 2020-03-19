@@ -1,0 +1,720 @@
+---
+date: 2020-19-03
+thumbnail_src: https://ct-academy.ch/wp-content/uploads/2019/08/microsoft-sql-server.svg
+thumbnail_alt: Microsoft SQL Server logo
+---
+
+# T-SQL
+
+## Table of Contents
+
+- [T-SQL](#t-sql)
+  - [Table of Contents](#table-of-contents)
+  - [Data Definition Language (DDL)](#data-definition-language-ddl)
+    - [Create](#create)
+      - [Create Table](#create-table)
+      - [Create Index](#create-index)
+      - [Create View](#create-view)
+    - [Drop](#drop)
+      - [Drop Table](#drop-table)
+      - [Drop Index](#drop-index)
+      - [Drop View](#drop-view)
+    - [Constraints](#constraints)
+      - [Check](#check)
+      - [Default](#default)
+      - [Foreign Key](#foreign-key)
+    - [Alter](#alter)
+      - [Add Column](#add-column)
+      - [Drop Column](#drop-column)
+      - [Alter Column](#alter-column)
+      - [Add Constraint](#add-constraint)
+        - [Add Foreign Key](#add-foreign-key)
+      - [Drop Constraint](#drop-constraint)
+      - [Add Default](#add-default)
+    - [Boolean Expression](#boolean-expression)
+      - [Conjunction](#conjunction)
+      - [Like](#like)
+        - [ReGex](#regex)
+      - [In](#in)
+      - [Between](#between)
+      - [Exists](#exists)
+    - [Data Types](#data-types)
+  - [Data Manipulation Language (DML)](#data-manipulation-language-dml)
+    - [Select](#select)
+      - [Sorting](#sorting)
+    - [Insert](#insert)
+    - [Update](#update)
+    - [Delete](#delete)
+    - [Commit](#commit)
+    - [Rollback](#rollback)
+    - [Join](#join)
+      - [Inner Join](#inner-join)
+      - [Outer Join](#outer-join)
+        - [Left Join](#left-join)
+        - [Right Join](#right-join)
+        - [Full Join](#full-join)
+    - [Union](#union)
+  - [Data Control Language](#data-control-language)
+    - [Grant](#grant)
+    - [Revoke](#revoke)
+    - [Commands](#commands)
+  - [Functions](#functions)
+    - [Aggregate](#aggregate)
+      - [Grouping](#grouping)
+    - [Date](#date)
+      - [Datediff](#datediff)
+      - [Datename](#datename)
+      - [Datepart](#datepart)
+      - [Dateadd](#dateadd)
+      - [Date Types](#date-types)
+    - [String](#string)
+      - [Charindex](#charindex)
+      - [Left](#left)
+      - [Right](#right)
+      - [Substring](#substring)
+      - [Trim](#trim)
+      - [Reverse](#reverse)
+      - [Length](#length)
+      - [Stuff](#stuff)
+      - [Convert](#convert)
+      - [Cast](#cast)
+  - [Advanced](#advanced)
+    - [Trigger](#trigger)
+      - [Create Trigger](#create-trigger)
+        - [Virtual Tables](#virtual-tables)
+          - [Inserted and Deleted](#inserted-and-deleted)
+      - [Drop Trigger](#drop-trigger)
+    - [Cursor](#cursor)
+      - [Terminologies](#terminologies)
+  - [Programming in SQL with T-SQL](#programming-in-sql-with-t-sql)
+    - [Variable Declaration](#variable-declaration)
+    - [Selection Statement](#selection-statement)
+      - [If else-if else](#if-else-if-else)
+      - [Switch Case](#switch-case)
+    - [Loop](#loop)
+      - [Loop Keyword](#loop-keyword)
+    - [Procedure](#procedure)
+      - [Create Procedure](#create-procedure)
+      - [Rename Procedure](#rename-procedure)
+      - [Drop Procedure](#drop-procedure)
+      - [Print Procedure](#print-procedure)
+    - [Error Handling](#error-handling)
+    - [Exception Handling](#exception-handling)
+
+## Data Definition Language (DDL)
+
+### Create
+
+#### Create Table
+
+```sql
+create table [Table_Name]
+(
+    [column_name] [data_type] [constraints]
+)
+```
+
+#### Create Index
+
+```sql
+create index [index_name] on [Table_Name]([column_name])
+```
+
+#### Create View
+
+```sql
+create view [View_Name] ([column1], [column2], ...)
+as
+    [subquery]
+```
+
+### Drop
+
+#### Drop Table
+
+```sql
+drop table [Table_Name]
+```
+
+#### Drop Index
+
+```sql
+drop index [index_name] on [Table_Name]
+```
+
+#### Drop View
+
+```sql
+drop view [view_name]
+```
+
+### Constraints
+
+- not null
+- primary key
+- unique
+
+#### Check
+
+```sql
+create table [Table_Name]
+(
+    [column_name] [data_type] check [column_name] [boolean_expression]
+)
+```
+
+#### Default
+
+```sql
+create table [Table_Name]
+(
+    [column_name] [data_type] default 'lorem ipsum'
+)
+```
+
+#### Foreign Key
+
+```sql
+create table Employees
+(
+    job_position_id int
+        foreign key (job_position_id)
+            references JobPositions (id)
+            on delete cascade
+            on update cascade
+)
+```
+
+### Alter
+
+#### Add Column
+
+```sql
+alter table [Table_Name]
+add [column_name] [data_type]
+```
+
+#### Drop Column
+
+```sql
+alter table [Table_Name]
+drop column [column_name]
+```
+
+#### Alter Column
+
+```sql
+alter table [Table_Name]
+alter column [column_name] [data_type]
+```
+
+#### Add Constraint
+
+```sql
+alter table [Table_Name]
+add constraint [constraint_name] [boolean_expression]
+```
+
+##### Add Foreign Key
+
+```sql
+alter table [Employee]
+  add constraint [fk_job_position_id]
+    foreign key (job_position_id) referrences [Job_Positions] (id)
+      on update [cascade | set [null | default]]
+      on delete [cascade | set [null | default]]
+```
+
+#### Drop Constraint
+
+```sql
+alter table [Table_Name]
+drop constraint [constraint_name]
+```
+
+#### Add Default
+
+```sql
+alter table [Table_Name]
+add constraint [constraint_name] default 'lorem ipsum' for [column_name]
+```
+
+### Boolean Expression
+
+#### Conjunction
+
+```sql
+[boolean1]
+and [boolean2]
+or [boolean3]
+```
+
+#### Like
+
+```sql
+[column_name] like '[regex]'
+```
+
+##### ReGex
+
+| Symbol | Meaning                 |
+| ------ | ----------------------- |
+| %      | Anything for any amount |
+| \_     | Anything for only one   |
+| [a-z]  | from 'a' to 'z'         |
+| [0-9]  | from '0' to '9'         |
+
+#### In
+
+```sql
+in ([value1], [value2], ...)
+```
+
+#### Between
+
+```sql
+between [value1] or [value2]
+```
+
+#### Exists
+
+```sql
+exists
+  (
+      [subquery]
+  )
+```
+
+### Data Types
+
+- int
+- varchar
+- date
+
+## Data Manipulation Language (DML)
+
+### Select
+
+```sql
+select [* | [column1, column2, ...]]
+from [Table_Name]
+```
+
+#### Sorting
+
+```sql
+select name
+from Employees
+order by name
+```
+
+### Insert
+
+```sql
+insert into [Table_Name] ([column1], [column2], ...)
+values ([value1], [value2], ...)
+```
+
+### Update
+
+```sql
+update [Table_Name]
+set [column_name] = [new_value]
+where [boolean_expression]
+```
+
+### Delete
+
+```sql
+delete from [Table_Name]
+where [boolean_expression]
+```
+
+### Commit
+
+```sql
+begin tran
+    [DDL | DML]
+    commit
+```
+
+### Rollback
+
+```sql
+begin tran
+    [DDL | DML]
+    rollback
+```
+
+### Join
+
+#### Inner Join
+
+```sql
+select *
+from Employees as e
+    join JobPositions as jp
+        on e.job_position_id = jp.id
+```
+
+#### Outer Join
+
+##### Left Join
+
+```sql
+select *
+from Employees as e
+    left join JobPositions as jp
+        on e.job_position_id = jp.id
+```
+
+##### Right Join
+
+```sql
+select *
+from Employees as e
+    right join JobPositions as jp
+        on e.job_position_id = jp.id
+```
+
+##### Full Join
+
+```sql
+select *
+from Employees as e
+    full join JobPositions as jp
+        on e.job_position_id = jp.id
+```
+
+### Union
+
+```sql
+[subquery1]
+union
+[subquery2]
+```
+
+> `subquery1` and `subquery2` both must have same columns
+
+## Data Control Language
+
+### Grant
+
+```sql
+grant [command1], [command2], ...
+on [Database_Name]
+to [public | user_name]
+```
+
+### Revoke
+
+```sql
+revoke [[command1], [command2], ...]
+on [Database_Name]
+from [public | user_name]
+```
+
+### Commands
+
+- select
+- insert
+- update
+- delete
+- references
+- alter
+- index
+
+## Functions
+
+### Aggregate
+
+- sum
+- count
+- avg
+- min
+- max
+
+#### Grouping
+
+```sql
+select name, sum(salary)
+from Employees
+group by name
+```
+
+### Date
+
+#### Datediff
+
+```sql
+datediff([date_type], [date1], [date2])
+```
+
+#### Datename
+
+```sql
+datename([date_type], [date])
+```
+
+#### Datepart
+
+```sql
+datepart([date_type], [date])
+```
+
+#### Dateadd
+
+```sql
+dateadd([date_type], [+/-][amount], [date])
+```
+
+#### Date Types
+
+- day
+- weekday
+- month
+- year
+
+### String
+
+#### Charindex
+
+```sql
+charindex([target], [string], [start_index])
+```
+
+> `[start_index]` is optional
+
+#### Left
+
+```sql
+left([string], [length])
+```
+
+#### Right
+
+```sql
+right([string], [length])
+```
+
+#### Substring
+
+```sql
+substring([string], [start_index], [length])
+```
+
+#### Trim
+
+```sql
+rtrim([string])
+ltrim([string])
+```
+
+#### Reverse
+
+```sql
+reverse([string])
+```
+
+#### Length
+
+```sql
+len([string])
+```
+
+#### Stuff
+
+```sql
+stuff([string], [start_index], [length], [replacement])
+```
+
+> A.K.A 'replace'
+
+#### Convert
+
+```sql
+convert([data_type], [string], [date_format])
+```
+
+> `[date_format]` is optional
+
+#### Cast
+
+```sql
+cast([string] as [data_type])
+```
+
+
+## Advanced
+
+### Trigger
+
+#### Create Trigger
+
+```sql
+create trigger [trigger_name]
+    on [Table_Name]
+    for [command1], [command2], ...
+    as
+    [subquery]
+```
+
+##### Virtual Tables
+
+###### Inserted and Deleted
+
+```sql
+create trigger [print_on_insert]
+    on Employee
+    for [insert | delete]
+    as
+        declare
+            @id int, @name varchar(20), @gender varchar(6)
+select @id = id,
+       @name = name,
+       @gender = gender
+from [inserted | deleted]
+print '(' + @id + ', ' + @name + ', ' + @gender + ')'
+```
+
+#### Drop Trigger
+
+```sql
+drop trigger [trigger_name]
+```
+
+### Cursor
+
+```sql
+declare [cursor_name] cursor for
+    select [column1], [column2], ...
+    from [Table_Name]
+
+open [cursor_name]
+
+fetch next from [cursor_name]
+
+while @@FETCH_STATUS = 0 begin
+    fetch next from [cursor_name]
+end
+
+close [cursor_name]
+
+deallocate [cursor_name]
+```
+
+#### Terminologies
+
+| Terminology | Meaning                       |
+| ----------- | ----------------------------- |
+| Next        | Return the next row           |
+| Prior       | Return the previous row       |
+| First       | Return the first row          |
+| Last        | Return the last row           |
+| Absolute    | Return the n-th row           |
+| Relative    | Return the current + n-th row |
+
+## Programming in SQL with T-SQL
+
+### Variable Declaration
+
+```sql
+declare @[var_name] [data_type]
+select @[var_name] = [a_value]
+print @[var_name]
+```
+
+### Selection Statement
+
+#### If else-if else
+
+```sql
+if [boolean_expression]
+    begin
+        ...
+    end
+else
+    if [boolean_expression]
+        begin
+            ...
+        end
+    else
+        begin
+            ...
+        end
+```
+
+#### Switch Case
+
+```sql
+print case
+        when [boolean1] then 'value1'
+        when [boolean2] then 'value2'
+        ...
+        else 'valueN'
+    end
+```
+
+### Loop
+
+```sql
+declare @i int = 1
+while @i < 100 begin
+    print @i
+    select @i = @i + 1
+end
+```
+
+#### Loop Keyword
+
+- continue
+- break
+- return
+
+### Procedure
+
+#### Create Procedure
+
+```sql
+create procedure [procedure_name]
+as
+    [subquery]
+```
+
+#### Rename Procedure
+
+```sql
+sp_rename [old_procedure_name], [new_procedure_name]
+```
+
+#### Drop Procedure
+
+```sql
+drop procedure [procedure_name]
+```
+
+#### Print Procedure
+
+```sql
+sp_helptext [procedure_name]
+```
+
+### Error Handling
+
+```sql
+[subquery_which_might_cause_error]
+if @@ERROR <> 0 begin -- <> is the same as !=
+    ...
+end
+```
+
+### Exception Handling
+
+```sql
+begin try
+    [subquery_that_might_cause_exception]
+end begin
+begin catch
+    print 'Error occured'
+end catch
+```
