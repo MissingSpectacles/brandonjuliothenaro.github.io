@@ -10,7 +10,6 @@ export default memo(
   ({
     children,
     location,
-    theme,
     pageContext: {
       frontmatter: { date, thumbnail_src, thumbnail_alt },
     },
