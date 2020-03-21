@@ -6,100 +6,9 @@ thumbnail_alt: Microsoft SQL Server logo
 
 # T-SQL
 
-## Table of Contents
+## About
 
-- [T-SQL](#t-sql)
-  - [Table of Contents](#table-of-contents)
-  - [Data Definition Language (DDL)](#data-definition-language-ddl)
-    - [Create](#create)
-      - [Create Table](#create-table)
-      - [Create Index](#create-index)
-      - [Create View](#create-view)
-    - [Drop](#drop)
-      - [Drop Table](#drop-table)
-      - [Drop Index](#drop-index)
-      - [Drop View](#drop-view)
-    - [Constraints](#constraints)
-      - [Check](#check)
-      - [Default](#default)
-      - [Foreign Key](#foreign-key)
-    - [Alter](#alter)
-      - [Add Column](#add-column)
-      - [Drop Column](#drop-column)
-      - [Alter Column](#alter-column)
-      - [Add Constraint](#add-constraint)
-        - [Add Foreign Key](#add-foreign-key)
-      - [Drop Constraint](#drop-constraint)
-      - [Add Default](#add-default)
-    - [Boolean Expression](#boolean-expression)
-      - [Conjunction](#conjunction)
-      - [Like](#like)
-        - [ReGex](#regex)
-      - [In](#in)
-      - [Between](#between)
-      - [Exists](#exists)
-    - [Data Types](#data-types)
-  - [Data Manipulation Language (DML)](#data-manipulation-language-dml)
-    - [Select](#select)
-      - [Sorting](#sorting)
-    - [Insert](#insert)
-    - [Update](#update)
-    - [Delete](#delete)
-    - [Commit](#commit)
-    - [Rollback](#rollback)
-    - [Join](#join)
-      - [Inner Join](#inner-join)
-      - [Outer Join](#outer-join)
-        - [Left Join](#left-join)
-        - [Right Join](#right-join)
-        - [Full Join](#full-join)
-    - [Union](#union)
-  - [Data Control Language](#data-control-language)
-    - [Grant](#grant)
-    - [Revoke](#revoke)
-    - [Commands](#commands)
-  - [Functions](#functions)
-    - [Aggregate](#aggregate)
-      - [Grouping](#grouping)
-    - [Date](#date)
-      - [Datediff](#datediff)
-      - [Datename](#datename)
-      - [Datepart](#datepart)
-      - [Dateadd](#dateadd)
-      - [Date Types](#date-types)
-    - [String](#string)
-      - [Charindex](#charindex)
-      - [Left](#left)
-      - [Right](#right)
-      - [Substring](#substring)
-      - [Trim](#trim)
-      - [Reverse](#reverse)
-      - [Length](#length)
-      - [Stuff](#stuff)
-      - [Convert](#convert)
-      - [Cast](#cast)
-  - [Advanced](#advanced)
-    - [Trigger](#trigger)
-      - [Create Trigger](#create-trigger)
-        - [Virtual Tables](#virtual-tables)
-          - [Inserted and Deleted](#inserted-and-deleted)
-      - [Drop Trigger](#drop-trigger)
-    - [Cursor](#cursor)
-      - [Terminologies](#terminologies)
-  - [Programming in SQL with T-SQL](#programming-in-sql-with-t-sql)
-    - [Variable Declaration](#variable-declaration)
-    - [Selection Statement](#selection-statement)
-      - [If else-if else](#if-else-if-else)
-      - [Switch Case](#switch-case)
-    - [Loop](#loop)
-      - [Loop Keyword](#loop-keyword)
-    - [Procedure](#procedure)
-      - [Create Procedure](#create-procedure)
-      - [Rename Procedure](#rename-procedure)
-      - [Drop Procedure](#drop-procedure)
-      - [Print Procedure](#print-procedure)
-    - [Error Handling](#error-handling)
-    - [Exception Handling](#exception-handling)
+This is my note about T-SQL when learning about database in my university. It's T-SQL because my university uses SQL Server to teach in database course.
 
 ## Data Definition Language (DDL)
 
@@ -303,9 +212,9 @@ from [Table_Name]
 #### Sorting
 
 ```sql
-select name
-from Employees
-order by name
+select [column_name]
+from [Table_Name]
+order by [column_name] [asc | desc]
 ```
 
 ### Insert
@@ -543,7 +452,6 @@ convert([data_type], [string], [date_format])
 ```sql
 cast([string] as [data_type])
 ```
-
 
 ## Advanced
 
