@@ -56,18 +56,6 @@ export default connect(mapStateToProps)(
                   ) : null}
                 </Link>
               </li>
-              <li
-                className={`nav-item ${
-                  location.pathname.startsWith("/blogs") ? "active" : ""
-                }`}
-              >
-                <Link className="nav-link" to="/blogs">
-                  Blog{" "}
-                  {location.pathname.startsWith("/blogs") ? (
-                    <span className="sr-only">(current)</span>
-                  ) : null}
-                </Link>
-              </li>
             </ul>
           </div>
 

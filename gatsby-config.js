@@ -17,8 +17,8 @@ module.exports = {
     facebookUrl: `https://www.facebook.com/profile.php?id=100008724798107`,
     freeCodeCampUrl: `https://www.freecodecamp.org/brandon-julio-thenaro`,
     githubUrl: `https://github.com/brandon-julio-t`,
-    instagramUrl: `https://www.instagram.com/`,
-    linkedinUrl: `https://www.linkedin.com/in/brandonjuliothenaro/`,
+    instagramUrl: `https://www.instagram.com/brandon.julio.t`,
+    linkedinUrl: `https://www.linkedin.com/in/brandonjuliothenaro`,
     twitterUrl: `https://twitter.com/brandon_julio_t`,
 
     myStructuredData: JSON.stringify(myStructuredData),
@@ -26,17 +26,10 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: path.join(__dirname, `src`, `pages`),
-        ignore: [`blogs/blog_template.jsx`],
-      },
-    },
 
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -47,10 +40,18 @@ module.exports = {
       },
     },
 
-    { resolve: `gatsby-plugin-canonical-urls`, options: { siteUrl: siteUrl } },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: siteUrl,
+      },
+    },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
-      options: { trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID },
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+      },
     },
 
     {
@@ -68,25 +69,6 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve(
-            path.join(__dirname, `src`, `pages`, `blogs`, `blog_template.jsx`)
-          ),
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              noInlineHighlight: true,
-            },
-          },
-        ],
-      },
-    },
-
-    {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/`, `/skills`, `/blogs/*`],
@@ -96,14 +78,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-redux`,
       options: { pathToCreateStoreModule: "./src/state/createStore" },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: path.join(__dirname, `src`, `pages`, `blogs`),
-      },
     },
 
     {
