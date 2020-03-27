@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
+site_url: https://brandonjuliothenaro.my.id
 publish_mode: editorial_workflow
 
 media_folder: static/uploads/images
@@ -15,8 +16,8 @@ collections:
     create: true
     slug: "{{slug}}"
     preview_path: "blogs/{{slug}}"
-    extension: "frontmatter"
-    format: "frontmatter"
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
