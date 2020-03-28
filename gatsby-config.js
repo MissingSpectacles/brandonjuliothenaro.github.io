@@ -31,21 +31,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    
-        {
-          resolve: `gatsby-plugin-offline`,
-          options: {
-            precachePages: [`/`, `/skills`, `/blogs/*`],
-          },
-        },
-        
-            {
-              resolve: `gatsby-source-filesystem`,
-              options: {
-                name: `images`,
-                path: path.join(__dirname, `src`, `images`),
-              },
-            },
+
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/skills`, `/blogs/*`],
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
 
     {
       resolve: `gatsby-plugin-robots-txt`,
