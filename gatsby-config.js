@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 const path = require(`path`)
-const myStructuredData = require(`./static/structured_data`)
+const myStructuredData = require(`${__dirname}/static/structured_data`)
 
 const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
@@ -30,13 +30,32 @@ module.exports = {
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-remark`,
 
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: "*", allow: "/" }],
+        policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/blogs`,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve(`${__dirname}/src/pages/blogs/template.jsx`),
+        },
       },
     },
 
@@ -77,12 +96,17 @@ module.exports = {
 
     {
       resolve: `gatsby-plugin-react-redux`,
-      options: { pathToCreateStoreModule: "./src/state/createStore" },
+      options: {
+        pathToCreateStoreModule: `${__dirname}/src/state/createStore`,
+      },
     },
 
     {
       resolve: `gatsby-source-filesystem`,
-      options: { name: `images`, path: path.join(__dirname, `src`, `images`) },
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
     },
 
     {

@@ -6,7 +6,7 @@ import { library, config } from "@fortawesome/fontawesome-svg-core"
 import "../../styles/styles.scss"
 import Footer from "./footer"
 import Header from "./header"
-import Navbar from "./navbar"
+import Navbar from "./navbar/navbar"
 import SEO from "../seo"
 import {
   getThemeByTime,
@@ -38,20 +38,23 @@ export default connect(
     }) => {
       // Automatically change theme according to time on first load
       if (isFirstLoad && theme !== getThemeByTime()) {
-        console.log("Theme is not in sync. Changing...")
         toggleTheme()
       }
 
       return (
         <>
+          <SEO
+            title={title}
+            additionalStructuredData={additionalStructuredData}
+          />
+
           <Navbar location={location} />
+
           <div className="container">
-            <SEO
-              title={title}
-              additionalStructuredData={additionalStructuredData}
-            />
-            <Header location={location} title={title} />
+            <Header title={title} />
+
             <main className={className}>{children}</main>
+
             <Footer />
           </div>
         </>
