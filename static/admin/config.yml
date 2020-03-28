@@ -2,9 +2,6 @@ backend:
   name: git-gateway
   branch: master
 
-site_url: https://brandonjuliothenaro.my.id
-publish_mode: editorial_workflow
-
 media_folder: static/uploads/images
 public_folder: uploads/images
 
