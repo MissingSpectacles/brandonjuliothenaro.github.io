@@ -31,6 +31,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    
+        {
+          resolve: `gatsby-plugin-offline`,
+          options: {
+            precachePages: [`/`, `/skills`, `/blogs/*`],
+          },
+        },
+        
+            {
+              resolve: `gatsby-source-filesystem`,
+              options: {
+                name: `images`,
+                path: path.join(__dirname, `src`, `images`),
+              },
+            },
 
     {
       resolve: `gatsby-plugin-robots-txt`,
@@ -38,6 +53,14 @@ module.exports = {
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/*template.(js|ts)?(x)`],
       },
     },
 
@@ -88,24 +111,9 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/`, `/skills`, `/blogs/*`],
-      },
-    },
-
-    {
       resolve: `gatsby-plugin-react-redux`,
       options: {
         pathToCreateStoreModule: `${__dirname}/src/state/createStore`,
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
 
