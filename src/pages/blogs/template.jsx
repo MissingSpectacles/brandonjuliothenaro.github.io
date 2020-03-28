@@ -1,17 +1,27 @@
 import React, { memo } from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { connect } from "react-redux"
 
 import Layout from "../../components/layout/layout"
+import { mapStateToProps, THEME } from "../../state/createStore"
 
-export default memo(({ location, pageContext: { body, frontmatter } }) => {
-  return (
+export default connect(mapStateToProps)(
+  memo(({ theme, location, pageContext: { body, frontmatter } }) => (
     <Layout location={location} title={frontmatter.title}>
       <article>
         <small>Created at: {new Date(frontmatter.date).toDateString()}</small>
         <MDXProvider
           components={{
             h1: props => <></>, // `h1` is delegated to `header.jsx` via `<Layout />`
+            pre: memo(props => (
+              <pre
+                {...props}
+                className={`${props.className} ${
+                  theme === THEME.DARK ? "text-light" : ""
+                }`}
+              />
+            )),
             img: memo(props => (
               <img
                 className="img-fluid my-4 rounded mx-auto d-block"
@@ -26,5 +36,5 @@ export default memo(({ location, pageContext: { body, frontmatter } }) => {
         </MDXProvider>
       </article>
     </Layout>
-  )
-})
+  ))
+)
