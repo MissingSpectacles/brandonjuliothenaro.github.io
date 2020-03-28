@@ -16,10 +16,12 @@ export default memo(({ label, location }) => {
     >
       <Link className="nav-link" to={path}>
         {/* Title case */}
-        {label
-          .split("")
-          .map((s, i) => (i === 0 ? s.toUpperCase() : s.toLowerCase()))
-          .join("")}
+        {isIndex
+          ? "Home"
+          : label
+              .split("")
+              .map((s, i) => (i === 0 ? s.toUpperCase() : s.toLowerCase()))
+              .join("")}
 
         {(isIndex ? (
           pathname === "/"
