@@ -7,7 +7,8 @@
 - PWA with Gatsby
 - Front-end design with [React](https://reactjs.org/) and [Bootstrap](https://getbootstrap.com/)
 - State management with [Redux Toolkit](https://redux-toolkit.js.org/) and [React-Redux](https://react-redux.js.org/)
-- Deploy via [Gatsby Cloud](https://www.gatsbyjs.com/cloud/)
+- Continuous Deployment [Gatsby Cloud](https://www.gatsbyjs.com/cloud/)
+- Blogging system with [Netlify CMS](https://www.netlifycms.org/)
 
 ## How to run Locally
 
