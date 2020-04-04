@@ -8,12 +8,13 @@ import Footer from "./footer"
 import Header from "./header"
 import Navbar from "./navbar/navbar"
 import SEO from "../seo"
+import { connect } from "react-redux"
 import {
   getThemeByTime,
   mapDispatchToProps,
   mapStateToProps,
+  THEME,
 } from "../../state/createStore"
-import { connect } from "react-redux"
 
 library.add(fab, faMoon, faSun, faArrowLeft)
 config.autoAddCss = false // Prevent Font Awesome Icons being large then small on first load
@@ -24,21 +25,27 @@ export default connect(
 )(
   memo(
     ({
-      /* Props */
       children,
       className,
       location,
       additionalStructuredData,
       title,
-
-      /* Redux Store */
       theme,
       isFirstLoad,
       toggleTheme,
     }) => {
-      // Automatically change theme according to time on first load
-      if (isFirstLoad && theme !== getThemeByTime()) {
-        toggleTheme()
+      if (isFirstLoad) {
+        const noPreference = window.matchMedia(
+          "(prefers-color-scheme: no-preference)"
+        ).matches
+        const darkMode = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+
+        if (darkMode && theme !== THEME.DARK) {
+          toggleTheme()
+        } else if (noPreference && theme !== getThemeByTime()) {
+          toggleTheme()
+        }
       }
 
       return (

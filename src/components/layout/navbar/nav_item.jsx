@@ -6,15 +6,19 @@ export default memo(({ label, location }) => {
   const lowerLabel = label.toLowerCase()
   const isIndex = lowerLabel === "index"
   const pathname = location.pathname
-  const path = isIndex ? "/" : `/${lowerLabel}`
+  const anchorLink = isIndex ? "/" : `/${lowerLabel}`
 
   return (
     <li
       className={`nav-item ${
-        (isIndex ? pathname === "/" : pathname.startsWith(path)) ? "active" : ""
+        (isIndex
+        ? pathname === "/"
+        : pathname.startsWith(anchorLink))
+          ? "active"
+          : ""
       }`}
     >
-      <Link className="nav-link" to={path}>
+      <Link className="nav-link" to={anchorLink}>
         {/* Title case */}
         {isIndex
           ? "Home"
@@ -26,7 +30,7 @@ export default memo(({ label, location }) => {
         {(isIndex ? (
           pathname === "/"
         ) : (
-          pathname.startsWith(path)
+          pathname.startsWith(anchorLink)
         )) ? (
           <span className="sr-only">(current)</span>
         ) : null}

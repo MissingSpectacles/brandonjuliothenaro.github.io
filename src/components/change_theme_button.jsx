@@ -22,7 +22,7 @@ export default connect(
         className={theme === THEME.DARK ? "text-light" : ""}
         icon={theme === THEME.DARK ? "sun" : "moon"}
         size="2x"
-      ></FontAwesomeIcon>
+      />
       <span className="sr-only">Change theme button</span>
     </button>
   ))
