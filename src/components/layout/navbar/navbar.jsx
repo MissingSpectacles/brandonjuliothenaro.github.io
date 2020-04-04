@@ -1,8 +1,3 @@
-// Enable nav items expansion on small screen
-import "jquery"
-import "popper.js"
-import "bootstrap"
-
 import React, { memo } from "react"
 import { connect } from "react-redux"
 
