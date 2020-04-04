@@ -30,22 +30,13 @@ export default connect(
       location,
       additionalStructuredData,
       title,
+
       theme,
       isFirstLoad,
       toggleTheme,
     }) => {
-      if (isFirstLoad) {
-        const noPreference = window.matchMedia(
-          "(prefers-color-scheme: no-preference)"
-        ).matches
-        const darkMode = window.matchMedia("(prefers-color-scheme: dark)")
-          .matches
-
-        if (darkMode && theme !== THEME.DARK) {
-          toggleTheme()
-        } else if (noPreference && theme !== getThemeByTime()) {
-          toggleTheme()
-        }
+      if (isFirstLoad && theme !== getThemeByTime()) {
+        toggleTheme()
       }
 
       return (
