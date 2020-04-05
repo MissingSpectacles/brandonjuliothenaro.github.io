@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { mapStateToProps, THEME } from "../state/createStore"
 
 export default connect(mapStateToProps)(
-  memo(({ additionalStructuredData, theme, title }) => {
+  memo(({ theme, title }) => {
     const {
       site: {
         siteMetadata: {
@@ -14,7 +14,6 @@ export default connect(mapStateToProps)(
           name,
           siteUrl,
           twitterId,
-          myStructuredData,
         },
       },
     } = useStaticQuery(graphql`
@@ -42,13 +41,6 @@ export default connect(mapStateToProps)(
         />
 
         <title>{tabTitle}</title>
-
-        {/* JSON-LD */}
-        <script type="application/ld+json">{myStructuredData}</script>
-
-        {additionalStructuredData ? (
-          <script type="application/ld+json">{JSON.stringify(additionalStructuredData)}</script>
-        ) : null}
 
         {/* Search Engine */}
         <meta name="description" content={description} />

@@ -3,7 +3,6 @@ require("dotenv").config({
 })
 
 const path = require(`path`)
-const myStructuredData = require(`${__dirname}/static/structured_data`)
 
 const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
@@ -20,8 +19,6 @@ module.exports = {
     instagramUrl: `https://www.instagram.com/brandon.julio.t`,
     linkedinUrl: `https://www.linkedin.com/in/brandonjuliothenaro`,
     twitterUrl: `https://twitter.com/brandon_julio_t`,
-
-    myStructuredData: JSON.stringify(myStructuredData),
   },
 
   plugins: [
