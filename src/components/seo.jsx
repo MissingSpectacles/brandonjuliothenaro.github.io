@@ -25,7 +25,6 @@ export default connect(mapStateToProps)(
             name
             siteUrl
             twitterId
-            myStructuredData
           }
         }
       }
