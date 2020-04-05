@@ -13,7 +13,10 @@ export default connect(mapStateToProps)(
         <small>Created at: {new Date(frontmatter.date).toDateString()}</small>
         <MDXProvider
           components={{
-            h1: props => <></>, // `h1` is delegated to `header.jsx` via `<Layout />`
+            h1: () => <></>, // `h1` is delegated to `header.jsx` via `<Layout />`
+            a: memo(props => (
+              <a {...props} target="_blank" rel="noreferrer noopener" />
+            )),
             pre: memo(props => (
               <pre
                 {...props}
