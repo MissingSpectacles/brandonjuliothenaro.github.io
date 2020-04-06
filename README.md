@@ -4,11 +4,13 @@
 
 ## What I Implemented
 
-- PWA with Gatsby
+- Fast Performance and PWA with [Gatsby](https://www.gatsbyjs.org/)
 - Front-end design with [React](https://reactjs.org/) and [Bootstrap](https://getbootstrap.com/)
 - State management with [Redux Toolkit](https://redux-toolkit.js.org/) and [React-Redux](https://react-redux.js.org/)
 - Continuous Deployment [Gatsby Cloud](https://www.gatsbyjs.com/cloud/)
 - Blogging system with [Netlify CMS](https://www.netlifycms.org/)
+- Form submission handling with [Netlify Form](https://docs.netlify.com/forms/setup/)
+- [JSON-LD](https://json-ld.org/)
 
 ## How to run Locally
 
