@@ -155,7 +155,14 @@ export default connect(mapStateToProps)(
                         <tr key={name}>
                           <td>{index + 1}</td>
                           <td>
-                            <Link to={url}>{name.replace(/[-]/gi, " ")}</Link>
+                            <Link to={url}>
+                              {name
+                                .split("-")
+                                .map(
+                                  str => str[0].toUpperCase() + str.substring(1)
+                                )
+                                .join(" ")}
+                            </Link>
                           </td>
                           <td>{description}</td>
                           <td>{new Date(updatedAt).toDateString()}</td>

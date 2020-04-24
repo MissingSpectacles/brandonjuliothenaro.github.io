@@ -1,6 +1,12 @@
 import React, { memo } from "react"
 import { connect } from "react-redux"
-import { faArrowLeft, faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
+import {
+  faArrowLeft,
+  faBars,
+  faMoon,
+  fas,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { library, config } from "@fortawesome/fontawesome-svg-core"
 
@@ -15,7 +21,7 @@ import {
   mapStateToProps,
 } from "../../state/createStore"
 
-library.add(fab, faMoon, faSun, faArrowLeft)
+library.add(fab, fas, faMoon, faSun, faArrowLeft, faBars)
 config.autoAddCss = false // Prevent Font Awesome Icons being large then small on first load
 
 export default connect(
@@ -39,9 +45,7 @@ export default connect(
 
       return (
         <>
-          <SEO
-            title={title}
-          />
+          <SEO title={title} />
 
           <Navbar location={location} />
 

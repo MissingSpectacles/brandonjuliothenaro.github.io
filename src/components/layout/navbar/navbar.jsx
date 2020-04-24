@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import NavItem from "./nav_item"
 import ChangeThemeButton from "../../change_theme_button"
 import { mapStateToProps, THEME } from "../../../state/createStore"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default connect(mapStateToProps)(
   memo(({ location, theme }) => (
@@ -31,7 +32,7 @@ export default connect(mapStateToProps)(
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <FontAwesomeIcon icon={["fas", "bars"]} />
         </button>
 
         <ChangeThemeButton />
