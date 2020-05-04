@@ -8,6 +8,7 @@ import Navbar from "./subcomponents/navbar"
 import SEO from "./seo"
 
 import { Box, Container, useMediaQuery } from "@material-ui/core"
+
 import {
   ThemeProvider,
   createMuiTheme,

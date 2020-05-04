@@ -14,7 +14,7 @@ import {
   Twitter,
 } from "@material-ui/icons"
 
-export default memo(() => {
+const Contact = () => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(graphql`
@@ -133,4 +133,6 @@ export default memo(() => {
       </Box>
     </Layout>
   )
-})
+}
+
+export default memo(Contact)

@@ -63,7 +63,7 @@ const skills = {
   },
 }
 
-export default memo(({ location }) => (
+const Skills = ({ location }) => (
   <Layout location={location} title="Developer Skills">
     <Grid container component="article" spacing={4}>
       <Grid item component="section" xs>
@@ -223,4 +223,6 @@ export default memo(({ location }) => (
       </Grid>
     </Grid>
   </Layout>
-))
+)
+
+export default memo(Skills)
