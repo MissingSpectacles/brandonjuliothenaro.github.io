@@ -1,27 +1,36 @@
 import React, { memo } from "react"
-import { Link } from "gatsby"
-import { connect } from "react-redux"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Link as GatsbyLink } from "gatsby"
 
-import { mapStateToProps, THEME } from "../state/createStore"
+import Button from "@material-ui/core/Button"
 
-export default connect(mapStateToProps)(
-  memo(({ children, className, theme, to }) => {
-    className = `${className} ${theme === THEME.DARK ? "text-dark-link" : ""}`
+const Link = ({ children, to, variant, icon }) => {
+  const isExternal = to.includes("http")
 
-    return !to.includes("http") ? (
-      <Link to={to} className={className}>
-        {children}
-      </Link>
-    ) : (
-      <OutboundLink
-        href={to}
-        className={className}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        {children}
-      </OutboundLink>
-    )
-  })
-)
+  const ExternalPage = (
+    <Button
+      component="a"
+      href={to}
+      variant={variant ?? "text"}
+      rel="noreferrer noopener"
+      target="_blank"
+      startIcon={icon}
+    >
+      {children}
+    </Button>
+  )
+
+  const InternalPage = (
+    <Button
+      component={GatsbyLink}
+      to={to}
+      startIcon={icon}
+      variant={variant ?? "text"}
+    >
+      {children}
+    </Button>
+  )
+
+  return isExternal ? ExternalPage : InternalPage
+}
+
+export default memo(Link)

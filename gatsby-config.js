@@ -2,8 +2,6 @@ require("dotenv").config({
   path: `.env`,
 })
 
-const path = require(`path`)
-
 const siteUrl = `https://www.brandonjuliothenaro.my.id`
 
 module.exports = {
@@ -22,63 +20,6 @@ module.exports = {
   },
 
   plugins: [
-    `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-preact`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
-
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/`, `/skills`, `/contact`, `/blogs/*`],
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
-
-    {
-      resolve: `gatsby-plugin-robots-txt`,
-      options: {
-        host: siteUrl,
-        sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: `*`, allow: `/` }],
-      },
-    },
-
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        ignore: [`**/template.(js|ts)?(x)`],
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/blogs`,
-      },
-    },
-
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve(`${__dirname}/src/pages/blogs/template.jsx`),
-        },
-      },
-    },
-
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -107,12 +48,10 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-plugin-react-redux`,
-      options: {
-        pathToCreateStoreModule: `${__dirname}/src/state/createStore`,
-      },
-    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sitemap`,
 
     {
       resolve: `gatsby-source-github-api`,
@@ -124,7 +63,7 @@ module.exports = {
          */
         graphQLQuery: `query {
           viewer {
-            repositories(first: 5, orderBy: {field: CREATED_AT, direction: DESC}) {
+            repositories(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
               nodes {
                 description
                 name
