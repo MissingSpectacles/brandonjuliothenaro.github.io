@@ -4,6 +4,13 @@ import React, { memo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import useTheme from "@material-ui/core/styles/useTheme"
+import { makeStyles } from "@material-ui/core/styles"
+
+const useStyles = makeStyles({
+  html: {
+    backgroundColor: props => props.bgcolor,
+  },
+})
 
 const SEO = ({ title }) => {
   const {
@@ -22,6 +29,8 @@ const SEO = ({ title }) => {
     }
   `)
 
+  const classes = useStyles({ bgcolor: useTheme().palette.background.default })
+
   return (
     <Helmet titleTemplate={`%s | ${siteMetadata.name}`}>
       {/*
@@ -39,10 +48,7 @@ const SEO = ({ title }) => {
        | SEO
        |------------------------------------------------------------------------
        */}
-      <html
-        lang="en"
-        style={`background-color: ${useTheme().palette.background.default}`}
-      />
+      <html lang="en" className={classes.html} />
 
       <title>{title ? title : "Home"}</title>
 

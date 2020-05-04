@@ -63,8 +63,8 @@ const skills = {
   },
 }
 
-const Skills = ({ location }) => (
-  <Layout location={location} title="Developer Skills">
+const Skills = () => (
+  <Layout title="Developer Skills">
     <Grid container component="article" spacing={4}>
       <Grid item component="section" xs>
         <header>
