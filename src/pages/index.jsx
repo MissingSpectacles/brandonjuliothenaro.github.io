@@ -28,85 +28,65 @@ import {
   Vuejs,
 } from "mdi-material-ui"
 
-const Index = ({ data }) => {
-  const programmingLanguages = [
-    { label: "Java", Icon: props => <LanguageJava {...props} /> },
-    { label: "JavaScript", Icon: props => <LanguageJavascript {...props} /> },
-    { label: "SQL", Icon: props => <Database {...props} /> },
-  ]
+const programmingLanguages = [
+  { label: "Java", Icon: props => <LanguageJava {...props} /> },
+  { label: "JavaScript", Icon: props => <LanguageJavascript {...props} /> },
+  { label: "SQL", Icon: props => <Database {...props} /> },
+]
 
-  const frameworks = [
-    { label: "Laravel", Icon: props => <Laravel {...props} /> },
-    { label: "React", Icon: props => <ReactIcon {...props} /> },
-    { label: "Vue", Icon: props => <Vuejs {...props} /> },
-  ]
+const frameworks = [
+  { label: "Laravel", Icon: props => <Laravel {...props} /> },
+  { label: "React", Icon: props => <ReactIcon {...props} /> },
+  { label: "Vue", Icon: props => <Vuejs {...props} /> },
+]
 
-  return (
-    <Layout>
-      <article>
-        <section>
-          <header>
-            <Text variant="h2">About Me</Text>
-          </header>
+const Index = ({ data }) => (
+  <Layout>
+    <article>
+      <section>
+        <header>
+          <Text variant="h2">About Me</Text>
+        </header>
 
-          <Text>
-            Junior web developer since 2019.
-            <br />
-            Student at <Link to="https://binus.ac.id/">
-              Binus University
-            </Link>{" "}
-            since 2019.
-          </Text>
+        <Text>
+          Junior web developer since 2019.
+          <br />
+          Student at <Link to="https://binus.ac.id/">
+            Binus University
+          </Link>{" "}
+          since 2019.
+        </Text>
 
-          <Text variant="caption">
-            <em>coincidence?</em>
-          </Text>
-
-          <Spacer />
-
-          <Link
-            to="https://www.brandonjuliothenaro.my.id/resume.pdf"
-            variant="outlined"
-          >
-            My Resume (PDF)
-          </Link>
-        </section>
+        <Text variant="caption">
+          <em>coincidence?</em>
+        </Text>
 
         <Spacer />
 
-        <section>
-          <header>
-            <Text variant="h2">Developer Skills</Text>
-          </header>
+        <Link
+          to="https://www.brandonjuliothenaro.my.id/resume.pdf"
+          variant="outlined"
+        >
+          My Resume (PDF)
+        </Link>
+      </section>
 
-          <Grid container justify="center" spacing={4}>
-            <Grid item component="section" xs>
-              <header>
-                <Text variant="h3">Programming Languages</Text>
-              </header>
+      <Spacer />
 
-              <List>
-                {programmingLanguages.map(({ label, Icon }) => {
-                  return (
-                    <ListItem key={label}>
-                      <ListItemText>
-                        <Text>
-                          <Icon /> {label}
-                        </Text>
-                      </ListItemText>
-                    </ListItem>
-                  )
-                })}
-              </List>
-            </Grid>
+      <section>
+        <header>
+          <Text variant="h2">Developer Skills</Text>
+        </header>
 
-            <Grid item component="section" xs>
-              <header>
-                <Text variant="h3">Frameworks</Text>
-              </header>
+        <Grid container justify="center" spacing={4}>
+          <Grid item component="section" xs>
+            <header>
+              <Text variant="h3">Programming Languages</Text>
+            </header>
 
-              <List>
-                {frameworks.map(({ label, Icon }) => (
+            <List>
+              {programmingLanguages.map(({ label, Icon }) => {
+                return (
                   <ListItem key={label}>
                     <ListItemText>
                       <Text>
@@ -114,63 +94,79 @@ const Index = ({ data }) => {
                       </Text>
                     </ListItemText>
                   </ListItem>
-                ))}
-              </List>
-            </Grid>
+                )
+              })}
+            </List>
           </Grid>
 
-          <Spacer />
+          <Grid item component="section" xs>
+            <header>
+              <Text variant="h3">Frameworks</Text>
+            </header>
 
-          <Link to="/skills" variant="outlined">
-            Full list of my developer skills.
-          </Link>
-        </section>
+            <List>
+              {frameworks.map(({ label, Icon }) => (
+                <ListItem key={label}>
+                  <ListItemText>
+                    <Text>
+                      <Icon /> {label}
+                    </Text>
+                  </ListItemText>
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+        </Grid>
 
         <Spacer />
 
-        <section>
-          <header>
-            <Text variant="h2">GitHub Projects</Text>
-          </header>
+        <Link to="/skills" variant="outlined">
+          Full list of my developer skills.
+        </Link>
+      </section>
 
-          <Text>The following table shows my repositories on GitHub.</Text>
+      <Spacer />
 
-          <TableContainer>
-            <Table stickyHeader>
-              <TableHead>
-                <TableRow>
-                  {["#", "Name", "Description", "Last Updated"].map(header => (
-                    <TableCell key={header} scope="col">
-                      {header}
+      <section>
+        <header>
+          <Text variant="h2">GitHub Projects</Text>
+        </header>
+
+        <Text>The following table shows my repositories on GitHub.</Text>
+
+        <TableContainer>
+          <Table stickyHeader>
+            <TableHead>
+              <TableRow>
+                {["#", "Name", "Description", "Last Updated"].map(header => (
+                  <TableCell key={header} scope="col">
+                    {header}
+                  </TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {data.githubData.data.viewer.repositories.nodes.map(
+                ({ name, url, description, updatedAt }, index) => (
+                  <TableRow hover key={name}>
+                    <TableCell component="th" scope="row">
+                      {index + 1}
                     </TableCell>
-                  ))}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {data.githubData.data.viewer.repositories.nodes.map(
-                  ({ name, url, description, updatedAt }, index) => (
-                    <TableRow hover key={name}>
-                      <TableCell component="th" scope="row">
-                        {index + 1}
-                      </TableCell>
-                      <TableCell>
-                        <Link to={url}>{name}</Link>
-                      </TableCell>
-                      <TableCell>{description}</TableCell>
-                      <TableCell>
-                        {new Date(updatedAt).toDateString()}
-                      </TableCell>
-                    </TableRow>
-                  )
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </section>
-      </article>
-    </Layout>
-  )
-}
+                    <TableCell>
+                      <Link to={url}>{name}</Link>
+                    </TableCell>
+                    <TableCell>{description}</TableCell>
+                    <TableCell>{new Date(updatedAt).toDateString()}</TableCell>
+                  </TableRow>
+                )
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </section>
+    </article>
+  </Layout>
+)
 
 export default memo(Index)
 

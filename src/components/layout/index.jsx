@@ -1,10 +1,11 @@
 import "normalize.css"
+import "typeface-roboto"
 
 import React, { memo, useMemo, useState } from "react"
 
-import Footer from "./subcomponents/footer"
-import Header from "./subcomponents/header"
-import Navbar from "./subcomponents/navbar"
+import Footer from "./footer"
+import Header from "./header"
+import Navbar from "../subcomponents/navbar"
 import SEO from "./seo"
 
 import { Box, Container, useMediaQuery } from "@material-ui/core"

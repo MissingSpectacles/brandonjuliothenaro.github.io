@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet"
 import React, { memo } from "react"
+import { Helmet } from "react-helmet"
 
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -33,21 +33,6 @@ const SEO = ({ title }) => {
 
   return (
     <Helmet titleTemplate={`%s | ${siteMetadata.name}`}>
-      {/*
-       |------------------------------------------------------------------------
-       | Material UI
-       |------------------------------------------------------------------------
-       */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      />
-
-      {/*
-       |------------------------------------------------------------------------
-       | SEO
-       |------------------------------------------------------------------------
-       */}
       <html lang="en" className={classes.html} />
 
       <title>{title ? title : "Home"}</title>
