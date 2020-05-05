@@ -1,9 +1,6 @@
 import React, { memo, useState } from "react"
-import { Link as GatsbyLink } from "gatsby"
 
 import NavItem from "./nav_item"
-
-import { createNavLabelFromLabel, createNavPathFromLabel } from "../../helpers"
 
 import {
   AppBar,
@@ -13,9 +10,6 @@ import {
   Grid,
   Hidden,
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   ListSubheader,
   Toolbar,
 } from "@material-ui/core"
@@ -23,36 +17,20 @@ import {
 import {
   Brightness4,
   BrightnessHigh,
-  Menu,
-  Home,
-  QuestionAnswer,
   Build,
+  Home,
+  Menu,
+  QuestionAnswer,
 } from "@material-ui/icons"
 
 import { makeStyles } from "@material-ui/core/styles"
+import ListItemLink from "./nav_item_list"
 
 const useStyles = makeStyles({
   list: {
     width: 250, // https://material-ui.com/components/drawers/#temporary-drawer
   },
 })
-
-function createListItem(label, closeDrawer, Icon) {
-  return (
-    <ListItem
-      button
-      component={GatsbyLink}
-      key={label}
-      onClose={closeDrawer}
-      to={createNavPathFromLabel(label)}
-    >
-      <ListItemIcon>
-        <Icon />
-      </ListItemIcon>
-      <ListItemText>{createNavLabelFromLabel(label)}</ListItemText>
-    </ListItem>
-  )
-}
 
 const Index = ({ isDarkMode, toggleTheme }) => {
   const navigations = [
@@ -85,7 +63,7 @@ const Index = ({ isDarkMode, toggleTheme }) => {
               </Hidden>
 
               <Hidden mdUp>
-                <Button onClick={openDrawer}>
+                <Button aria-label="open navigations" onClick={openDrawer}>
                   <Menu />
                 </Button>
 
@@ -101,9 +79,14 @@ const Index = ({ isDarkMode, toggleTheme }) => {
                     component="nav"
                     subheader={<ListSubheader>Navigation</ListSubheader>}
                   >
-                    {navigations.map(({ label, Icon }) =>
-                      createListItem(label, closeDrawer, Icon)
-                    )}
+                    {navigations.map(({ label, Icon }) => (
+                      <ListItemLink
+                        Icon={Icon}
+                        closeDrawer={closeDrawer}
+                        key={label}
+                        label={label}
+                      />
+                    ))}
                   </List>
                 </Drawer>
               </Hidden>
