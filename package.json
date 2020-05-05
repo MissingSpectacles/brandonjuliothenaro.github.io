@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "brandon-julio-thenaro",
   "private": false,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Junior web developer who studies at BINUS University since 2019.",
   "license": "MIT",
   "scripts": {
     "gatsby": "gatsby",

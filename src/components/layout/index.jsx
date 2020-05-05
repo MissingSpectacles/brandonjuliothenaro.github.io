@@ -1,7 +1,7 @@
 import "normalize.css"
 import "typeface-roboto"
 
-import React, { memo, useMemo, useState } from "react"
+import React, { memo, useEffect, useMemo, useState } from "react"
 
 import Footer from "./footer"
 import Header from "./header"
@@ -18,17 +18,20 @@ import {
 
 const Layout = ({ children, className, title }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
+  const [isDarkMode, setDarkMode] = useState(prefersDarkMode)
 
   /*--------------------------------------------------------------------------*
    |             Note: localStorage's value is always a String                |
    *--------------------------------------------------------------------------*/
 
   const key = "isDarkMode"
-  const storedSetting = localStorage.getItem(key) ?? "false"
 
-  const [isDarkMode, setDarkMode] = useState(
-    storedSetting ? storedSetting === "true" : prefersDarkMode
-  )
+  useEffect(() => {
+    const storedSetting = localStorage.getItem(key)
+    setDarkMode(
+      storedSetting ? storedSetting.toLowerCase() === "true" : isDarkMode
+    )
+  }, [isDarkMode])
 
   const toggleTheme = () => {
     setDarkMode(!isDarkMode)
