@@ -5,7 +5,7 @@ import React, { memo, useMemo, useState } from "react"
 
 import Footer from "./footer"
 import Header from "./header"
-import Navbar from "../subcomponents/navbar"
+import Navbar from "./navbar"
 import SEO from "./seo"
 
 import { Box, Container, useMediaQuery } from "@material-ui/core"

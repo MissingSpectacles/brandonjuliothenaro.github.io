@@ -1,6 +1,5 @@
 import React, { memo } from "react"
 import { Helmet } from "react-helmet"
-
 import { useStaticQuery, graphql } from "gatsby"
 
 import useTheme from "@material-ui/core/styles/useTheme"

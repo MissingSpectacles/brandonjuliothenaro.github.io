@@ -48,6 +48,7 @@ module.exports = {
       },
     },
 
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,

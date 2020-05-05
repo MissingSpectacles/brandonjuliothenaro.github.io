@@ -3,7 +3,9 @@ import { Link as GatsbyLink } from "gatsby"
 
 import Button from "@material-ui/core/Button"
 
-const Link = ({ children, to, variant, icon }) => {
+const Link = props => {
+  const { to, variant, icon, children } = props
+
   const isExternal = to.includes("http")
 
   const ExternalPage = (
@@ -14,6 +16,7 @@ const Link = ({ children, to, variant, icon }) => {
       rel="noreferrer noopener"
       target="_blank"
       startIcon={icon}
+      {...props}
     >
       {children}
     </Button>
@@ -25,6 +28,7 @@ const Link = ({ children, to, variant, icon }) => {
       to={to}
       startIcon={icon}
       variant={variant ?? "text"}
+      {...props}
     >
       {children}
     </Button>

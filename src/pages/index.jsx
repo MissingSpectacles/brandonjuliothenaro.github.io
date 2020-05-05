@@ -1,10 +1,7 @@
 import React, { memo } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Link from "../components/link"
-import Spacer from "../components/spacer"
-import Text from "../components/text"
+import { Layout, Link, Spacer, Text } from "../components"
 
 import {
   Grid,

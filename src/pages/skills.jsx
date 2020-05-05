@@ -1,7 +1,6 @@
 import React, { memo } from "react"
 
-import Layout from "../components/layout"
-import Text from "../components/text"
+import { Layout, Text } from "../components"
 
 import {
   Divider,
