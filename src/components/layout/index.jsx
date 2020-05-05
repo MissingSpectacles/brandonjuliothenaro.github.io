@@ -18,9 +18,22 @@ import {
 
 const Layout = ({ children, className, title }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
-  const [isDarkMode, setDarkMode] = useState(prefersDarkMode)
 
-  const toggleTheme = () => setDarkMode(!isDarkMode)
+  /*--------------------------------------------------------------------------*
+   |             Note: localStorage's value is always a String                |
+   *--------------------------------------------------------------------------*/
+
+  const key = "isDarkMode"
+  const storedSetting = localStorage.getItem(key) ?? "false"
+
+  const [isDarkMode, setDarkMode] = useState(
+    storedSetting ? storedSetting === "true" : prefersDarkMode
+  )
+
+  const toggleTheme = () => {
+    setDarkMode(!isDarkMode)
+    localStorage.setItem(key, String(!isDarkMode))
+  }
 
   let theme = useMemo(
     () =>
