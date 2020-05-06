@@ -1,20 +1,21 @@
 import React, { memo } from "react"
-import { connect } from "react-redux"
 
-import { mapStateToProps, THEME } from "../../state/createStore"
+import Text from "../text"
 
-export default connect(mapStateToProps)(
-  memo(({ theme, title }) => {
-    const mainHeader = title ? title : "Brandon Julio Thenaro"
+import { Box, Divider } from "@material-ui/core"
 
-    return (
-      <>
-        <header>
-          <h1 className="display-4">{mainHeader}</h1>
-        </header>
+const Header = ({ title }) => {
+  const mainHeader = title ? title : "Brandon Julio Thenaro"
 
-        <hr className={`${theme === THEME.DARK ? "bg-light" : "bg-dark"}`}/>
-      </>
-    )
-  })
-)
+  return (
+    <Box component="header" my={4}>
+      <Text align="center" variant="h1">
+        {mainHeader}
+      </Text>
+
+      <Divider />
+    </Box>
+  )
+}
+
+export default memo(Header)

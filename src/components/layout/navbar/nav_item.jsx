@@ -2,39 +2,16 @@ import React, { memo } from "react"
 
 import Link from "../../link"
 
-export default memo(({ label, location }) => {
-  const lowerLabel = label.toLowerCase()
-  const isIndex = lowerLabel === "index"
-  const pathname = location.pathname
-  const anchorLink = isIndex ? "/" : `/${lowerLabel}`
+import { createNavLabelFromLabel, createNavPathFromLabel } from "../../helpers"
+
+const NavItem = props => {
+  const { label } = props
 
   return (
-    <li
-      className={`nav-item ${
-        (isIndex
-        ? pathname === "/"
-        : pathname.startsWith(anchorLink))
-          ? "active"
-          : ""
-      }`}
-    >
-      <Link className="nav-link" to={anchorLink}>
-        {/* Title case */}
-        {isIndex
-          ? "Home"
-          : label
-              .split("")
-              .map((s, i) => (i === 0 ? s.toUpperCase() : s.toLowerCase()))
-              .join("")}
-
-        {(isIndex ? (
-          pathname === "/"
-        ) : (
-          pathname.startsWith(anchorLink)
-        )) ? (
-          <span className="sr-only">(current)</span>
-        ) : null}
-      </Link>
-    </li>
+    <Link to={createNavPathFromLabel(label)} {...props}>
+      {createNavLabelFromLabel(label)}
+    </Link>
   )
-})
+}
+
+export default memo(NavItem)
