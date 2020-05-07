@@ -61,7 +61,7 @@ const Index = ({ data }) => (
         <Spacer />
 
         <Link
-          to="https://www.brandonjuliothenaro.my.id/resume.pdf"
+          to="https://1drv.ms/b/s!AkMBCpXItqPVynO3k6qkjUQ-rdS0"
           variant="outlined"
         >
           My Resume (PDF)
