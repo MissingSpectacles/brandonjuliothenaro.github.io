@@ -64,7 +64,7 @@ module.exports = {
          */
         graphQLQuery: `query {
           viewer {
-            repositories(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+            repositories(first: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
               nodes {
                 description
                 name

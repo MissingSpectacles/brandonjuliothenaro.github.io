@@ -129,7 +129,9 @@ const Index = ({ data }) => (
           <Text variant="h2">GitHub Projects</Text>
         </header>
 
-        <Text>The following table shows my repositories on GitHub.</Text>
+        <Text>
+          The following table shows my 10 latest repositories on my GitHub.
+        </Text>
 
         <TableContainer>
           <Table stickyHeader>
