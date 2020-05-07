@@ -60,10 +60,7 @@ const Index = ({ data }) => (
 
         <Spacer />
 
-        <Link
-          to="https://1drv.ms/b/s!AkMBCpXItqPVynO3k6qkjUQ-rdS0"
-          variant="outlined"
-        >
+        <Link to="/resume" variant="outlined">
           My Resume (PDF)
         </Link>
       </section>

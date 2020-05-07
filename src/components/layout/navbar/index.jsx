@@ -18,6 +18,7 @@ import {
   Brightness4,
   BrightnessHigh,
   Build,
+  Description,
   Home,
   Menu,
   QuestionAnswer,
@@ -37,6 +38,7 @@ const Index = ({ isDarkMode, toggleTheme }) => {
     { label: "index", Icon: () => <Home /> },
     { label: "skills", Icon: () => <Build /> },
     { label: "contact", Icon: () => <QuestionAnswer /> },
+    { label: "resume", Icon: () => <Description /> },
   ]
 
   const classes = useStyles()
