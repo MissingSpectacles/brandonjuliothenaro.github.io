@@ -1,48 +1,42 @@
 {
-  "name": "brandon-julio-thenaro",
-  "private": false,
-  "description": "Junior web developer who studies at BINUS University since 2019.",
-  "license": "MIT",
+  "name": "brandon-julio-thenaro-website",
+  "version": "1.0.0",
+  "description": "My personal website with Nuxt.js",
+  "author": "Brandon Julio Thenaro",
+  "private": true,
   "scripts": {
-    "gatsby": "gatsby",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.12",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.9.13",
-    "gatsby": "^2.21.10",
-    "gatsby-plugin-canonical-urls": "^2.3.0",
-    "gatsby-plugin-google-analytics": "^2.3.0",
-    "gatsby-plugin-manifest": "^2.4.1",
-    "gatsby-plugin-material-ui": "^2.1.8",
-    "gatsby-plugin-offline": "^3.0.41",
-    "gatsby-plugin-react-helmet": "^3.3.0",
-    "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.4.0",
-    "gatsby-plugin-sitemap": "^2.4.1",
-    "gatsby-source-github-api": "^0.1.5",
-    "mdi-material-ui": "^6.14.0",
-    "normalize.css": "^8.0.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-helmet": "^6.0.0",
-    "typeface-roboto": "0.0.75"
+    "@nuxt/typescript-runtime": "^0.4.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/sitemap": "^2.3.0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "prettier": "^1.19.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/eslint-config-typescript": "^1.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/google-analytics": "^2.3.0",
+    "@nuxtjs/vuetify": "^1.0.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
+    "vue-jest": "^4.0.0-0"
   }
 }
