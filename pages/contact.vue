@@ -11,7 +11,6 @@
     <v-row justify="center">
       <v-col lg="8" sm="10">
         <v-form
-          :netlify="true"
           :novalidate="false"
           data-netlify="true"
           method="POST"
@@ -35,6 +34,8 @@
           ></v-text-field>
 
           <v-textarea label="Message" required></v-textarea>
+
+          <div data-netlify-recaptcha="true"></div>
 
           <v-btn block type="submit">Submit</v-btn>
         </v-form>
