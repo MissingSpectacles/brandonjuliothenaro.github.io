@@ -25,7 +25,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/variables.scss'],
+  css: [
+    // https://github.com/nuxt-community/vuetify-module#offline-applications
+    '@mdi/font/css/materialdesignicons.css',
+    'typeface-roboto'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -65,7 +69,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false, // https://github.com/nuxt-community/vuetify-module#offline-applications
     theme: {
       dark: false,
       themes: {

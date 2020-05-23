@@ -48,7 +48,12 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn class="mx-2" icon @click.stop="toggleTheme">
+      <v-btn
+        aria-label="toggle theme"
+        class="mx-2"
+        icon
+        @click.stop="toggleTheme"
+      >
         <v-icon>
           {{ isDarkTheme ? 'mdi-brightness-7' : 'mdi-brightness-3' }}
         </v-icon>
@@ -63,6 +68,7 @@
       <v-row justify="center">
         <v-col class="text-center">
           <v-btn
+            aria-label="GitHub"
             href="https://github.com/brandon-julio-t"
             icon
             rel="noopener noreferrer"
@@ -72,6 +78,7 @@
             <v-icon>mdi-github</v-icon>
           </v-btn>
           <v-btn
+            aria-label="Twitter"
             href="https://twitter.com/brandon_julio_t"
             icon
             rel="noopener noreferrer"
@@ -81,14 +88,17 @@
             <v-icon>mdi-twitter</v-icon>
           </v-btn>
           <v-btn
-            href="https://www.facebook.com/profile.php?id=100008724798107 rel=noopener noreferrer"
+            aria-label="Facebook"
+            href="https://www.facebook.com/profile.php?id=100008724798107"
             icon
+            rel="noopener noreferrer"
             target="_blank"
             x-large
           >
             <v-icon>mdi-facebook</v-icon>
           </v-btn>
           <v-btn
+            aria-label="Instagram"
             href="https://www.instagram.com/brandon.julio.t"
             icon
             rel="noopener noreferrer"
@@ -98,6 +108,7 @@
             <v-icon>mdi-instagram</v-icon>
           </v-btn>
           <v-btn
+            aria-label="LinkedIn"
             href="https://www.linkedin.com/in/brandonjuliothenaro"
             icon
             rel="noopener noreferrer"
