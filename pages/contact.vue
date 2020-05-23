@@ -17,7 +17,12 @@
           name="Contact"
           netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="Contact" />
+          <input
+            v-model="name"
+            name="form-name"
+            type="hidden"
+            value="Contact"
+          />
 
           <div v-show="false">
             <label>
@@ -33,11 +38,11 @@
             label="Name (Optional)"
           ></v-text-field>
 
-          <v-textarea label="Message" required></v-textarea>
+          <v-textarea v-model="message" label="Message" required></v-textarea>
 
           <div data-netlify-recaptcha="true"></div>
 
-          <v-btn block type="submit">Submit</v-btn>
+          <v-btn block type="submit" @click.prevent="submitForm">Submit</v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -46,6 +51,29 @@
 
 <script>
 export default {
+  data() {
+    return {
+      name: '',
+      message: ''
+    }
+  },
+
+  methods: {
+    submitForm() {
+      this.$axios.post(
+        '/',
+        {
+          'form-name': 'Contact',
+          name: this.name,
+          message: this.message
+        },
+        {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }
+      )
+    }
+  },
+
   head() {
     return {
       title: 'Contact'
