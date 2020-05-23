@@ -11,12 +11,15 @@
     <v-row justify="center">
       <v-col lg="8" sm="10">
         <v-form
+          :netlify="true"
           :novalidate="false"
           data-netlify="true"
           method="POST"
           name="Contact"
           netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="Contact" />
+
           <div v-show="false">
             <label>
               Don’t fill this out if you're human:

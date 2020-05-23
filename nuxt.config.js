@@ -69,7 +69,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    defaultAssets: false, // https://github.com/nuxt-community/vuetify-module#offline-applications
+    defaultAssets: process.env.NODE_ENV === 'development', // https://github.com/nuxt-community/vuetify-module#offline-applications
     theme: {
       dark: false,
       themes: {

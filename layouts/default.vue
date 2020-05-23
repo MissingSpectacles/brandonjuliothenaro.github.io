@@ -177,7 +177,13 @@
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <v-img :src="netlifyBadgeUrl" alt="Deploys by Netlify" />
+                <v-img
+                  :src="netlifyBadgeUrl"
+                  alt="Deploys by Netlify"
+                  eager
+                  max-height="51"
+                  max-width="114"
+                />
               </a>
             </v-col>
           </v-row>
