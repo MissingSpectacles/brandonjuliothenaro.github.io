@@ -32,13 +32,19 @@
           </div>
 
           <v-text-field
-            autofocus
             autocomplete="name"
+            autofocus
             clearable
             label="Name (Optional)"
+            name="name"
           ></v-text-field>
 
-          <v-textarea v-model="message" label="Message" required></v-textarea>
+          <v-textarea
+            v-model="message"
+            label="Message"
+            name="message"
+            required
+          ></v-textarea>
 
           <v-btn block type="submit">Submit</v-btn>
         </v-form>
