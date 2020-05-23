@@ -1,4 +1,4 @@
-# brandon-thenaro.github.io
+# brandon-julio-thenaro-website
 
 > My personal website with Nuxt.js
 
