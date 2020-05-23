@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <h1 class="text-center">Developer Skills</h1>
+        <h1 class="display-3 text-center">Developer Skills</h1>
       </v-col>
     </v-row>
 

@@ -93,6 +93,13 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {}
+    analyze:
+      process.env.NODE_END === 'development'
+        ? {
+            analyzerMode: 'static'
+          }
+        : false,
+    extractCSS: true
   },
   /*
    ** Nuxt PWA

@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center">
       <v-col>
-        <h1 class="text-center">Home</h1>
+        <h1 class="display-3 text-center">Home</h1>
       </v-col>
     </v-row>
 

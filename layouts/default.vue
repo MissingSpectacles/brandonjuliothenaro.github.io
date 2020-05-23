@@ -30,7 +30,11 @@
     </v-navigation-drawer>
 
     <v-app-bar app>
-      <v-app-bar-nav-icon v-if="isMobile" @click.stop="toggleDrawer" />
+      <v-app-bar-nav-icon
+        v-if="isMobile"
+        aria-label="open navigation drawer"
+        @click.stop="toggleDrawer"
+      />
 
       <div v-if="!isMobile">
         <v-btn
