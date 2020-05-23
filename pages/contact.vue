@@ -40,9 +40,7 @@
 
           <v-textarea v-model="message" label="Message" required></v-textarea>
 
-          <div data-netlify-recaptcha="true"></div>
-
-          <v-btn block type="submit" @click.prevent="submitForm">Submit</v-btn>
+          <v-btn block type="submit">Submit</v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -55,22 +53,6 @@ export default {
     return {
       name: '',
       message: ''
-    }
-  },
-
-  methods: {
-    submitForm() {
-      this.$axios.post(
-        '/',
-        {
-          'form-name': 'Contact',
-          name: this.name,
-          message: this.message
-        },
-        {
-          header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }
-      )
     }
   },
 
