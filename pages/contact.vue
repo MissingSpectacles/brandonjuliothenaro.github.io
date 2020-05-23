@@ -17,12 +17,7 @@
           name="Contact"
           netlify-honeypot="bot-field"
         >
-          <input
-            v-model="name"
-            name="form-name"
-            type="hidden"
-            value="Contact"
-          />
+          <input name="form-name" type="hidden" value="Contact" />
 
           <div v-show="false">
             <label>
@@ -39,12 +34,7 @@
             name="name"
           ></v-text-field>
 
-          <v-textarea
-            v-model="message"
-            label="Message"
-            name="message"
-            required
-          ></v-textarea>
+          <v-textarea label="Message" name="message" required></v-textarea>
 
           <v-btn block type="submit">Submit</v-btn>
         </v-form>
@@ -55,13 +45,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      name: '',
-      message: ''
-    }
-  },
-
   head() {
     return {
       title: 'Contact'
