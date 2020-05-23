@@ -143,6 +143,7 @@
 
                     <v-btn
                       :href="repository.url"
+                      aria-label="View this project on GitHub"
                       rel="noopener noreferrer"
                       target="_blank"
                       icon
