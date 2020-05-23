@@ -110,5 +110,11 @@ export default {
    */
   sitemap: {
     hostname: 'https://www.brandonjuliothenaro.my.id'
+  },
+  /*
+   ** https://nuxtjs.org/api/configuration-env#__layout
+   */
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN
   }
 }
