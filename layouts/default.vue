@@ -228,7 +228,7 @@ export default {
 
   computed: {
     isMobile() {
-      return this.$vuetify.breakpoint.smOnly
+      return this.$vuetify.breakpoint.smAndDown
     },
 
     isDarkTheme() {
