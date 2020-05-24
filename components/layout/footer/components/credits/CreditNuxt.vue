@@ -1,20 +1,19 @@
 <template>
   <div>
     Built with
-    <v-btn
-      text
-      href="https://nuxtjs.org/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <app-button-external-link href="https://nuxtjs.org/">
       <v-icon left>mdi-nuxt</v-icon>
       Nuxt
-    </v-btn>
+    </app-button-external-link>
   </div>
 </template>
 
 <script>
+import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+
 export default {
-  name: 'CreditNuxt'
+  name: 'CreditNuxt',
+
+  components: { AppButtonExternalLink }
 }
 </script>

@@ -1,35 +1,27 @@
 <template>
   <v-app>
-    <app-navbar :is-loading="isLoading"></app-navbar>
+    <TheAppNavbar :is-loading="isLoading" />
 
     <v-content>
-      <v-container>
-        <v-row justify="center">
-          <v-col>
-            <h1 class="display-3 text-center">
-              {{ this.$store.state.pageTitle }}
-            </h1>
-          </v-col>
-        </v-row>
-      </v-container>
+      <ThePageTitle />
 
-      <v-divider class="my-5"></v-divider>
-
-      <nuxt />
+      <Nuxt />
     </v-content>
 
-    <app-footer :is-loading="isLoading"></app-footer>
+    <TheAppFooter :is-loading="isLoading" />
   </v-app>
 </template>
 
 <script>
-import AppFooter from '~/components/layout/footer/AppFooter'
-import AppNavbar from '~/components/layout/navbar/AppNavbar'
+import TheAppFooter from '~/components/layout/footer/TheFooter'
+import TheAppNavbar from '~/components/layout/navbar/TheNavbar'
+import ThePageTitle from '~/components/layout/ThePageTitle'
 
 export default {
   components: {
-    AppNavbar,
-    AppFooter
+    ThePageTitle,
+    TheAppNavbar,
+    TheAppFooter
   },
 
   data() {
@@ -38,7 +30,7 @@ export default {
     }
   },
 
-  beforeMount() {
+  mounted() {
     const savedIsDark = localStorage.getItem('isDark')
 
     if (savedIsDark !== null) {

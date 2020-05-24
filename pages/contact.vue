@@ -38,7 +38,7 @@
 <script>
 export default {
   mounted() {
-    this.$store.commit('setPageTitle', 'Contact')
+    this.$store.commit('setCurrentPageTitle', 'Contact')
   },
 
   head() {

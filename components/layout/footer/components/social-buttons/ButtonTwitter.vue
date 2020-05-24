@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppButtonExternalLink from '~/components/AppButtonExternalLink'
+import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
 
 export default {
   name: 'ButtonTwitter',

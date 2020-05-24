@@ -1,20 +1,19 @@
 <template>
   <div>
     Designed with
-    <v-btn
-      text
-      href="https://vuetifyjs.com/en/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <app-button-external-link href="https://vuetifyjs.com/en/">
       <v-icon left>mdi-vuetify</v-icon>
       Vuetify
-    </v-btn>
+    </app-button-external-link>
   </div>
 </template>
 
 <script>
+import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+
 export default {
-  name: 'CreditVuetify'
+  name: 'CreditVuetify',
+
+  components: { AppButtonExternalLink }
 }
 </script>

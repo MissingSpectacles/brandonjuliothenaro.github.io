@@ -1,7 +1,13 @@
+<!--
+  https://vuejs.org/v2/guide/components-custom-events.html#sync-Modifier
+-->
+
 <template>
   <v-navigation-drawer
-    app
     :value="openDrawer"
+    absolute
+    app
+    temporary
     @input="$emit('update:open-drawer', $event)"
   >
     <v-list>
@@ -16,7 +22,7 @@
 
     <v-list nav>
       <v-list-item
-        v-for="(page, index) in pages"
+        v-for="(page, index) in allPages"
         :key="index"
         :to="page.to"
         exact
@@ -26,7 +32,7 @@
         </v-list-item-action>
 
         <v-list-item-content>
-          <v-list-item-title v-text="page.title" />
+          <v-list-item-title>{{ page.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -35,17 +41,18 @@
 
 <script>
 export default {
-  name: 'AppNavigationDrawer',
+  name: 'TheAppNavigationDrawer',
 
   props: {
     openDrawer: {
       type: Boolean,
       required: true
-    },
+    }
+  },
 
-    pages: {
-      type: Array,
-      required: true
+  computed: {
+    allPages() {
+      return this.$store.state.allPages
     }
   }
 }

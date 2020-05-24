@@ -6,7 +6,7 @@
       eager
       max-height="51"
       max-width="114"
-    />
+    ></v-img>
   </a>
 </template>
 

@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import AppCardRaisable from '~/components/AppCardRaisable'
+import AppCardRaisable from '~/components/common/AppCardRaisable'
 
 export default {
   components: { AppCardRaisable },

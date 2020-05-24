@@ -2,11 +2,11 @@
   <v-footer absolute app padless>
     <v-row justify="center">
       <v-col class="text-center">
-        <app-social-buttons></app-social-buttons>
+        <AppSocialButtons />
 
         <v-divider class="my-5"></v-divider>
 
-        <app-credits :is-loading="isLoading"></app-credits>
+        <AppCredits :is-loading="isLoading" />
 
         <v-divider class="my-5"></v-divider>
 
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import AppSocialButtons from '~/components/layout/footer/components/AppSocialButtons'
-import AppCredits from '~/components/layout/footer/components/AppCredits'
+import AppSocialButtons from '~/components/layout/footer/components/TheSocialButtons'
+import AppCredits from '~/components/layout/footer/components/TheCredits'
 
 export default {
-  name: 'AppFooter',
+  name: 'TheFooter',
 
   components: { AppCredits, AppSocialButtons },
 

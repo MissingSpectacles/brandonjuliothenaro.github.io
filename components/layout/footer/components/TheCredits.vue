@@ -1,13 +1,13 @@
 <template>
   <v-row justify="center" align="center">
     <v-col sm="auto">
-      <credit-nuxt></credit-nuxt>
-      <credit-vuetify></credit-vuetify>
-      <credit-vue></credit-vue>
+      <CreditNuxt />
+      <CreditVuetify />
+      <CreditVue />
     </v-col>
 
     <v-col v-if="!isLoading" sm="auto">
-      <credit-netlify></credit-netlify>
+      <CreditNetlify />
     </v-col>
   </v-row>
 </template>
@@ -19,7 +19,7 @@ import CreditVue from '~/components/layout/footer/components/credits/CreditVue'
 import CreditNetlify from '~/components/layout/footer/components/credits/CreditNetlify'
 
 export default {
-  name: 'AppCredits',
+  name: 'TheCredits',
 
   components: { CreditNetlify, CreditVue, CreditVuetify, CreditNuxt },
 

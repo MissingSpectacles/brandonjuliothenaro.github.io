@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col>
+      <v-col lg="8">
         <keep-alive>
           <iframe
             id="cv"
@@ -16,7 +16,7 @@
 <script>
 export default {
   mounted() {
-    this.$store.commit('setPageTitle', 'CV')
+    this.$store.commit('setCurrentPageTitle', 'CV')
   },
 
   head() {
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 #cv {
-  height: 100vh;
+  height: 75vh;
   width: 100%;
 }
 </style>

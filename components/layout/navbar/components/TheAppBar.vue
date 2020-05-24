@@ -1,14 +1,14 @@
 <template>
-  <v-app-bar app>
+  <v-app-bar app max-width="100vw">
     <v-app-bar-nav-icon
       v-if="isMobile"
       aria-label="open navigation drawer"
       @click="$emit('toggle-drawer')"
     />
 
-    <div v-else>
+    <span v-else>
       <v-btn
-        v-for="(page, index) in pages"
+        v-for="(page, index) in allPages"
         :key="index"
         :to="page.to"
         exact
@@ -18,31 +18,30 @@
         <v-icon left>{{ page.icon }}</v-icon>
         {{ page.title }}
       </v-btn>
-    </div>
+    </span>
 
     <v-spacer></v-spacer>
 
-    <v-btn
-      aria-label="toggle theme"
-      class="mx-2"
-      icon
-      @click.stop="toggleTheme"
-    >
-      <v-icon>
-        {{ isDarkTheme ? 'mdi-brightness-7' : 'mdi-brightness-3' }}
-      </v-icon>
-    </v-btn>
+    <v-switch
+      :color="isDarkTheme ? colors.shades.white : colors.grey.darken2"
+      :value="isDarkTheme"
+      append-icon="mdi-brightness-3"
+      hide-details
+      prepend-icon="mdi-brightness-7"
+      @change="toggleAndSaveTheme"
+    ></v-switch>
   </v-app-bar>
 </template>
 
 <script>
-export default {
-  name: 'AppBar',
+import colors from 'vuetify/lib/util/colors'
 
-  props: {
-    pages: {
-      type: Array,
-      required: true
+export default {
+  name: 'TheAppBar',
+
+  data() {
+    return {
+      colors
     }
   },
 
@@ -53,11 +52,15 @@ export default {
 
     isDarkTheme() {
       return this.$vuetify.theme.dark
+    },
+
+    allPages() {
+      return this.$store.state.allPages
     }
   },
 
   methods: {
-    toggleTheme() {
+    toggleAndSaveTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
       localStorage.setItem('isDark', this.$vuetify.theme.dark)
     }

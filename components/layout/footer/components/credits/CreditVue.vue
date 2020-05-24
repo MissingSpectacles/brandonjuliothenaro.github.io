@@ -1,20 +1,19 @@
 <template>
   <div>
     Powered by
-    <v-btn
-      text
-      href="https://vuejs.org/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <app-button-external-link href="https://vuejs.org/">
       <v-icon left>mdi-vuejs</v-icon>
       Vue
-    </v-btn>
+    </app-button-external-link>
   </div>
 </template>
 
 <script>
+import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+
 export default {
-  name: 'CreditVue'
+  name: 'CreditVue',
+
+  components: { AppButtonExternalLink }
 }
 </script>

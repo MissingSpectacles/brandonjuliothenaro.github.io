@@ -3,7 +3,7 @@
     :href="href"
     :icon="icon"
     :text="!icon"
-    :x-large="icon"
+    :x-large="icon && !medium"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -22,6 +22,12 @@ export default {
     },
 
     icon: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+
+    medium: {
       type: Boolean,
       default: false,
       required: false
