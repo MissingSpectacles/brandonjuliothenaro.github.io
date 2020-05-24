@@ -4,7 +4,11 @@
       v-if="isMobile"
       aria-label="open navigation drawer"
       @click="$emit('toggle-drawer')"
-    />
+    >
+      <v-icon icon>
+        {{ mdiMenu }}
+      </v-icon>
+    </v-app-bar-nav-icon>
 
     <span v-else>
       <v-btn
@@ -36,8 +40,9 @@
 </template>
 
 <script>
+import { mdiBrightness3, mdiBrightness7, mdiMenu } from '@mdi/js'
+
 import colors from 'vuetify/lib/util/colors'
-import { mdiBrightness3, mdiBrightness7 } from '@mdi/js'
 
 export default {
   name: 'TheAppBar',
@@ -46,7 +51,8 @@ export default {
     return {
       colors,
       mdiBrightness3,
-      mdiBrightness7
+      mdiBrightness7,
+      mdiMenu
     }
   },
 
