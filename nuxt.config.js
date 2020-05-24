@@ -27,7 +27,8 @@ export default {
    */
   css: [
     // https://github.com/nuxt-community/vuetify-module#offline-applications
-    '@mdi/font/css/materialdesignicons.css'
+    '@mdi/font/css/materialdesignicons.css',
+    '~/assets/styles.scss'
   ],
   /*
    ** Plugins to load before mounting the App

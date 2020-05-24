@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app max-width="100vw">
+  <v-app-bar app>
     <v-app-bar-nav-icon
       v-if="isMobile"
       aria-label="open navigation drawer"
