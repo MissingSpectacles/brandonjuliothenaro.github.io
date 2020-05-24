@@ -1,11 +1,6 @@
 <template>
   <a href="https://www.netlify.com" rel="noopener noreferrer" target="_blank">
-    <v-img
-      :src="netlifyBadgeUrl"
-      alt="Deploys by Netlify"
-      max-height="51"
-      max-width="114"
-    ></v-img>
+    <v-img :src="netlifyBadgeUrl" alt="Deploys by Netlify"></v-img>
   </a>
 </template>
 

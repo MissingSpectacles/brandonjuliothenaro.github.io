@@ -1,5 +1,5 @@
 <template>
-  <v-footer absolute app padless>
+  <v-footer padless>
     <v-row justify="center">
       <v-col class="text-center">
         <AppSocialButtons />

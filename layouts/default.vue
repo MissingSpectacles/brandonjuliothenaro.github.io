@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <TheAppNavbar :is-loading="isLoading" />
+    <TheNavbar />
 
     <v-content>
       <ThePageTitle />
@@ -13,20 +13,43 @@
 </template>
 
 <script>
+import { mdiBrightness3, mdiBrightness7, mdiMenu } from '@mdi/js'
+import colors from 'vuetify/lib/util/colors'
+
 import TheAppFooter from '~/components/layout/footer/TheFooter'
-import TheAppNavbar from '~/components/layout/navbar/TheNavbar'
 import ThePageTitle from '~/components/layout/ThePageTitle'
+import TheNavbar from '~/components/layout/navbar/TheNavbar'
 
 export default {
   components: {
+    TheNavbar,
     ThePageTitle,
-    TheAppNavbar,
     TheAppFooter
   },
 
   data() {
     return {
-      isLoading: true
+      isLoading: true,
+      colors,
+      mdiBrightness3,
+      mdiBrightness7,
+      mdiMenu,
+
+      openDrawer: false
+    }
+  },
+
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+
+    isDarkTheme() {
+      return this.$vuetify.theme.dark
+    },
+
+    allPages() {
+      return this.$store.state.allPages
     }
   },
 
@@ -42,6 +65,13 @@ export default {
     }
 
     this.isLoading = false
+  },
+
+  methods: {
+    toggleAndSaveTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      localStorage.setItem('isDark', this.$vuetify.theme.dark)
+    }
   }
 }
 </script>

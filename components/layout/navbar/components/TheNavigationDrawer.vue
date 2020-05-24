@@ -5,9 +5,7 @@
 <template>
   <v-navigation-drawer
     :value="openDrawer"
-    absolute
     app
-    temporary
     @input="$emit('update:open-drawer', $event)"
   >
     <v-list>

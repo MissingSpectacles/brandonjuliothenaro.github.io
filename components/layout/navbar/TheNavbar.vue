@@ -10,18 +10,11 @@ import TheAppBar from '~/components/layout/navbar/components/TheAppBar'
 import TheAppNavigationDrawer from '~/components/layout/navbar/components/TheNavigationDrawer'
 
 export default {
-  name: 'TheAppNavbar',
+  name: 'TheNavbar',
 
   components: {
     TheAppBar,
     TheAppNavigationDrawer
-  },
-
-  props: {
-    isLoading: {
-      type: Boolean,
-      required: true
-    }
   },
 
   data() {
@@ -33,6 +26,10 @@ export default {
   computed: {
     isMobile() {
       return this.$vuetify.breakpoint.smAndDown
+    },
+
+    allPages() {
+      return this.$store.state.allPages
     }
   },
 
