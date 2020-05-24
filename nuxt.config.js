@@ -65,10 +65,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    defaultAssets: {
-      font: false,
-      icons: 'mdiSvg'
-    },
+    defaultAssets: false,
     theme: {
       dark: false,
       themes: {
