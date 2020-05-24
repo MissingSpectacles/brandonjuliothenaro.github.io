@@ -4,7 +4,7 @@
     href="https://github.com/brandon-julio-t"
     icon
   >
-    <v-icon x-large>{{ mdiGithub }}</v-icon>
+    <v-icon large>{{ mdiGithub }}</v-icon>
   </app-button-external-link>
 </template>
 

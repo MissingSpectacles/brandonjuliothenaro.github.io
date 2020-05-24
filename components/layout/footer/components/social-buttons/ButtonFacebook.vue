@@ -4,7 +4,7 @@
     href="https://www.facebook.com/profile.php?id=100008724798107"
     icon
   >
-    <v-icon x-large>{{ mdiFacebook }}</v-icon>
+    <v-icon large>{{ mdiFacebook }}</v-icon>
   </app-button-external-link>
 </template>
 

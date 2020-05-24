@@ -4,7 +4,7 @@
     href="https://twitter.com/brandon_julio_t"
     icon
   >
-    <v-icon x-large>{{ mdiTwitter }}</v-icon>
+    <v-icon large>{{ mdiTwitter }}</v-icon>
   </app-button-external-link>
 </template>
 

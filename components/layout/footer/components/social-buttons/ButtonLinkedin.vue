@@ -4,7 +4,7 @@
     href="https://www.linkedin.com/in/brandonjuliothenaro"
     icon
   >
-    <v-icon x-large>{{ mdiLinkedin }}</v-icon>
+    <v-icon large>{{ mdiLinkedin }}</v-icon>
   </app-button-external-link>
 </template>
 

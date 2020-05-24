@@ -5,7 +5,7 @@
     icon
     x-large
   >
-    <v-icon x-large>{{ mdiEmail }}</v-icon>
+    <v-icon large>{{ mdiEmail }}</v-icon>
   </v-btn>
 </template>
 

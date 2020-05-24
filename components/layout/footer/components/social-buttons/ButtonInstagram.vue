@@ -4,7 +4,7 @@
     href="https://www.instagram.com/brandon.julio.t"
     icon
   >
-    <v-icon x-large>{{ mdiInstagram }}</v-icon>
+    <v-icon large>{{ mdiInstagram }}</v-icon>
   </app-button-external-link>
 </template>
 

@@ -6,8 +6,8 @@
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40px"
-      height="40px"
+      width="36px"
+      height="36px"
       viewBox="0 0 700.08435 482.89237"
     >
       <path

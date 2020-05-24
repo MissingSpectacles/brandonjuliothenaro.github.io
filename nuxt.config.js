@@ -91,6 +91,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    crossorigin: 'anonymous',
+    extractCSS: true,
     extend(config, _) {
       config.optimization.splitChunks.maxSize = 200000
       config.optimization.moduleIds = 'size'
