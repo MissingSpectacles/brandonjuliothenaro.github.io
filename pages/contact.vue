@@ -1,13 +1,5 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <h1 class="display-3 text-center">Contact</h1>
-      </v-col>
-    </v-row>
-
-    <v-divider class="my-5"></v-divider>
-
     <v-row justify="center">
       <v-col lg="8" sm="10">
         <v-form
@@ -45,6 +37,10 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.commit('setPageTitle', 'Contact')
+  },
+
   head() {
     return {
       title: 'Contact'

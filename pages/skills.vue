@@ -2,14 +2,6 @@
   <v-container>
     <v-row>
       <v-col>
-        <h1 class="display-3 text-center">Developer Skills</h1>
-      </v-col>
-    </v-row>
-
-    <v-divider class="my-5"></v-divider>
-
-    <v-row>
-      <v-col>
         <h2>Languages</h2>
 
         <v-list v-for="(category, categoryIdx) in languages" :key="categoryIdx">
@@ -102,6 +94,10 @@ export default {
         { name: 'Collaboration', items: ['Basecamp', 'Microsoft Teams'] }
       ]
     }
+  },
+
+  mounted() {
+    this.$store.commit('setPageTitle', 'Skills')
   },
 
   head() {

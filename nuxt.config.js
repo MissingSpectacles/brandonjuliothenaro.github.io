@@ -100,7 +100,6 @@ export default {
           analyzerMode: 'static'
         }
       : false
-    // extractCSS: true // Prevent vuetify styles not loading on development
   },
   /*
    ** Nuxt PWA
@@ -127,6 +126,6 @@ export default {
    ** https://nuxtjs.org/api/configuration-env#__layout
    */
   env: {
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN
+    GITHUB_GRAPHQL_API_TOKEN: process.env.GITHUB_GRAPHQL_API_TOKEN
   }
 }

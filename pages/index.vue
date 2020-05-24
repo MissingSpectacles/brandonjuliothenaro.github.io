@@ -2,71 +2,59 @@
   <v-container>
     <v-row justify="center">
       <v-col>
-        <h1 class="display-3 text-center">Home</h1>
-      </v-col>
-    </v-row>
-
-    <v-divider class="my-5"></v-divider>
-
-    <v-row justify="center">
-      <v-col>
         <h2>Developer Skills Overview</h2>
 
         <v-row>
           <v-col>
-            <v-hover v-slot:default="{ hover }">
-              <v-card :elevation="hover ? 8 : 2">
-                <v-list>
-                  <v-subheader>
-                    <h3>Programming Languages</h3>
-                  </v-subheader>
+            <app-card-raisable>
+              <v-list>
+                <v-subheader>
+                  <h3>Programming Languages</h3>
+                </v-subheader>
 
-                  <v-list-item
-                    v-for="(programmingLanguage, index) in programmingLanguages"
-                    :key="index"
-                  >
-                    <v-list-item-icon>
-                      <v-icon>
-                        {{ programmingLanguage.icon }}
-                      </v-icon>
-                    </v-list-item-icon>
+                <v-list-item
+                  v-for="(programmingLanguage, index) in programmingLanguages"
+                  :key="index"
+                >
+                  <v-list-item-icon>
+                    <v-icon>
+                      {{ programmingLanguage.icon }}
+                    </v-icon>
+                  </v-list-item-icon>
 
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        {{ programmingLanguage.label }}
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
-              </v-card>
-            </v-hover>
+                  <v-list-item-content>
+                    <v-list-item-title>
+                      {{ programmingLanguage.label }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </app-card-raisable>
           </v-col>
 
           <v-col>
-            <v-hover v-slot:default="{ hover }">
-              <v-card :elevation="hover ? 8 : 2">
-                <v-list>
-                  <v-subheader>
-                    <h3>Frameworks</h3>
-                  </v-subheader>
+            <app-card-raisable>
+              <v-list>
+                <v-subheader>
+                  <h3>Frameworks</h3>
+                </v-subheader>
 
-                  <v-list-item
-                    v-for="(framework, index) in frameworks"
-                    :key="index"
-                  >
-                    <v-list-item-icon>
-                      <v-icon>{{ framework.icon }}</v-icon>
-                    </v-list-item-icon>
+                <v-list-item
+                  v-for="(framework, index) in frameworks"
+                  :key="index"
+                >
+                  <v-list-item-icon>
+                    <v-icon>{{ framework.icon }}</v-icon>
+                  </v-list-item-icon>
 
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        {{ framework.label }}
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
-              </v-card>
-            </v-hover>
+                  <v-list-item-content>
+                    <v-list-item-title>
+                      {{ framework.label }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </app-card-raisable>
           </v-col>
         </v-row>
 
@@ -80,7 +68,7 @@
 
         <keep-alive>
           <v-skeleton-loader
-            v-if="!myRawRepositoriesData"
+            v-if="!myRawPinnedRepositories"
             type="card"
           ></v-skeleton-loader>
 
@@ -98,63 +86,61 @@
 
           <v-row v-else>
             <v-col
-              v-for="(repository, repositoryIdx) in myRepositories"
+              v-for="(repository, repositoryIdx) in myPinnedRepositories"
               :key="repositoryIdx"
             >
-              <v-hover v-slot:default="{ hover }">
-                <v-card :elevation="hover ? 8 : 2">
-                  <v-card-title>
-                    <h3>{{ toTitleCase(repository.name) }}</h3>
-                  </v-card-title>
+              <app-card-raisable>
+                <v-card-title>
+                  <h3>{{ toTitleCase(repository.name) }}</h3>
+                </v-card-title>
 
-                  <v-card-subtitle>
-                    Created at:
-                    {{ extractMonthAndYearOnly(repository.createdAt) }}
-                  </v-card-subtitle>
+                <v-card-subtitle>
+                  Created at:
+                  {{ extractMonthAndYearOnly(repository.createdAt) }}
+                </v-card-subtitle>
 
-                  <v-card-text>
-                    <div>
-                      {{ repository.description }}
-                    </div>
+                <v-card-text>
+                  <div>
+                    {{ repository.description }}
+                  </div>
 
-                    <v-chip-group column>
-                      <v-chip
-                        v-for="(programmingLanguage,
-                        programmingLanguageIdx) in repository.languages.nodes"
-                        :key="programmingLanguageIdx"
-                      >
-                        {{ programmingLanguage.name }}
-                      </v-chip>
-                    </v-chip-group>
-                  </v-card-text>
-
-                  <v-card-actions>
-                    <v-btn
-                      :href="repository.homepageUrl"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      text
+                  <v-chip-group column>
+                    <v-chip
+                      v-for="(programmingLanguage,
+                      programmingLanguageIdx) in repository.languages.nodes"
+                      :key="programmingLanguageIdx"
                     >
-                      View Live
-                      <v-icon right>mdi-launch</v-icon>
-                    </v-btn>
+                      {{ programmingLanguage.name }}
+                    </v-chip>
+                  </v-chip-group>
+                </v-card-text>
 
-                    <v-spacer></v-spacer>
+                <v-card-actions>
+                  <v-btn
+                    :href="repository.homepageUrl"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    text
+                  >
+                    View Live
+                    <v-icon right>mdi-launch</v-icon>
+                  </v-btn>
 
-                    <v-btn
-                      :href="repository.url"
-                      aria-label="View this project on GitHub"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      icon
-                    >
-                      <v-icon>
-                        mdi-github
-                      </v-icon>
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-hover>
+                  <v-spacer></v-spacer>
+
+                  <v-btn
+                    :href="repository.url"
+                    aria-label="View this project on GitHub"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    icon
+                  >
+                    <v-icon>
+                      mdi-github
+                    </v-icon>
+                  </v-btn>
+                </v-card-actions>
+              </app-card-raisable>
             </v-col>
           </v-row>
         </keep-alive>
@@ -164,7 +150,11 @@
 </template>
 
 <script>
+import AppCardRaisable from '~/components/AppCardRaisable'
+
 export default {
+  components: { AppCardRaisable },
+
   data() {
     return {
       error: null,
@@ -175,7 +165,7 @@ export default {
         { label: 'Vue', icon: 'mdi-vuejs' }
       ],
 
-      myRawRepositoriesData: null,
+      myRawPinnedRepositories: null,
 
       programmingLanguages: [
         { label: 'Java', icon: 'mdi-language-java' },
@@ -186,16 +176,18 @@ export default {
   },
 
   computed: {
-    myRepositories() {
-      return this.myRawRepositoriesData.data.viewer.pinnedItems.nodes
+    myPinnedRepositories() {
+      return this.myRawPinnedRepositories.data.viewer.pinnedItems.nodes
     }
   },
 
   async mounted() {
     try {
-      this.$axios.setToken(process.env.GITHUB_TOKEN, 'bearer')
+      this.$store.commit('setPageTitle', 'Home')
 
-      this.myRawRepositoriesData = await this.$axios.$post(
+      this.$axios.setToken(process.env.GITHUB_GRAPHQL_API_TOKEN, 'bearer')
+
+      this.myRawPinnedRepositories = await this.$axios.$post(
         'https://api.github.com/graphql',
         {
           query: `
