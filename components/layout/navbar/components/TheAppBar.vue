@@ -26,10 +26,10 @@
     <v-switch
       :color="isDarkTheme ? colors.shades.white : colors.grey.darken2"
       :value="isDarkTheme"
-      append-icon="mdi-brightness-3"
+      :append-icon="mdiBrightness3"
       aria-label="toggle theme button"
       hide-details
-      prepend-icon="mdi-brightness-7"
+      :prepend-icon="mdiBrightness7"
       @change="toggleAndSaveTheme"
     ></v-switch>
   </v-app-bar>
@@ -37,13 +37,16 @@
 
 <script>
 import colors from 'vuetify/lib/util/colors'
+import { mdiBrightness3, mdiBrightness7 } from '@mdi/js'
 
 export default {
   name: 'TheAppBar',
 
   data() {
     return {
-      colors
+      colors,
+      mdiBrightness3,
+      mdiBrightness7
     }
   },
 

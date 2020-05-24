@@ -25,9 +25,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '~/assets/styles.scss'
-  ],
+  css: ['typeface-roboto', '~/assets/styles.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -67,6 +65,10 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    defaultAssets: {
+      font: false,
+      icons: 'mdiSvg'
+    },
     theme: {
       dark: false,
       themes: {

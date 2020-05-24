@@ -55,7 +55,7 @@
               <v-card-actions>
                 <app-button-external-link :href="repository.homepageUrl">
                   View Live
-                  <v-icon right>mdi-launch</v-icon>
+                  <v-icon right>{{ mdiLaunch }}</v-icon>
                 </app-button-external-link>
 
                 <v-spacer></v-spacer>
@@ -67,7 +67,7 @@
                   medium
                 >
                   <v-icon>
-                    mdi-github
+                    {{ mdiGithub }}
                   </v-icon>
                 </app-button-external-link>
               </v-card-actions>
@@ -80,8 +80,10 @@
 </template>
 
 <script>
-import AppCardRaisable from '~/components/common/AppCardRaisable'
+import { mdiGithub, mdiLaunch } from '@mdi/js'
+
 import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+import AppCardRaisable from '~/components/common/AppCardRaisable'
 
 export default {
   name: 'IndexPinnedGitHubProjects',
@@ -94,7 +96,9 @@ export default {
   data() {
     return {
       error: null,
-      myRawPinnedRepositories: null
+      myRawPinnedRepositories: null,
+      mdiGithub,
+      mdiLaunch
     }
   },
 

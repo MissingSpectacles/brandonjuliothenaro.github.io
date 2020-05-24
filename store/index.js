@@ -1,24 +1,31 @@
+import {
+  mdiChat,
+  mdiFileDocument,
+  mdiHammerScrewdriver,
+  mdiHome
+} from '@mdi/js'
+
 export const state = () => ({
   currentPageTitle: 'Home',
 
   allPages: [
     {
-      icon: 'mdi-home',
+      icon: mdiHome,
       title: 'Home',
       to: '/'
     },
     {
-      icon: 'mdi-hammer-screwdriver',
+      icon: mdiHammerScrewdriver,
       title: 'Skills',
       to: 'skills'
     },
     {
-      icon: 'mdi-chat',
+      icon: mdiChat,
       title: 'Contact',
       to: 'contact'
     },
     {
-      icon: 'mdi-file-document',
+      icon: mdiFileDocument,
       title: 'CV',
       to: 'cv'
     }

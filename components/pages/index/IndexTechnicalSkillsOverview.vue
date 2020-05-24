@@ -44,6 +44,15 @@
 </template>
 
 <script>
+import {
+  mdiDatabase,
+  mdiLanguageJava,
+  mdiLanguageJavascript,
+  mdiLaravel,
+  mdiReact,
+  mdiVuejs
+} from '@mdi/js'
+
 import AppCardRaisable from '~/components/common/AppCardRaisable'
 
 export default {
@@ -57,17 +66,17 @@ export default {
         {
           title: 'Programming Languages',
           items: [
-            { label: 'Java', icon: 'mdi-language-java' },
-            { label: 'JavaScript', icon: 'mdi-language-javascript' },
-            { label: 'SQL', icon: 'mdi-database' }
+            { label: 'Java', icon: mdiLanguageJava },
+            { label: 'JavaScript', icon: mdiLanguageJavascript },
+            { label: 'SQL', icon: mdiDatabase }
           ]
         },
         {
           title: 'Frameworks',
           items: [
-            { label: 'Laravel', icon: 'mdi-laravel' },
-            { label: 'React', icon: 'mdi-react' },
-            { label: 'Vue', icon: 'mdi-vuejs' }
+            { label: 'Laravel', icon: mdiLaravel },
+            { label: 'React', icon: mdiReact },
+            { label: 'Vue', icon: mdiVuejs }
           ]
         }
       ]

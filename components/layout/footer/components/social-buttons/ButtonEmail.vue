@@ -5,12 +5,20 @@
     icon
     x-large
   >
-    <v-icon>mdi-email</v-icon>
+    <v-icon x-large>{{ mdiEmail }}</v-icon>
   </v-btn>
 </template>
 
 <script>
+import { mdiEmail } from '@mdi/js'
+
 export default {
-  name: 'ButtonEmail'
+  name: 'ButtonEmail',
+
+  data() {
+    return {
+      mdiEmail
+    }
+  }
 }
 </script>
