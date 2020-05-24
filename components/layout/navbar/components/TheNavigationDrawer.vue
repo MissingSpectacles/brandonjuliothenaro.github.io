@@ -26,6 +26,7 @@
         :key="index"
         :to="page.to"
         exact
+        nuxt
       >
         <v-list-item-action>
           <v-icon>{{ page.icon }}</v-icon>

@@ -35,7 +35,7 @@
         </v-col>
       </v-row>
 
-      <v-btn block to="skills">
+      <v-btn block nuxt to="skills">
         <v-icon left>mdi-magnify</v-icon>
         View More
       </v-btn>

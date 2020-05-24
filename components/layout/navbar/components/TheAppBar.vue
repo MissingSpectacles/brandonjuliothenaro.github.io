@@ -11,9 +11,10 @@
         v-for="(page, index) in allPages"
         :key="index"
         :to="page.to"
-        exact
-        text
         class="mx-2"
+        exact
+        nuxt
+        text
       >
         <v-icon left>{{ page.icon }}</v-icon>
         {{ page.title }}
