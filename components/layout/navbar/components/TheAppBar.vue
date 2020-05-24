@@ -27,6 +27,7 @@
       :color="isDarkTheme ? colors.shades.white : colors.grey.darken2"
       :value="isDarkTheme"
       append-icon="mdi-brightness-3"
+      aria-label="toggle theme button"
       hide-details
       prepend-icon="mdi-brightness-7"
       @change="toggleAndSaveTheme"

@@ -1,5 +1,6 @@
 <template>
   <app-button-external-link
+    aria-label="freeCodeCamp"
     href="https://www.freecodecamp.org/brandon-julio-thenaro"
     icon
   >

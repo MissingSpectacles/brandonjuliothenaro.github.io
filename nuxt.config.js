@@ -26,8 +26,6 @@ export default {
    ** Global CSS
    */
   css: [
-    // https://github.com/nuxt-community/vuetify-module#offline-applications
-    '@mdi/font/css/materialdesignicons.css',
     '~/assets/styles.scss'
   ],
   /*
@@ -69,10 +67,6 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    // defaultAssets: isDevelopment, // https://github.com/nuxt-community/vuetify-module#offline-applications
-    defaultAssets: {
-      icons: false
-    },
     theme: {
       dark: false,
       themes: {

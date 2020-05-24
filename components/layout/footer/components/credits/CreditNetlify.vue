@@ -3,7 +3,6 @@
     <v-img
       :src="netlifyBadgeUrl"
       alt="Deploys by Netlify"
-      eager
       max-height="51"
       max-width="114"
     ></v-img>
