@@ -3,20 +3,16 @@
     <v-row justify="center">
       <v-col sm="auto">
         <app-card-raisable>
-          <v-card-title>
-            <h1 class="display-2 text-center">Error {{ error.statusCode }}</h1>
+          <v-card-title class="d-flex justify-center">
+            <h2 class="display-1 text-center">{{ error.message }}</h2>
           </v-card-title>
 
           <v-card-subtitle>
-            <h2 class="display-1 text-center">{{ error.message }}</h2>
-          </v-card-subtitle>
-
-          <v-card-text>
-            <p>
+            <h3>
               Try to refresh the page. If error persists, please contact the
               page administrator.
-            </p>
-          </v-card-text>
+            </h3>
+          </v-card-subtitle>
 
           <v-card-actions>
             <v-btn text to="/">
@@ -43,6 +39,10 @@ export default {
       type: Object,
       default: null
     }
+  },
+
+  mounted() {
+    this.$store.commit('setCurrentPageTitle', `Error ${this.error.statusCode}`)
   },
 
   head() {

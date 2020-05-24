@@ -17,17 +17,17 @@ export const state = () => ({
     {
       icon: mdiHammerScrewdriver,
       title: 'Skills',
-      to: 'skills'
+      to: '/skills'
     },
     {
       icon: mdiChat,
       title: 'Contact',
-      to: 'contact'
+      to: '/contact'
     },
     {
       icon: mdiFileDocument,
       title: 'CV',
-      to: 'cv'
+      to: '/cv'
     }
   ]
 })
