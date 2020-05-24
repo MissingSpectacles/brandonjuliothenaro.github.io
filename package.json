@@ -5,6 +5,7 @@
   "author": "Brandon Julio Thenaro",
   "private": true,
   "scripts": {
+    "analyze": "nuxt-ts build -a",
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "generate": "nuxt-ts generate",
