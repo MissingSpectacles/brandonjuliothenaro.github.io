@@ -1,7 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
 
+const isDevelopment = process.env.NODE_ENV === 'development'
+
 export default {
-  mode: 'spa', // I'm deploying to Netlify
+  mode: isDevelopment ? 'universal' : 'spa', // I'm deploying to Netlify
   /*
    ** Headers of the page
    */
@@ -69,7 +71,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    defaultAssets: process.env.NODE_ENV === 'development', // https://github.com/nuxt-community/vuetify-module#offline-applications
+    defaultAssets: isDevelopment, // https://github.com/nuxt-community/vuetify-module#offline-applications
     theme: {
       dark: false,
       themes: {
@@ -93,13 +95,12 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {}
-    analyze:
-      process.env.NODE_END === 'development'
-        ? {
-            analyzerMode: 'static'
-          }
-        : false,
-    extractCSS: true
+    analyze: isDevelopment
+      ? {
+          analyzerMode: 'static'
+        }
+      : false
+    // extractCSS: true // Prevent vuetify styles not loading on development
   },
   /*
    ** Nuxt PWA

@@ -71,108 +71,112 @@
     <v-footer absolute app padless>
       <v-row justify="center">
         <v-col class="text-center">
-          <v-btn
-            aria-label="GitHub"
-            href="https://github.com/brandon-julio-t"
-            icon
-            rel="noopener noreferrer"
-            target="_blank"
-            x-large
-          >
-            <v-icon>mdi-github</v-icon>
-          </v-btn>
-          <v-btn
-            aria-label="Twitter"
-            href="https://twitter.com/brandon_julio_t"
-            icon
-            rel="noopener noreferrer"
-            target="_blank"
-            x-large
-          >
-            <v-icon>mdi-twitter</v-icon>
-          </v-btn>
-          <v-btn
-            aria-label="Facebook"
-            href="https://www.facebook.com/profile.php?id=100008724798107"
-            icon
-            rel="noopener noreferrer"
-            target="_blank"
-            x-large
-          >
-            <v-icon>mdi-facebook</v-icon>
-          </v-btn>
-          <v-btn
-            aria-label="Instagram"
-            href="https://www.instagram.com/brandon.julio.t"
-            icon
-            rel="noopener noreferrer"
-            target="_blank"
-            x-large
-          >
-            <v-icon>mdi-instagram</v-icon>
-          </v-btn>
-          <v-btn
-            aria-label="LinkedIn"
-            href="https://www.linkedin.com/in/brandonjuliothenaro"
-            icon
-            rel="noopener noreferrer"
-            target="_blank"
-            x-large
-          >
-            <v-icon>mdi-linkedin</v-icon>
-          </v-btn>
+          <div>
+            <v-btn
+              aria-label="GitHub"
+              href="https://github.com/brandon-julio-t"
+              icon
+              rel="noopener noreferrer"
+              target="_blank"
+              x-large
+            >
+              <v-icon>mdi-github</v-icon>
+            </v-btn>
+            <v-btn
+              aria-label="Twitter"
+              href="https://twitter.com/brandon_julio_t"
+              icon
+              rel="noopener noreferrer"
+              target="_blank"
+              x-large
+            >
+              <v-icon>mdi-twitter</v-icon>
+            </v-btn>
+            <v-btn
+              aria-label="Facebook"
+              href="https://www.facebook.com/profile.php?id=100008724798107"
+              icon
+              rel="noopener noreferrer"
+              target="_blank"
+              x-large
+            >
+              <v-icon>mdi-facebook</v-icon>
+            </v-btn>
+            <v-btn
+              aria-label="Instagram"
+              href="https://www.instagram.com/brandon.julio.t"
+              icon
+              rel="noopener noreferrer"
+              target="_blank"
+              x-large
+            >
+              <v-icon>mdi-instagram</v-icon>
+            </v-btn>
+            <v-btn
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/brandonjuliothenaro"
+              icon
+              rel="noopener noreferrer"
+              target="_blank"
+              x-large
+            >
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
 
-          <br />
+            <br />
 
-          <v-btn
-            text
-            href="https://www.freecodecamp.org/brandon-julio-thenaro"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            freeCodeCamp
-          </v-btn>
+            <v-btn
+              text
+              href="https://www.freecodecamp.org/brandon-julio-thenaro"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              freeCodeCamp
+            </v-btn>
+          </div>
 
           <v-divider class="my-5"></v-divider>
 
           <v-row justify="center" align="center">
             <v-col sm="auto">
-              Built with
-              <v-btn
-                text
-                href="https://nuxtjs.org/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <v-icon left>mdi-nuxt</v-icon>
-                Nuxt
-              </v-btn>
+              <div>
+                Built with
+                <v-btn
+                  text
+                  href="https://nuxtjs.org/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <v-icon left>mdi-nuxt</v-icon>
+                  Nuxt
+                </v-btn>
+              </div>
 
-              <br />
+              <div>
+                Designed with
+                <v-btn
+                  text
+                  href="https://vuetifyjs.com/en/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <v-icon left>mdi-vuetify</v-icon>
+                  Vuetify
+                </v-btn>
+              </div>
 
-              Designed with
-              <v-btn
-                text
-                href="https://vuetifyjs.com/en/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <v-icon left>mdi-vuetify</v-icon>
-                Vuetify
-              </v-btn>
-
-              <br />
-
-              Powered by
-              <v-btn
-                text
-                href="https://vuejs.org/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <v-icon left>mdi-vuejs</v-icon>
-                Vue
-              </v-btn>
+              <div>
+                Powered by
+                <v-btn
+                  text
+                  href="https://vuejs.org/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <v-icon left>mdi-vuejs</v-icon>
+                  Vue
+                </v-btn>
+              </div>
             </v-col>
 
             <v-col v-if="!isLoading" sm="auto">
@@ -194,10 +198,12 @@
 
           <v-divider class="my-5"></v-divider>
 
-          <p>
-            Copyright &copy; {{ new Date().getFullYear() }} Brandon Julio
-            Thenaro. All rights reserved.
-          </p>
+          <div>
+            <p>
+              Copyright &copy; {{ new Date().getFullYear() }} Brandon Julio
+              Thenaro. All rights reserved.
+            </p>
+          </div>
         </v-col>
       </v-row>
     </v-footer>
