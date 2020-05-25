@@ -1,6 +1,6 @@
 <template>
   <div>
-    Designed with
+    Designs by
     <app-button-external-link href="https://vuetifyjs.com/en/">
       <v-icon left>{{ mdiVuetify }}</v-icon>
       Vuetify
