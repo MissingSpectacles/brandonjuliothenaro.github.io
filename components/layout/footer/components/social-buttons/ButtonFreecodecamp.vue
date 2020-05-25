@@ -22,6 +22,7 @@
 
 <script>
 import colors from 'vuetify/lib/util/colors'
+
 import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
 
 export default {
