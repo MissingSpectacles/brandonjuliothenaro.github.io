@@ -27,7 +27,7 @@ export const state = () => ({
     {
       icon: mdiFileDocument,
       title: 'CV',
-      to: '/cv'
+      to: '/curriculum-vitae'
     }
   ]
 })

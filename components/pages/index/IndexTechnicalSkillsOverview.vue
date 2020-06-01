@@ -35,10 +35,14 @@
         </v-col>
       </v-row>
 
-      <v-btn block nuxt to="skills">
-        <v-icon left>mdi-magnify</v-icon>
-        View More
-      </v-btn>
+      <v-row justify="center">
+        <v-col sm="auto">
+          <v-btn nuxt to="skills">
+            <v-icon left>{{ mdiMagnify }}</v-icon>
+            View More
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -49,6 +53,7 @@ import {
   mdiLanguageJava,
   mdiLanguageJavascript,
   mdiLaravel,
+  mdiMagnify,
   mdiReact,
   mdiVuejs
 } from '@mdi/js'
@@ -79,7 +84,9 @@ export default {
             { label: 'Vue', icon: mdiVuejs }
           ]
         }
-      ]
+      ],
+
+      mdiMagnify
     }
   }
 }
