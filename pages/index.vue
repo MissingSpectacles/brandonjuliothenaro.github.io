@@ -1,5 +1,11 @@
 <template>
   <v-container>
+    <v-subheader class="d-flex justify-center text-center">
+      Lifelong Learner | Web Developer
+      <br />
+      Since 2019
+    </v-subheader>
+
     <IndexTechnicalSkillsOverview />
 
     <keep-alive>

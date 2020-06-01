@@ -29,48 +29,54 @@ export default {
 
   data() {
     return {
-      isLoading: true,
       colors,
       mdiBrightness3,
       mdiBrightness7,
       mdiMenu,
 
+      isLoading: true,
       openDrawer: false
     }
   },
 
   computed: {
+    allPages() {
+      return this.$store.state.allPages
+    },
+
     isMobile() {
       return this.$vuetify.breakpoint.smAndDown
     },
 
     isDarkTheme() {
       return this.$vuetify.theme.dark
-    },
-
-    allPages() {
-      return this.$store.state.allPages
     }
   },
 
   mounted() {
     const savedIsDark = localStorage.getItem('isDark')
-
-    if (savedIsDark !== null) {
-      this.$vuetify.theme.dark = savedIsDark === 'true'
-    } else {
-      this.$vuetify.theme.dark = matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches
-    }
+    this.$vuetify.theme.dark = savedIsDark
+      ? savedIsDark === 'true'
+      : matchMedia('(prefers-color-scheme: dark)').matches
 
     this.isLoading = false
   },
 
   methods: {
+    getNow() {
+      return new Intl.DateTimeFormat(undefined, {
+        dateStyle: 'full',
+        timeStyle: this.isMobile ? 'medium' : 'full'
+      }).format(new Date())
+    },
+
     toggleAndSaveTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
       localStorage.setItem('isDark', this.$vuetify.theme.dark)
+    },
+
+    updateNow() {
+      this.now = this.getNow()
     }
   }
 }

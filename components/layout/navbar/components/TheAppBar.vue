@@ -28,7 +28,7 @@
     <v-spacer></v-spacer>
 
     <v-switch
-      :color="isDarkTheme ? colors.shades.white : colors.grey.darken2"
+      :color="vSwitchThemeColor"
       :value="isDarkTheme"
       :append-icon="mdiBrightness3"
       aria-label="toggle theme button"
@@ -49,7 +49,6 @@ export default {
 
   data() {
     return {
-      colors,
       mdiBrightness3,
       mdiBrightness7,
       mdiMenu
@@ -57,6 +56,10 @@ export default {
   },
 
   computed: {
+    allPages() {
+      return this.$store.state.allPages
+    },
+
     isMobile() {
       return this.$vuetify.breakpoint.smAndDown
     },
@@ -65,8 +68,8 @@ export default {
       return this.$vuetify.theme.dark
     },
 
-    allPages() {
-      return this.$store.state.allPages
+    vSwitchThemeColor() {
+      return this.isDarkTheme ? colors.shades.white : colors.grey.darken2
     }
   },
 

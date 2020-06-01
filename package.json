@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@mdi/js": "^5.3.45",
-    "@nuxt/typescript-runtime": "^0.4.0",
+    "@nuxt/content": "^1.2.0",
+    "@nuxt/typescript-runtime": "^0.4.8",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",

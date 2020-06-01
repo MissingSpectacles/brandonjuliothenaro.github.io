@@ -25,6 +25,9 @@
           <v-col
             v-for="(repository, repositoryIdx) in myPinnedRepositories"
             :key="repositoryIdx"
+            cols="12"
+            sm="6"
+            md="4"
           >
             <app-card-raisable>
               <v-card-title>

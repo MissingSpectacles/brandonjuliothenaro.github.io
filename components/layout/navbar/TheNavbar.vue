@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <TheSystemBar />
     <TheAppNavigationDrawer v-if="isMobile" :open-drawer.sync="openDrawer" />
     <TheAppBar @toggle-drawer="toggleDrawer" />
   </nav>
@@ -8,13 +9,15 @@
 <script>
 import TheAppBar from '~/components/layout/navbar/components/TheAppBar'
 import TheAppNavigationDrawer from '~/components/layout/navbar/components/TheNavigationDrawer'
+import TheSystemBar from '~/components/layout/navbar/components/TheSystemBar'
 
 export default {
   name: 'TheNavbar',
 
   components: {
     TheAppBar,
-    TheAppNavigationDrawer
+    TheAppNavigationDrawer,
+    TheSystemBar
   },
 
   data() {

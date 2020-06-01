@@ -3,8 +3,8 @@
     <v-row justify="center">
       <v-col sm="auto">
         <app-card-raisable>
-          <v-card-title class="d-flex justify-center">
-            <h2 class="display-1 text-center">{{ error.message }}</h2>
+          <v-card-title>
+            <h2 class="display-1">{{ error.message }}</h2>
           </v-card-title>
 
           <v-card-subtitle>
@@ -15,10 +15,10 @@
           </v-card-subtitle>
 
           <v-card-actions>
-            <v-btn text to="/">
-              Home page
+            <v-btn to="/">
+              Return to Home page
             </v-btn>
-            <v-btn text href="mailto:brandon.julio.t@icloud.com">
+            <v-btn href="mailto:brandon.julio.t@icloud.com">
               Contact Page Admin
             </v-btn>
           </v-card-actions>

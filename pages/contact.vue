@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col lg="8" sm="10">
+      <v-col cols="10" sm="8" md="6" lg="4">
         <v-form
           :novalidate="false"
           data-netlify="true"
