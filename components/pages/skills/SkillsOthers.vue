@@ -23,10 +23,12 @@ export default {
   data() {
     return {
       others: [
-        { name: 'Cloud', items: ['Firebase', 'Heroku'] },
+        { name: 'Cloud', items: ['Heroku', 'Netlify'] },
         { name: 'IDE', items: ['JetBrain IDEs', 'Visual Studio Code'] },
-        { name: 'Productivity', items: ['Adobe Xd', 'Microsoft Office 365'] },
-        { name: 'Collaboration', items: ['Basecamp', 'Microsoft Teams'] }
+        {
+          name: 'Etc.',
+          items: ['Basecamp', 'Microsoft Office 365', 'Microsoft Teams']
+        }
       ]
     }
   }

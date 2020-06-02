@@ -24,7 +24,7 @@ export default {
     return {
       frameworks: [
         { name: 'Front-end', items: ['Bootstrap', 'Vue', 'Vuetify', 'Nuxt'] },
-        { name: 'Back-end', items: ['Laravel'] }
+        { name: 'Back-end', items: ['Express', 'Laravel'] }
       ]
     }
   }

@@ -56,7 +56,7 @@
               </v-card-text>
 
               <v-card-actions>
-                <app-button-external-link :href="repository.homepageUrl">
+                <app-button-external-link :href="repository.homepageUrl" text>
                   View Live
                   <v-icon right>{{ mdiLaunch }}</v-icon>
                 </app-button-external-link>

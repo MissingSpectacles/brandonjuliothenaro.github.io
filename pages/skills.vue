@@ -28,9 +28,7 @@ export default {
   },
 
   head() {
-    return {
-      title: 'Skills'
-    }
+    return { title: 'Skills' }
   }
 }
 </script>

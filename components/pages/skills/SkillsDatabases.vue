@@ -18,7 +18,7 @@ export default {
   name: 'SkillsDatabases',
 
   data() {
-    return { databases: ['MySQL', 'PostgreSQL', 'SQL Server', 'SQLite'] }
+    return { databases: ['FaunaDB', 'MySQL', 'PostgreSQL', 'SQL Server', 'SQLite'] }
   }
 }
 </script>

@@ -39,5 +39,6 @@ export default {
 #cv {
   height: 75vh;
   width: 100%;
+  border: inherit;
 }
 </style>

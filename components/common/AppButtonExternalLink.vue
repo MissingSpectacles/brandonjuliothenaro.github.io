@@ -2,7 +2,7 @@
   <v-btn
     :href="href"
     :icon="icon"
-    :text="!icon"
+    :text="text"
     :x-large="icon && !medium"
     rel="noopener noreferrer"
     target="_blank"
@@ -22,6 +22,12 @@ export default {
     },
 
     icon: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+
+    text: {
       type: Boolean,
       default: false,
       required: false

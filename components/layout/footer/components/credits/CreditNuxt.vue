@@ -1,7 +1,7 @@
 <template>
   <div>
     Built with
-    <app-button-external-link href="https://nuxtjs.org/">
+    <app-button-external-link href="https://nuxtjs.org/" text>
       <v-icon left>{{ mdiNuxt }}</v-icon>
       Nuxt
     </app-button-external-link>

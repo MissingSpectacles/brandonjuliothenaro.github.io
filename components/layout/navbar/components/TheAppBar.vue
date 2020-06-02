@@ -57,7 +57,7 @@ export default {
 
   computed: {
     allPages() {
-      return this.$store.state.allPages
+      return this.$store.getters.allPages
     },
 
     isMobile() {

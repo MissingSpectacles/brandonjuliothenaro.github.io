@@ -1,7 +1,7 @@
 <template>
   <div>
     Powered by
-    <app-button-external-link href="https://vuejs.org/">
+    <app-button-external-link href="https://vuejs.org/" text>
       <v-icon left>{{ mdiVuejs }}</v-icon>
       Vue
     </app-button-external-link>

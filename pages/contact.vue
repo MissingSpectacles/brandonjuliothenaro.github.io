@@ -42,9 +42,7 @@ export default {
   },
 
   head() {
-    return {
-      title: 'Contact'
-    }
+    return { title: 'Contact' }
   }
 }
 </script>

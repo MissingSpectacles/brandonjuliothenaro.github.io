@@ -1,4 +1,5 @@
 import {
+  mdiCertificate,
   mdiChat,
   mdiFileDocument,
   mdiHammerScrewdriver,
@@ -6,9 +7,11 @@ import {
 } from '@mdi/js'
 
 export const state = () => ({
-  currentPageTitle: 'Home',
+  currentPageTitle: 'Home'
+})
 
-  allPages: [
+export const getters = {
+  allPages: () => [
     {
       icon: mdiHome,
       title: 'Home',
@@ -20,17 +23,22 @@ export const state = () => ({
       to: '/skills'
     },
     {
-      icon: mdiChat,
-      title: 'Contact',
-      to: '/contact'
+      icon: mdiCertificate,
+      title: 'Certificates',
+      to: '/certificates'
     },
     {
       icon: mdiFileDocument,
       title: 'CV',
       to: '/curriculum-vitae'
+    },
+    {
+      icon: mdiChat,
+      title: 'Contact',
+      to: '/contact'
     }
   ]
-})
+}
 
 export const mutations = {
   setCurrentPageTitle(state, text) {

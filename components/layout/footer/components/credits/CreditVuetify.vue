@@ -1,7 +1,7 @@
 <template>
   <div>
     Designs by
-    <app-button-external-link href="https://vuetifyjs.com/en/">
+    <app-button-external-link href="https://vuetifyjs.com/en/" text>
       <v-icon left>{{ mdiVuetify }}</v-icon>
       Vuetify
     </app-button-external-link>
