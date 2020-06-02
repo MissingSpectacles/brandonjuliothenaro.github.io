@@ -41,20 +41,20 @@ export default {
     return {
       certificates: [
         {
-          dir: APIsAndMicroservicesCertificate,
-          url: 'https://bit.ly/301Cvx8'
-        },
-        {
-          dir: FrontEndLibrariesCertificate,
-          url: 'https://bit.ly/2YTCNpg'
+          dir: ResponsiveWebDesignCertificate,
+          url: 'https://bit.ly/35OoTpT'
         },
         {
           dir: JavaScriptAlgorithmsAndDataStructureCertificate,
           url: 'https://bit.ly/3dA7eFe'
         },
         {
-          dir: ResponsiveWebDesignCertificate,
-          url: 'https://bit.ly/35OoTpT'
+          dir: FrontEndLibrariesCertificate,
+          url: 'https://bit.ly/2YTCNpg'
+        },
+        {
+          dir: APIsAndMicroservicesCertificate,
+          url: 'https://bit.ly/301Cvx8'
         },
         {
           dir: TokopediaSTARTSummitCertificate,
