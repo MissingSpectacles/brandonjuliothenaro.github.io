@@ -1,7 +1,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' *.cloudfront.net"
+    Content-Security-Policy = "default-src 'self' https:"
     Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'midi'; sync-xhr 'self'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'self'; speaker 'self'; vibrate 'self'; fullscreen 'self'; payment 'none';"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
