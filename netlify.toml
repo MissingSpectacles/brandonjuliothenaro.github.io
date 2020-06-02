@@ -1,7 +1,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+    Content-Security-Policy = "default-src https: ; object-src 'none' "
     Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'midi'; sync-xhr 'self'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'self'; speaker 'self'; vibrate 'self'; fullscreen 'self'; payment 'none';"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
