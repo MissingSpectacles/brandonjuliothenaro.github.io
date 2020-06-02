@@ -37,6 +37,7 @@ import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
 
 export default {
   components: { AppButtonExternalLink },
+
   data() {
     return {
       certificates: [
@@ -68,6 +69,10 @@ export default {
 
       mdiOpenInNew
     }
+  },
+
+  mounted() {
+    this.$store.commit('setCurrentPageTitle', 'Certificates')
   },
 
   head() {
