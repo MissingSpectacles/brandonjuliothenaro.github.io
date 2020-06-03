@@ -1,22 +1,20 @@
 <template>
-  <app-button-external-link
-    aria-label="Facebook"
+  <ButtonSocialBase
+    :icon="mdiFacebook"
     href="https://www.facebook.com/profile.php?id=100008724798107"
-    icon
-  >
-    <v-icon large>{{ mdiFacebook }}</v-icon>
-  </app-button-external-link>
+    label="Facebook"
+  />
 </template>
 
 <script>
 import { mdiFacebook } from '@mdi/js'
 
-import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+import ButtonSocialBase from '~/components/layout/footer/components/social-buttons/ButtonSocialBase'
 
 export default {
   name: 'ButtonFacebook',
 
-  components: { AppButtonExternalLink },
+  components: { ButtonSocialBase },
 
   data() {
     return {

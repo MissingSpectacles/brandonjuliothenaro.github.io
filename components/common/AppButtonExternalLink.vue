@@ -3,7 +3,8 @@
     :href="href"
     :icon="icon"
     :text="text"
-    :x-large="icon && !medium"
+    :large="large"
+    :x-large="xLarge"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -27,13 +28,25 @@ export default {
       required: false
     },
 
-    text: {
+    large: {
       type: Boolean,
       default: false,
       required: false
     },
 
     medium: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+
+    text: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
+
+    xLarge: {
       type: Boolean,
       default: false,
       required: false

@@ -1,22 +1,20 @@
 <template>
-  <app-button-external-link
-    aria-label="Instagram"
+  <ButtonSocialBase
+    :icon="mdiInstagram"
     href="https://www.instagram.com/brandon.julio.t"
-    icon
-  >
-    <v-icon large>{{ mdiInstagram }}</v-icon>
-  </app-button-external-link>
+    label="Instagram"
+  />
 </template>
 
 <script>
 import { mdiInstagram } from '@mdi/js'
 
-import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+import ButtonSocialBase from '~/components/layout/footer/components/social-buttons/ButtonSocialBase'
 
 export default {
   name: 'ButtonInstagram',
 
-  components: { AppButtonExternalLink },
+  components: { ButtonSocialBase },
 
   data() {
     return {

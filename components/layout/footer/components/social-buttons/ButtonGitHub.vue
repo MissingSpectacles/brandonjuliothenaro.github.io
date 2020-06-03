@@ -1,22 +1,20 @@
 <template>
-  <app-button-external-link
-    aria-label="GitHub"
+  <ButtonSocialBase
+    :icon="mdiGithub"
     href="https://github.com/brandon-julio-t"
-    icon
-  >
-    <v-icon large>{{ mdiGithub }}</v-icon>
-  </app-button-external-link>
+    label="GitHub"
+  />
 </template>
 
 <script>
 import { mdiGithub } from '@mdi/js'
 
-import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+import ButtonSocialBase from '~/components/layout/footer/components/social-buttons/ButtonSocialBase'
 
 export default {
   name: 'ButtonGitHub',
 
-  components: { AppButtonExternalLink },
+  components: { ButtonSocialBase },
 
   data() {
     return {

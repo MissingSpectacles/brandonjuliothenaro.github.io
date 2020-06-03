@@ -33,8 +33,14 @@ export default {
   methods: {
     getNow() {
       return new Intl.DateTimeFormat(undefined, {
-        dateStyle: 'full',
-        timeStyle: this.isMobile ? 'medium' : 'full'
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        month: 'long',
+        second: '2-digit',
+        timeZoneName: this.isMobile ? undefined : 'long',
+        weekday: 'long',
+        year: 'numeric'
       }).format(new Date())
     },
 

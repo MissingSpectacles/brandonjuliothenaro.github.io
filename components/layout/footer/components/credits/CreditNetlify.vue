@@ -12,10 +12,7 @@ export default {
   name: 'CreditNetlify',
 
   data() {
-    return {
-      NetlifyDark,
-      NetlifyLight
-    }
+    return { NetlifyDark, NetlifyLight }
   },
 
   computed: {

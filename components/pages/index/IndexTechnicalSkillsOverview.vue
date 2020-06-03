@@ -36,8 +36,8 @@
       </v-row>
 
       <v-row justify="center">
-        <v-col sm="auto">
-          <v-btn block nuxt to="skills">
+        <v-col cols="auto">
+          <v-btn nuxt to="skills">
             <v-icon left>{{ mdiMagnify }}</v-icon>
             View More
           </v-btn>

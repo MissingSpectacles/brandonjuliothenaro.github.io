@@ -11,15 +11,19 @@
     <keep-alive>
       <IndexPinnedGitHubProjects />
     </keep-alive>
+
+    <IndexCertificates />
   </v-container>
 </template>
 
 <script>
-import IndexTechnicalSkillsOverview from '~/components/pages/index/IndexTechnicalSkillsOverview'
 import IndexPinnedGitHubProjects from '~/components/pages/index/IndexPinnedGitHubProjects'
+import IndexTechnicalSkillsOverview from '~/components/pages/index/IndexTechnicalSkillsOverview'
+import IndexCertificates from '~/components/pages/index/IndexCertificates'
 
 export default {
   components: {
+    IndexCertificates,
     IndexPinnedGitHubProjects,
     IndexTechnicalSkillsOverview
   },

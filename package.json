@@ -1,9 +1,9 @@
 {
   "name": "brandon-julio-thenaro-website",
-  "version": "1.0.0",
-  "description": "My personal website with Nuxt.js",
+  "version": "0.0.0",
+  "description": "Brandon Julio Thenaro's personal website with Nuxt.js",
   "author": "Brandon Julio Thenaro",
-  "private": true,
+  "private": false,
   "scripts": {
     "analyze": "nuxt-ts build -a",
     "dev": "nuxt-ts",
@@ -23,6 +23,7 @@
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.3.0",
     "nuxt": "^2.0.0",
+    "postcss-responsive-type": "^1.0.0",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {

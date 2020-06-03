@@ -1,27 +1,23 @@
 <template>
-  <app-button-external-link
-    aria-label="LinkedIn"
+  <ButtonSocialBase
+    :icon="mdiLinkedin"
     href="https://www.linkedin.com/in/brandonjuliothenaro"
-    icon
-  >
-    <v-icon large>{{ mdiLinkedin }}</v-icon>
-  </app-button-external-link>
+    label="LinkedIn"
+  />
 </template>
 
 <script>
 import { mdiLinkedin } from '@mdi/js'
 
-import AppButtonExternalLink from '~/components/common/AppButtonExternalLink'
+import ButtonSocialBase from '~/components/layout/footer/components/social-buttons/ButtonSocialBase'
 
 export default {
   name: 'ButtonLinkedin',
 
-  components: { AppButtonExternalLink },
+  components: { ButtonSocialBase },
 
   data() {
-    return {
-      mdiLinkedin
-    }
+    return { mdiLinkedin }
   }
 }
 </script>

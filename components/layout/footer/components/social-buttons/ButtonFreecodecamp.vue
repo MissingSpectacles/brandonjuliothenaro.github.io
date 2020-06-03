@@ -1,8 +1,9 @@
 <template>
   <app-button-external-link
-    aria-label="freeCodeCamp"
     href="https://www.freecodecamp.org/brandon-julio-thenaro"
     icon
+    label="freeCodeCamp"
+    large
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

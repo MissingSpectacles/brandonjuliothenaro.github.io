@@ -17,7 +17,7 @@
           <v-card-actions>
             <v-row justify="center">
               <v-col sm="auto">
-                <v-btn to="/">
+                <v-btn :active-class="false" nuxt to="/">
                   Return to Home page
                 </v-btn>
               </v-col>
