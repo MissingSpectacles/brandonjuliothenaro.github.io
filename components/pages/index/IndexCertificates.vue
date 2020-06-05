@@ -14,11 +14,12 @@
               cycle
               height="auto"
             >
-              <v-carousel-item
+              <VCarouselItem
                 v-for="(certificate, index) in allCertificates"
                 :key="index"
                 :src="certificate.dir"
-              ></v-carousel-item>
+                eager
+              />
             </v-carousel>
           </app-card-raisable>
         </v-col>
