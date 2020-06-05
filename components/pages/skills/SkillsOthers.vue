@@ -1,6 +1,6 @@
 <template>
   <v-col>
-    <h2>Others</h2>
+    <h2 class="display-1">Others</h2>
 
     <v-list v-for="(category, categoryIdx) in others" :key="categoryIdx">
       <v-subheader>

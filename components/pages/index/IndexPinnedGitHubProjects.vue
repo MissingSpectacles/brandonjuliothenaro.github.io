@@ -1,67 +1,65 @@
 <template>
-  <v-row justify="center">
-    <v-col>
-      <h2>Pinned GitHub Projects</h2>
+  <section>
+    <h2 class="text-center display-1 my-5">Pinned GitHub Projects</h2>
 
-      <v-skeleton-loader
-        v-if="!myRawPinnedRepositories"
-        type="card"
-      ></v-skeleton-loader>
+    <v-skeleton-loader
+      v-if="!myRawPinnedRepositories"
+      type="card"
+    ></v-skeleton-loader>
 
-      <v-row v-else>
-        <v-col
-          v-for="(repository, repositoryIdx) in myPinnedRepositories"
-          :key="repositoryIdx"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <app-card-raisable>
-            <v-card-title>
-              <h3>{{ toTitleCase(repository.name) }}</h3>
-            </v-card-title>
+    <v-row v-else>
+      <v-col
+        v-for="(repository, repositoryIdx) in myPinnedRepositories"
+        :key="repositoryIdx"
+        cols="12"
+        sm="6"
+        md="4"
+      >
+        <app-card-raisable>
+          <v-card-title>
+            <h3>{{ toTitleCase(repository.name) }}</h3>
+          </v-card-title>
 
-            <v-card-subtitle>
-              Created at:
-              {{ extractMonthAndYearOnly(repository.createdAt) }}
-            </v-card-subtitle>
+          <v-card-subtitle>
+            Created at:
+            {{ extractMonthAndYearOnly(repository.createdAt) }}
+          </v-card-subtitle>
 
-            <v-card-text>
-              {{ repository.description }}
+          <v-card-text>
+            {{ repository.description }}
 
-              <v-chip-group column>
-                <v-chip
-                  v-for="(programmingLanguage,
-                  programmingLanguageIdx) in repository.languages.nodes"
-                  :key="programmingLanguageIdx"
-                >
-                  {{ programmingLanguage.name }}
-                </v-chip>
-              </v-chip-group>
-            </v-card-text>
-
-            <v-card-actions>
-              <app-button-external-link :href="repository.homepageUrl" text>
-                View Live
-                <v-icon right>{{ mdiOpenInNew }}</v-icon>
-              </app-button-external-link>
-
-              <v-spacer></v-spacer>
-
-              <app-button-external-link
-                :href="repository.url"
-                aria-label="View this project on GitHub"
-                icon
-                medium
+            <v-chip-group column>
+              <v-chip
+                v-for="(programmingLanguage,
+                programmingLanguageIdx) in repository.languages.nodes"
+                :key="programmingLanguageIdx"
               >
-                <v-icon>{{ mdiGithub }}</v-icon>
-              </app-button-external-link>
-            </v-card-actions>
-          </app-card-raisable>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+                {{ programmingLanguage.name }}
+              </v-chip>
+            </v-chip-group>
+          </v-card-text>
+
+          <v-card-actions>
+            <app-button-external-link :href="repository.homepageUrl" text>
+              View Live
+              <v-icon right>{{ mdiOpenInNew }}</v-icon>
+            </app-button-external-link>
+
+            <v-spacer></v-spacer>
+
+            <app-button-external-link
+              :href="repository.url"
+              aria-label="View this project on GitHub"
+              icon
+              medium
+            >
+              <v-icon>{{ mdiGithub }}</v-icon>
+            </app-button-external-link>
+          </v-card-actions>
+        </app-card-raisable>
+      </v-col>
+    </v-row>
+  </section>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <v-col>
-    <h2>Frameworks</h2>
+    <h2 class="display-1">Frameworks</h2>
 
     <v-list v-for="(category, categoryIdx) in frameworks" :key="categoryIdx">
       <v-subheader>

@@ -1,6 +1,6 @@
 <template>
   <v-col>
-    <h2>Databases</h2>
+    <h2 class="display-1">Databases</h2>
 
     <v-list>
       <v-list-item
@@ -18,7 +18,9 @@ export default {
   name: 'SkillsDatabases',
 
   data() {
-    return { databases: ['FaunaDB', 'MySQL', 'PostgreSQL', 'SQL Server', 'SQLite'] }
+    return {
+      databases: ['FaunaDB', 'MySQL', 'PostgreSQL', 'SQL Server', 'SQLite']
+    }
   }
 }
 </script>
