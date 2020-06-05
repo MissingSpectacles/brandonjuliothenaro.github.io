@@ -14,12 +14,12 @@
               cycle
               height="auto"
             >
-              <VCarouselItem
+              <v-carousel-item
                 v-for="(certificate, index) in allCertificates"
                 :key="index"
-                :src="certificate.dir"
-                eager
-              />
+              >
+                <VImg :src="certificate.dir" />
+              </v-carousel-item>
             </v-carousel>
           </app-card-raisable>
         </v-col>
@@ -35,6 +35,7 @@ import {
   mdiCircle,
   mdiOpenInNew
 } from '@mdi/js'
+
 import AppCardRaisable from '~/components/common/AppCardRaisable'
 
 export default {
